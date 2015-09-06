@@ -1,0 +1,57 @@
+.list{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.list__item{
+    position: relative;
+
+    padding: 30px 50px;
+
+    text-align: center;
+}
+
+.list__item--blue:nth-child(odd){
+    background: #f5fafe;
+}
+
+.list__item--yellow:nth-child(odd){
+    background: #f7de22;
+}
+
+.list__item--blue:nth-child(odd):before,
+.list__item--blue:nth-child(odd):after,
+.list__item--yellow:nth-child(odd):before,
+.list__item--yellow:nth-child(odd):after{
+    position: absolute;
+    top: -10%;
+
+    display: block;
+
+    width: 50px;
+
+    content: '';
+    -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+       -moz-transform: rotate(15deg); /* Для Firefox */
+        -ms-transform: rotate(15deg); /* Для IE */
+         -o-transform: rotate(15deg); /* Для Opera */
+            transform: rotate(15deg);
+
+    background: #fdfeff;
+}
+
+.list__item--blue:nth-child(odd):before,
+.list__item--yellow:nth-child(odd):before{
+    left: -20px;
+
+    height: 110%;
+}
+
+.list__item--blue:nth-child(odd):after,
+.list__item--yellow:nth-child(odd):after{
+    right: -20px;
+
+    height: 120%;
+}

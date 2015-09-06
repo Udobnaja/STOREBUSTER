@@ -1,0 +1,401 @@
+.header{
+    line-height: 2.2;
+
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+
+.header__track{
+    font: 13px/18px 'ProximaNovaBold';
+
+    position: absolute;
+    top: 45px;
+    left: 170px;
+
+    width: 80px;
+
+    vertical-align: middle;
+}
+
+.header__top{
+    font-family: 'ProximaNovaRegular';
+    font-size: 13px;
+
+    background: #414a57;
+}
+
+.header__wrapper{
+    position: relative;
+
+    width: 275px;
+    margin: 0 auto;
+}
+
+.header__top-panel{
+    text-align: center;
+}
+
+.header__btn{
+    position: relative;
+
+    display: inline-block;
+
+    width: 120px;
+    height: 30px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #3c3c3b;
+}
+
+.header__btn:first-child{
+    margin-right: 10px;
+}
+
+.header__btn:before,
+.header__btn:after{
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+}
+
+.header__btn:before{
+    left: -8px;
+
+    border-bottom: 30px solid;
+    border-left: 8px solid transparent;
+}
+
+.header__btn:after{
+    left: 120px;
+
+    border-top: 30px solid;
+    border-right: 8px solid transparent;
+}
+
+.header__btn--yellow{
+    background: #f7de22;
+}
+
+.header__btn--yellow:before{
+    border-bottom-color: #f7de22;
+}
+
+.header__btn--yellow:after{
+    border-top-color: #f7de22;
+}
+
+.header__btn--lightYellow{
+    background: #fef39c;
+}
+
+.header__btn--lightYellow:before{
+    border-bottom-color: #fef39c;
+}
+
+.header__btn--lightYellow:after{
+    border-top-color: #fef39c;
+}
+
+
+.header__bottom{
+    width: 84%;
+    margin: 0 auto;
+    padding: 30px 0 25px;
+}
+
+.header__logo{
+    float: left;
+
+    width: 50%;
+    max-width: 114px;
+}
+
+.header__tel{
+    line-height: 1.2;
+
+    float: right;
+
+    width: 50%;
+
+    text-align: center;
+}
+
+.header__tel-number{
+    font: 20px/18px 'ProximaNovaBold';
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #3c3c3b;
+}
+
+
+.header__menu{
+    padding: 15px 0;
+
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+.header__submenu{
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-bottom: 15px;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    border-bottom: 1px solid #fff;
+}
+
+.header__faq{
+    font: 30px 'ProximaNovaBold';
+    line-height: 1.2;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 33px;
+    height: 33px;
+
+    cursor: pointer;
+    text-align: center;
+
+    border: 6px solid #f7de22;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+
+
+
+@media only screen and (min-width: 480px){
+    
+    .header__wrapper{
+        width: 93%;
+    }
+
+    .header__top-panel{
+        float: left;
+    }
+    
+
+    .header__bottom{
+        width: 86.5%;
+    }
+
+    .header__logo{
+        float: left;
+
+        width: 126px;
+    }
+
+    .header__tel{
+        width: auto;
+        padding-top: 10px;
+    }
+    
+    .header__tel-number{
+        font-size: 30px;
+    }
+
+    .header__track{
+        top: 45px;
+        left: 19px;
+
+        width: auto;
+
+        border-bottom: 1px dashed #fff;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    
+    .header__wrapper{
+        width: 768px;
+    }
+
+    .header__logo{
+        width: 135px;
+    }
+
+    .header__track{
+        line-height: 2.2;
+
+        top: 0;
+        left: 0;
+
+        width: 150px;
+        height: 30px;
+        padding: 10px 0;
+
+        text-align: center;
+
+        border: 0;
+        background: #f7de22;
+    }
+    
+    .header__track:before{
+        position: absolute;
+        top: 0;
+        left: -13px;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+
+        border-bottom: 50px solid #f7de22;
+        border-left: 13px solid transparent;
+    }
+
+
+    .header__track:after{
+        position: absolute;
+        top: 0;
+        left: 150px;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+
+        border-top: 50px solid #f7de22;
+        border-right: 13px solid transparent;
+    }
+    
+    .header__btns-panel{
+        float: right;
+    }
+    
+    .header__btn:nth-child(2){
+        margin-right: 24px;
+    }
+
+    .header__tel{
+        margin-right: 0;
+    }
+
+    .header__btn:first-child{
+        margin-right: 20px;
+    }
+
+    .header__btn{
+        width: 135px;
+        padding: 10px 0;
+    }
+
+    .header__btn:before{
+        left: -13px;
+
+        border-bottom-width: 50px;
+        border-left-width: 13px;
+    }
+
+    .header__btn:after{
+        left: 135px;
+
+        border-top-width: 50px;
+        border-right-width: 13px ;
+    }
+
+    .header__bottom{
+        width: 625px;
+    }
+
+    .header__menu{
+        width: 96%;
+        margin: 0 auto;
+        padding-top: 0;
+
+        border-top: none;
+    }
+
+    .header__faq{
+        top: -80px;
+    }
+
+    .header__tel{
+        margin-right: 70px;
+    }
+
+    .header__submenu{
+        position: absolute;
+        top: 49px;
+
+        visibility: hidden;
+
+        margin: 0;
+        padding: 0;
+
+        -webkit-transition: all .3s linear;
+           -moz-transition: all .3s linear;
+            -ms-transition: all .3s linear;
+             -o-transition: all .3s linear;
+                transition: all .3s linear;
+        transition-delay: .25s;
+
+        opacity: 0;
+        background: #f7de22;
+    }
+
+    .header__submenu:hover{
+        visibility: visible;
+
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    
+    .header__wrapper{
+        width: 94%;
+        max-width: 1440px;
+    }
+    
+    .header__bottom{
+        width: 86%;
+        max-width: 1440px;
+    }
+    
+    .header__tel{
+        margin-right: 20px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .header__bottom{
+        width: 96%;
+    }
+    
+    .header__tel{
+        margin-right: 70px;
+    }
+
+    .header__menu{
+        padding-bottom: 5px;
+    }
+
+    .header__submenu{
+        top: 61px;
+    }
+}

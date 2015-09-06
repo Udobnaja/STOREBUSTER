@@ -1,0 +1,16 @@
+.pay{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.pay__col{
+    padding: 20px 50px;
+}
+
+.pay__img-container{
+    width: 30%;
+}
+
+.pay__radio{
+    width: 10%;
+}

@@ -1,0 +1,47 @@
+.team{
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.team__text{
+    display: inline-block;
+
+    height: 46px;
+    padding-right: 10px;
+
+    vertical-align: middle;
+
+    color: #fff;
+}
+
+.team__link{
+    width: 78px;
+    height: 46px;
+
+    background: url(/images/jetmix.png) no-repeat center center;
+}
+
+.team__link.link{
+    border-bottom: none;
+}
+
+@media only screen and (min-width: 992px){
+    
+    .team{
+        margin-right: 10px;
+
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .team__text{
+        height: 75px;
+    }
+
+    .team__link{
+        height: 75px;
+    }
+}

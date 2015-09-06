@@ -1,0 +1,65 @@
+.faq-window{
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+
+    visibility: hidden;
+
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.faq-window--show{
+    visibility: visible;
+}
+
+.faq-window__list{
+    position: relative;
+
+    height: 100%;
+    margin: 0 auto;
+    padding: 100px 0 0 80px;
+
+    -webkit-transition: all .3s cubic-bezier(.25, .5, .5, .9);
+       -moz-transition: all .3s cubic-bezier(.25, .5, .5, .9);
+            transition: all .3s cubic-bezier(.25, .5, .5, .9);
+    -webkit-transform: translateX(20%);
+       -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+            transform: translateX(20%);
+
+    opacity: 0;
+    background: #f7de22;
+}
+
+.faq-window__list--show{
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+.faq-window__link{
+    font: 15px/40px 'ProximaNovaBold';
+}
+
+.faq-window__close-btn{
+    top: 3%;
+    right: 8%;;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .faq-window{
+        width: 320px;
+        /*top: 80px;*/ /* так по дизайну, но мне не нравится */
+    }
+}

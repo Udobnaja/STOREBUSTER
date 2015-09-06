@@ -1,0 +1,30 @@
+.commission{
+    font-size: 25px;
+
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px 30px 35px 30px;
+
+    text-align: center;
+
+    background: #f7de22;
+}
+
+.commission__rate{
+    font: 60px/33px  'ProximaNovaBold';
+
+    margin-top: 7px;
+
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .commission{
+        float: right;
+
+        width: 290px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+}

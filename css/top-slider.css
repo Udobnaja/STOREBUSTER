@@ -1,0 +1,32 @@
+.top-slider{
+    width: 92%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.top-slider__headline{
+    font: 35px/41px 'ProximaNovaBold';
+
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 480px){
+    
+    .top-slider__slide{
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    
+    .top-slider__content{
+        position: absolute;
+        top: 50%;
+
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+}

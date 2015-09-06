@@ -1,0 +1,22 @@
+.link{
+    display: inline-block;
+
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+        -ms-transition: all .15s linear;
+         -o-transition: all .15s linear;
+            transition: all .15s linear;
+    text-decoration: none;
+
+    color: #3c3c3b;
+    border-bottom: 1px dashed #3c3c3b;
+}
+
+.link:hover{
+    border-color: transparent;
+}
+
+.link--centered{
+    margin-top: 10px;
+}
+

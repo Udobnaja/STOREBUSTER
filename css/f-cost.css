@@ -1,0 +1,67 @@
+.f-cost__wrapper{
+    width: 96%;
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.f-cost__wrapper--little{
+    width: 90%;
+    max-width: 705px;
+    margin: 45px auto 45px;
+}
+
+.f-cost__wrapper--indent{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.f-cost--white{
+    margin: 50px 0;
+    padding: 50px 0;
+
+    background: #fff;
+}
+
+.f-cost__filters{
+    margin-top: 0;
+}
+
+.f-cost__pkg:not(:checked) + .form_checkLabel:after,
+.f-cost__pkg:checked + .form_checkLabel:after,
+.f-cost__v-adress:not(:checked) + .form_checkLabel:after,
+.f-cost__v-adress:checked + .form_checkLabel:after{
+    top: -30px;
+}
+
+
+.f-cost__pkg-txt,
+.f-cost__v-adress-txt{
+    line-height: 1.3;
+
+    margin-top: -35px;
+    margin-left: 50px;
+}
+
+/* for js*/
+.add-options{
+    display: none;
+
+    margin-top: 60px;
+}
+
+/* for js*/
+.add-options--show{
+    display: block;
+
+    margin-top: 60px;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .f-cost__virtual-adress{
+        margin-top: 70px;
+    }
+}
+
+
+

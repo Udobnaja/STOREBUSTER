@@ -1,0 +1,28 @@
+.staff__elem{
+    position: relative;
+
+    border: 1px solid #8e8e8e;
+    background: #fff;
+}
+
+.staff__img{
+    margin-bottom: 0;
+}
+
+.staff__info{
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+@media only screen and (min-width: 992px){
+    
+    .staff__info{
+        padding-left: 50px;
+    }
+}

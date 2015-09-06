@@ -1,0 +1,42 @@
+.footer-menu{
+    padding: 30px 0;
+
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+.footer-menu__link{
+    float: left;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 50%;
+    padding: 15px 35px;
+}
+
+.footer-menu__link.link{
+    border-bottom: none;
+}
+
+@media only screen and (min-width: 480px){
+    .footer-menu__content
+    {
+        width: 84%;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .footer-menu__link
+    {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .footer-menu
+    {
+        border: none;
+    }
+}

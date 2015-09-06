@@ -1,0 +1,31 @@
+.paragraph{
+    margin: 25px 0;
+
+    text-align: left;
+}
+
+.paragraph--centered{
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .paragraph__error--not-logged{
+        width: 63%;
+        margin: 25px auto;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    
+    .paragraph__error--not-logged{
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .paragraph__error--not-logged{
+        width: 40%;
+    }
+}

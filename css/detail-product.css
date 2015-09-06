@@ -1,0 +1,56 @@
+.detail-product__desk{
+    padding: 45px 50px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.detail-product__select{
+    width: 75%;
+}
+
+.detail-product__quantity{
+    width: 50%;
+}
+
+.detail-product__price{
+    padding: 5px 20px;
+    background: #3c3c3b;
+    color: #fff;
+}
+
+.detail-product__info{
+    padding: 20px 0;
+}
+
+.detail-product__seller,
+.detail-product__paiment,
+.detail-product__characteristics{
+    padding: 45px 50px;
+}
+
+.detail-product__col{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.detail-product__headline{
+    margin-bottom: 20px;
+    font-family: 'ProximaNovaBold';
+    text-align: center;
+}
+
+.detail-product__characteristics-txt{
+    padding: 20px;
+    background: #fff;
+}
+
+@media only screen and (min-width: 992px) {
+     
+    .detail-product__characteristics-txt{
+        padding: 40px;
+    }
+
+}

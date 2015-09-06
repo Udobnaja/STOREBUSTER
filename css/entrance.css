@@ -1,0 +1,66 @@
+
+.entrance--registration{
+    margin-bottom: 20px;
+}
+
+.entrance__headline{
+    font: 25px/33px 'ProximaNovaBold';
+
+    margin: 10px 0 20px 0;
+
+    text-align: center;
+}
+
+.entrance__ico{
+    font-size: 38px;
+    line-height: 2;
+
+    width: 70px;
+    height: 70px;
+
+    opacity: .9;
+    border-radius: 50%;
+}
+
+.entrance__ico:hover{
+    opacity: 1;
+}
+
+.entrance__ico.link{
+    color: #fff;
+    border-bottom: none;
+}
+
+.entrance__ico:hover{
+    -webkit-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
+}
+
+
+.entrance__ico--facebook{
+    background: #3b5998;
+}
+
+.entrance__ico--google-plus{
+    background: #d34836;
+}
+
+.entrance__ico--twitter{
+    background: #55acee;
+}
+
+.entrance__close-btn{
+    top: -6%;
+    right: -7%;
+}
+
+
+.entrance__social-ico{
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+.entrance__submit{
+    margin-top: 30px;
+}
+

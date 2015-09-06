@@ -1,0 +1,16 @@
+.payment-method__headline{
+    font: 20px/33px  'ProximaNovaBold';
+}
+
+.payment-method__link{
+    line-height: 1.2;
+
+    display: inline-block;
+    float: right;
+
+    margin-right: 15px;
+}
+
+.payment-method__elem{
+    margin: 60px 0;
+}

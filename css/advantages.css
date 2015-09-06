@@ -1,0 +1,22 @@
+.advantages__ico{
+    font-size: 65px;
+    line-height: 1.8;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+
+    color: #fff;
+    border-radius: 50%;
+    background: #414a57;
+}
+
+.advantages__paragraph{
+    font-family: 'ProximaNovaBold';
+
+    margin-bottom: 0;
+
+    text-align: center;
+}

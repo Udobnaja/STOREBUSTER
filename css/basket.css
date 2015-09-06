@@ -1,0 +1,76 @@
+
+.basket{
+        padding: 0 20px 90px 20px;
+}
+
+.basket__form{
+    display: none;
+}
+
+.basket__form--show{
+    display: block;
+}
+
+
+    
+
+.basket__elem{
+    margin: 20px auto;
+    background: #fff;
+}
+
+.basket__key{
+    text-align: left;
+    padding: 15px 0 0;
+}
+
+.basket__textarea,
+.basket__textarea.form__textarea{
+    height: 100px;
+}
+
+.basket__price{
+    text-align: center;
+}
+
+.basket__elem--transparent{
+    background: transparent;
+}
+
+.basket__shop-name{
+    font: 25px/30px 'ProximaNovaBold';
+    margin-top: 45px;
+}
+
+.basket__img{
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 480px){
+    
+}
+
+@media only screen and (min-width: 768px){
+    .basket{
+        padding: 0 30px 90px 30px;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+
+    .basket__key{
+        padding: 105px 0;
+        text-align: center;
+    }
+    
+    .basket__price{
+        padding: 76px 0;
+        text-align: center;
+    }
+    
+    .basket__product{
+        border-right: 1px solid #8e8e8e;
+    }
+}

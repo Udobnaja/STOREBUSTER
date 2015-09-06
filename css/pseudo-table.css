@@ -1,0 +1,21 @@
+.pseudo-table{
+    position: relative;
+    padding: 15px 20px;
+}
+
+.pseudo-table__row{
+    margin: 0;
+}
+
+.pseudo-table__cell{
+    padding: 20px;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px){
+    
+      .pseudo-table__row{
+        padding: 20px 40px;
+    }
+       
+}

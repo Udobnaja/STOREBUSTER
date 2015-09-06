@@ -1,0 +1,27 @@
+.blog__prev-content{
+    padding: 25px;
+
+    background: #f5fafe;
+}
+
+.blog__prev{
+    position: absolute;
+    top: 0;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    text-decoration: none;
+
+    color: #3c3c3b;
+}
+
+.blog__wrapper{
+    max-width: 1100px;
+}
+
+.blog__img-container{
+    margin-top: 0;
+
+    text-align: center;
+}

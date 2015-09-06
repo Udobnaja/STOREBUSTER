@@ -1,0 +1,21 @@
+.track__link.link{
+    color: #fff;
+    border-color: #fff;
+    display: inline;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .track__link{
+        line-height: 1;
+
+        display: inline-block;
+
+        border-bottom: 1px dashed #3c3c3b;
+    }
+    
+    .track__link.link{
+        color: #3c3c3b;
+        border-color: #3c3c3b;
+    }
+}

@@ -1,0 +1,21 @@
+.social__link{
+    font-size: 35px;
+
+    padding: 0 12px;
+}
+
+.social__link.link{
+    border-bottom: none;
+}
+
+.social__link:hover{
+    color: #f7de22;
+}
+
+
+@media only screen and (min-width: 992px){
+    
+    .social__link:first-child{
+        padding-left: 0;
+    }
+}

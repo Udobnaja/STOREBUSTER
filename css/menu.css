@@ -1,0 +1,89 @@
+.menu__wrapper{
+    position: relative;
+
+    width: 84%;
+    margin: 0 auto;
+}
+
+.menu__item{
+    font: 15px/30px 'ProximaNovaBold';
+}
+
+.menu__ico{
+    font-size: 21px;
+
+    padding: 5px 7px;
+
+    cursor: pointer;
+
+    border: 3px solid #3c3c3b;
+}
+
+.menu__name{
+    font: 15px/18px 'ProximaNovaBold';
+
+    padding-left: 7px;
+}
+
+@media only screen and (min-width: 480px){
+    
+    .menu__wrapper{
+        width: 86.5%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    
+    .menu__wrapper{
+        width: 625px;
+    }
+
+    .menu__ico{
+        display: none;
+    }
+
+    .menu__name{
+        display: none;
+    }
+
+    .menu__item{
+        display: inline-block;
+
+        padding-right: 10%;
+    }
+
+    .menu__item:last-child{
+        padding-right: 0;
+    }
+
+    .menu__link.link{
+        -webkit-transition: all .3s;
+           -moz-transition: all .3s;
+                transition: all .3s;
+
+        border-bottom: 3px solid transparent;
+    }
+
+    .menu__link.link:hover,
+    .menu__link--active.link{
+        border-bottom: 3px solid #dadada;
+    }
+
+    .menu__link:hover + .header__submenu{
+        visibility: visible;
+
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    
+    .menu__wrapper{
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .menu__item{
+        padding-right: 7%;
+    }
+}

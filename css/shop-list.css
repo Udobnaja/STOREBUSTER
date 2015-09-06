@@ -1,0 +1,32 @@
+.shop-list{
+    padding: 45px 0 0 0;
+    list-style-type: none;
+    margin: 0 0 45px 0;
+}
+
+.shop-list__item{
+    padding: 15px 0;
+}
+
+.shop-list__link.link{
+    border: none;
+}
+
+.shop-list__link{
+    padding: 15px 25px;
+}
+
+.shop-list__link--active,
+.shop-list__link:hover{
+    background: #f7de22;
+}
+
+
+@media only screen and (min-width: 768px){
+    
+    
+    .shop-list__item{
+        display: inline-block;
+        padding: 0;
+    }
+}

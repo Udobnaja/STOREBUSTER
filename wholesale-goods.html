@@ -1,0 +1,368 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Шопоголик</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
+        <link  link rel="stylesheet" href="css/normalize.min.css">
+        <link  link rel="stylesheet" href="css/style.css">
+        <link  link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+           
+            <header class="header" role="banner">
+               <div class="header__top">
+                  <div class="header__wrapper">
+                      <div class="header__track track">
+                          <a href="" class="track__link  link">Отследить посылку</a>
+                      </div>
+                      <div class="header__btns-panel">
+                          <div class="header__top-panel">
+                             <a href="registration.html" class="header__btn btn header__btn--yellow">
+                                 Регистрация
+                             </a>
+                              <div class="header__btn btn header__btn--lightYellow js-btn_entrance-window js-show_overlay">
+                                 Вход в кабинет
+                              </div>
+                          </div>
+                          <div class="add-panel">
+                              <a href="basket.html" class="btn add-panel__basket">
+                                  Корзина 
+                                  <i class="fa fa-shopping-cart add-panel__basket-ico"></i>
+                              </a>
+                          </div> 
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>                  
+               </div>
+               <div class="header__bottom">
+                    <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
+                    <div class="header__tel">
+                        <a href="" class="header__tel-number">8-800-888-888</a> 
+                           заказать обратный звонок 
+                    </div>
+                    <div class="clearfix"></div>
+               </div>
+               <div class="header__menu menu">
+                  <div class="menu__wrapper">
+                     <div class="menu-window">
+                          <ul class="menu-window__list menu__list">
+                              <li class="menu__item">
+                                  <a href="delivery.html" class="menu__link  link">Услуги</a>
+                                  <ul class="header__submenu submenu">
+                                      <li class="submenu__item">
+                                          <a href="delivery.html" class="submenu__link  link">Услуги и тарифы</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="wholesale-goods.html" class="submenu__link  link">Услуги для бизнеса</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="virtual-address.html" class="submenu__link  link">Виртуальный адрес</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="menu__item">
+                                  <a href="catalog-shops.html" class="menu__link  link">Магазины</a>
+                                  <ul class="header__submenu">
+                                      <li class="submenu__item">
+                                          <a href="catalog.html" class="submenu__link  link">Товары с Amazoon</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="catalog.html" class="submenu__link  link">Товары с  E-bay</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="catalog-shops.html" class="submenu__link  link">Каталог магазинов</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="menu__item">
+                                  <a href="about.html" class="menu__link  link">О нас</a>
+                                  <ul class="header__submenu">
+                                      <li class="submenu__item">
+                                          <a href="about.html" class="submenu__link  link">Контакты</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="agent.html" class="submenu__link  link">Как мы работаем</a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="news.html" class="submenu__link  link">Блог</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="menu__item"><a href="delivery-single-page.html" class="menu__link  link">Доставка, гарантия, возврат</a></li>
+                          </ul>
+                      </div>
+                      <div class="header__faq js-btn_faq-window js-show_overlay">?</div>
+                      <span class="menu__ico js-btn_menu-window js-show_overlay"><i class="fa fa-bars"></i></span>
+                      <span class="menu__name">меню</span> 
+                  </div>    
+               </div>
+               <div class="faq-window">
+                   <div class="faq-window__list">
+                      <div class="js-close_overlay btn btn--close js-close-btn_faq-window faq-window__close-btn"></div>
+                       <a href="often-questions.html" class="faq-window__link  link">FAQ</a><br>
+                       <a href="agent.html" class="faq-window__link  link">Как это работает</a><br>
+                       <a href="payment-method.html" class="faq-window__link  link">Способы оплаты</a><br>
+                       <a href="/" class="faq-window__link  link">Обратная связь</a>
+                   </div>
+               </div>
+               <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
+                <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
+                <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
+                <div class="entrance-window entrance">
+                    <div class="entrance-window__list entrance__list">
+                      <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
+                       <div class="entrance__headline">Войти</div>
+                       <form action="" class="form entrance__form">
+                            <p class="paragraph">
+                                Войти через адрес электронной почты
+                            </p>
+                            <input type="email" class="form__item form__input" placeholder="E-mail">
+                            <input type="password" class="form__item form__input" placeholder="Пароль">
+                            <p class="paragraph">
+                                Войти через социальную сеть
+                            </p>
+                            <div class="row entrance__social-ico">
+                                <div class="col-xs-33 centered">
+                                    <a href="" class="link entrance__ico entrance__ico--facebook"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="col-xs-33 centered">
+                                    <a href="" class="link entrance__ico entrance__ico--google-plus"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                                <div class="col-xs-33 centered">
+                                    <a href="" class="link entrance__ico entrance__ico--twitter"><i class="fa fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <input type="submit" class="form__item form__submit entrance__submit" value="Войти" >
+                        </form>
+                    </div>
+                </div>         
+            </header>
+            <div class="light-blue">
+                <div class="content">
+                    <div class="content__wrapper ">
+                        <h1 class="content__headline">
+                            Товары оптом
+                        </h1>
+                        <p class="paragraph">
+                            Если вы ищите партнеров за рубежом, рекомендуем вам остановиться именно на Англии. 
+                            Для тех кто имеет интернет магазины или просто ведет бизнес деятельность в России, Украине и 
+                            странах СНГ мы предлагаем расширить свой ассортимент и добавить качественные товары из Английских магазинов.
+                        </p>
+                        <p class="paragraph">
+                            В Великобритании появляется возможность приобретать товары из так называемых сток-магазинов или с крупных оптовых баз 
+                            по очень привлекательным ценам. Английская одежда украсят любую коллекцию и придадут вашему бизнесу новый облик. 
+                            Наша компания предлагает свои услуги по поиску партнеров в Англии и закупки товаров оптом с Английских магазинов и аукционов.
+                        </p>
+                        <div class="content__headline content__headline--h2">
+                            Что такое сток (stock)?
+                        </div>
+                        <p class="paragraph">
+                            Когда у больших супермаркетов и шопинг центров заканчиваются распродажи, товара на складах очень много или просто не удается                                   реализовать, они предлагают сток магазинам купить его по низким ценам оптом.
+                        </p>
+                        <p class="paragraph">
+                             Англии много компаний,  которые скупают такой товар и затем перепродают его более мелким оптовикам или частным 
+                             предпринимателям для его дальнейшей продажи на Ebay или в своих магазинах. Продают они обычно паллетами или 
+                             коробками и при больших заказах доставляют его абсолютно бесплатно.
+                        </p>
+                        <div class="content__headline content__headline--h2">
+                            Почему это выгодно?   
+                        </div>
+                        <p class="paragraph">
+                            Большая часть оптовых товаров  это невостребованные вещи с распродаж или акций, которые закончились в магазинах.
+                            Среди такого товара много так называемого «бренда», который можно перепродать по вполне выгодной цене. 
+                            Бывает, что например паллет электроники стоит всего 500-800 фунтов и на нем плазменный телевизор,  который после продажи 
+                            покроет почти все расходы на покупку таких товаров, а остальные товары это прибыль продавца.
+                        </p>
+                        <p class="paragraph">
+                            Если заказ большой, то доставка по Англии будет бесплатная и вам останется только заплатить за доставку опта в 
+                            Россию или страны СНГ.
+                        </p>
+                        <p class="paragraph">
+                            Мы ищем партнеров заинтересованных в постоянном сотрудничестве и сделаем все возможное, чтобы доставить ваш товар 
+                            быстро, удобно по приемлемой цене. Наша компания поможет вам провести переговоры с продавцами и найти для вас надежных 
+                            и постоянных партнеров. Мы открыты для любых предложений для закупки и доставке товаров оптом из Англии.
+                            Наши специалисты ответят на все вопросы и помогут минимизировать траты связанные с доставкой опта из Англии.
+                        </p>
+                        <div class="content__headline content__headline--h2">
+                            Как это работает?   
+                        </div>
+                        <p class="paragraph">
+                            Доставка опта подразумевает под собой полное сопровождение и подготовку всей необходимой документации 
+                            для безболезненного перемещения товара через таможню.
+                        </p>
+                        <p class="paragraph centered">
+                            Все средства перечисляются банковским переводом на наш расчетный счет.
+                        </p>
+                        <div class="content__headline content__headline--h2">
+                            Есть 2 варианта сотрудничества с юридическими лицами:
+                        </div>
+                        <p class="paragraph">
+                            <strong>Первый вариант</strong><br>
+                            подойдет большим магазинам и предпринимателям с опытом, которым нужна вся документация и сертификация товара.<br>
+                            Мы заключаем с вами контракт на покупку товара и его дальнейшую доставку в Россию или СНГ, оптовые товары покупаем 
+                            без наценки и процентов.<br>
+                            Мы находим и договариваемся о цене опта и выставляем вам счет, за покупку.<br>
+                            После получения нами товара, наши сотрудники проверяют его и если нужна сертификация готовятся все необходимые данные, 
+                            ТНВЭД коды и другая информация вместе с таможенным брокером.<br>
+                            Мы подготавливаем счет на оплату доставки и услуг по подготовке и отправляем груз, после оплаты счета.<br>
+                            Груз попадает на таможню, мы помогаем вам с брокером его растаможить и оплатить пошлины, а так же получить сертификаты.<br>
+                            После оплаты всех пошлин мы высылаем акт приема сдачи и вы получаете товары.<br>
+                            Это длительный и дорогой процесс, поэтому нужно подойти к нему со всей ответственностью. 
+                            Мы можем вам помочь найти таможенного брокера или работать с вашим.
+                        </p>
+                        <p class="paragraph">
+                            <strong>Второй вариант </strong><br>
+                            упрощенный и подойдет для начинающих бизнесменов, совместных покупок, небольших магазинов и онлайн магазинам.
+                        </p>
+                        <p class="paragraph">
+                            Мы заключаем договор на аутсортинг вашего магазина или вашей компании. 
+                            Это договор при котором вам не нужна полная документация и сертификация, товар проходит таможню по упрощенной схеме.<br>
+                            Находим поставщика и покупаем вам товары, без наценки и процентов.<br>
+                            Возможно использование виртуального адреса<br>
+                            После получения товара мы его храним и рассылаем сразу вашим клиентам, таким образом, обходя таможенные препятствия.<br>
+                            Ваши клиенты получают товары, как будто от вашего магазина или лица.<br>
+                            Таким образом, вам не нужно делать сертификаты, вы не нарушаете таможенные лимиты, груз идет официально по 
+                            договору об услугах, вы получаете все счета и документы для вашей бухгалтерии
+                        </p>
+                    </div>
+                    <div class="content__wrapper">
+                        <div class="content__headline">
+                            Преимущества такого сотрудничества
+                        </div>
+                        <div class="wrapper wrapper--940">
+                            <ul class="list">
+                                <li class="list__item list__item--yellow">
+                                    Вы не платите наценки и сможете экономить на товарах.
+                                </li>
+                                <li class="list__item list__item--yellow">
+                                    Вы не нарушаете таможенные лимиты и значит вам не нужно об этом беспокоиться.
+                                </li>
+                                <li class="list__item list__item--yellow">
+                                    Мы предоставим вам всю отчетную документацию и вы всегда сможете
+                                    видеть ваши расходы.
+                                </li>
+                                <li class="list__item list__item--yellow">
+                                    Специально выделенный менеджер, который ведет ваш проект и помогает 
+                                    вам на всех стадиях.
+                                </li>
+                                <li class="list__item list__item--yellow">
+                                    <span>Так же вы получаете бесплатную упаковку и при желании мы можем ваши посылки 
+                                    упаковывать в вашу специальную упаковку с вашим логотипом.</span>
+                                </li>
+                                <li class="list__item list__item--yellow">
+                                    Так же вы рассылаете посылки непосредственно вашим клиентам и экономите на доставке. 
+                                    При больших объемах возможны скидка на доставку.
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="paragraph strong paragraph--centered">
+                            Если вас заинтересовало наше предложение и вы готовы начать работать и развивать ваш бизнес,<br> 
+	                        пишите нам на имеил на shopogolic@shopogolic.net с пометкой «для бизнеса».
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer" role="contentinfo">
+               <div class="footer__wrapper">
+                    <div class="footer-top">
+                        <div class="footer-top__left-part">
+                            <div class="footer__payment">
+                                Способы оплаты
+                                <div class="footer__payment-content payment">
+
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="payment__col">
+                                        <img src="images/payment.png" alt="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="footer-menu">
+                               <nav class="footer-menu__content">
+                                    <a href="news.html" class="footer-menu__link  link">Блог</a>
+                                    <a href="news.html" class="footer-menu__link  link">Блог</a>
+                                    <a href="vacancy.html" class="footer-menu__link  link">Вакансии</a>
+                                    <a href="vacancy.html" class="footer-menu__link  link">Вакансии</a>
+                                    <a href="ref.html" class="footer-menu__link  link">Реферальная программа</a>
+                                    <a href="ref.html" class="footer-menu__link  link">Реферальная программа</a>
+                                    <a href="ref.html" class="footer-menu__link  link">Реферальная программа</a>
+                                    <a href="news.html" class="footer-menu__link  link">Блог</a>
+                                    <a href="vacancy.html" class="footer-menu__link  link">Вакансии</a>
+                                    <div class="clearfix"></div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="footer-top__right-part">
+                            <div class="footer__adress">
+                                Москва:<br> 
+                                <a href="" class="link">8 800 333 05 28</a><br>
+                                Великобритания: <br>
+                                <a href="" class="link">+44 75633 59 211</a><br><br>
+                                Skype: <a href="" class="link">shopogolic.net</a><br>
+                                Email: <a href="" class="link">shopogolic@shopogolic.net</a> 
+                            </div>
+                            <div class="footer__social social">
+                                <a href="" class="social__link  link"><i class="fa fa-vk"></i></a>
+                                <a href="" class="social__link  link"><i class="fa fa-facebook"></i></a>
+                                <a href="" class="social__link  link"><i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom__wrapper">
+                          <div class="footer-bottom__left-part subscribe">
+                                <div class="subscribe__headline">Подпишитесь на новости, и получайте самые выгодные предложения:</div>
+                                <form action="" class="footer__form form">                 
+                                    <input type="email" class="form__item  subscribe__email">
+                                    <input type="submit" class="form__item subscribe__btn" value="Подписаться">
+                                    <div class="clearfix"></div>
+                                </form>
+                          </div>
+                          <div class="footer-bottom__right-part">
+                               <div class="team"><div class="team__text">Разработка</div><a href="" class="team__link link"></a></div>
+                           </div>
+                          <div class="clearfix"></div>
+                    </div>
+                </div>   
+            </footer>
+          
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+           
+          <script src="js/main.js"></script>
+                      
+    </body>
+</html>

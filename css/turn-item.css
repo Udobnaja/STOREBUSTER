@@ -1,0 +1,36 @@
+.turn-item{
+    position: relative;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+.turn-item:after{
+    position: absolute;
+    top: 7px;
+    right: -35px;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+    cursor: pointer;
+
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #000;
+    border-left: 10px solid transparent;
+}
+
+.turn-item__delivery:after{
+    top: 3px;
+}
+
+.turn-item--closed:after{
+    border-top: 15px solid #000;
+    border-right: 10px solid transparent;
+    border-bottom: none;
+    border-left: 10px solid transparent;
+}

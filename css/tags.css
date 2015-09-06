@@ -1,0 +1,33 @@
+.tags{
+    text-align: center;
+}
+
+.tags--yellow{
+    padding: 45px;
+
+    background: #f7de22;
+}
+
+.tags__link{
+    white-space: nowrap;
+}
+
+.tags__link.link{
+    border: none;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .tags{
+
+        text-align: left;
+    }
+
+    .tags--yellow{
+        padding: 45px 60px;
+    }
+
+    .tags__link{
+        display: block;
+    }
+}

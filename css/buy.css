@@ -1,0 +1,14 @@
+.buy{
+    max-width: 1235px;
+    margin: 0 auto;
+    padding: 35px 25px 20px;
+
+    background: #4b4b4b;
+}
+
+@media only screen and (min-width: 768px){
+    
+    .buy{
+        padding: 60px 90px 45px;
+    }
+}

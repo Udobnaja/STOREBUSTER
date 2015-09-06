@@ -1,0 +1,23 @@
+.wrapper{
+    margin: 50px auto;
+}
+
+.wrapper--710{
+    max-width: 710px;
+}
+
+.wrapper--790{
+    max-width: 790px;
+}
+
+.wrapper--815{
+    max-width: 815px;
+}
+
+.wrapper--940{
+    max-width: 940px;
+}
+
+.wrapper--1170{
+    max-width: 1170px;
+}
