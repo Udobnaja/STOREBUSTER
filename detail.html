@@ -37,7 +37,7 @@
                               </div>
                           </div>
                           <div class="add-panel">
-                              <a href="basket.html" class="btn add-panel__basket">
+                              <a href="basket.html" class="add-panel__btn btn add-panel__basket">
                                   Корзина 
                                   <i class="fa fa-shopping-cart add-panel__basket-ico"></i>
                               </a>
@@ -48,7 +48,7 @@
                   </div>                  
                </div>
                <div class="header__bottom">
-                    <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img img--response"></a>
+                    <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
                     <div class="header__tel">
                         <a href="" class="header__tel-number">8-800-888-888</a> 
                            заказать обратный звонок 
@@ -120,17 +120,19 @@
                </div>
                <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
                 <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
+                <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
                 <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
                 <div class="entrance-window entrance">
                     <div class="entrance-window__list entrance__list">
                       <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
-                       <div class="entrance__headline">Войти</div>
+                       <div class="headline">Войти</div>
                        <form action="" class="form entrance__form">
                             <p class="paragraph">
                                 Войти через адрес электронной почты
                             </p>
                             <input type="email" class="form__item form__input" placeholder="E-mail">
                             <input type="password" class="form__item form__input" placeholder="Пароль">
+                            <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
                             <p class="paragraph">
                                 Войти через социальную сеть
                             </p>
@@ -147,6 +149,18 @@
                             </div>
                             <input type="submit" class="form__item form__submit entrance__submit" value="Войти" >
                         </form>
+                    </div>
+                </div>
+                <div class="forgot-password-window">
+                    <div class="forgot-password-window__list">
+                       <div class="js-close_overlay btn btn--close js-close-btn_forgot-password-window forgot-password-window__close-btn"></div>
+                        <div class="headline">Восстановить пароль</div>
+                        <form action="" class="form">
+                            <lable class="form__label">Введите E-mail, указанный при регистрации</lable>
+                            <input type="text" class="form__item form__input">
+                            <div class="btn btn--block" id="reestablish">Отправить</div>
+                        </form>
+                        
                     </div>
                 </div>         
             </header>

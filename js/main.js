@@ -190,7 +190,8 @@ $(function(){
         defineClassName.hideOverlay();
     });
     
-    $('.js-close_overlay').click(function(){
+    $('.js-close_overlay').click(function(e){
+        e.preventDefault();
         defineClassName($(this),'js-close-btn_');
         defineClassName.closeOverlay();
 
@@ -208,6 +209,20 @@ $(function(){
         
         e.preventDefault();
     });
+    //Только для визцального представления,
+    //Этот скрипт не будет существовать
+ 
+
+    
+     $('#reestablish').click(function(e){
+         $(this).parent()
+         .html("<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>");
+         setTimeout(function() {
+             location.reload();
+            }, 2000
+         );
+    });  
+    //
     
     windowSize();
     
