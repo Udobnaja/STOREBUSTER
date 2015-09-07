@@ -24,4 +24,5 @@
     overflow: scroll;
     overflow-x: auto;
     overflow-y: scroll;
+    z-index: 20;
 }

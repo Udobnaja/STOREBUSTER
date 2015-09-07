@@ -161,7 +161,7 @@ fix-panel__wrapper:after{
 
 .calculator-window{
     position: absolute;
-    z-index: 2000;
+    z-index: 12;
     top: 50px;
     left: 50%;
 
