@@ -183,17 +183,20 @@ $(function(){
      $('.js-show_overlay').click(function(){
         defineClassName($(this),'js-btn_');
         defineClassName.showOverlay();
+        $('body').css('overflow', 'hidden');
      });
     
     $('.js-hide_overlay').click(function(){
         defineClassName($(this),'js-overlay_');
         defineClassName.hideOverlay();
+        $('body').css('overflow', 'auto');
     });
     
     $('.js-close_overlay').click(function(e){
         e.preventDefault();
         defineClassName($(this),'js-close-btn_');
         defineClassName.closeOverlay();
+        $('body').css('overflow', 'auto');
 
     });
     
