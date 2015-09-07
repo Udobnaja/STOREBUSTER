@@ -1,0 +1,95 @@
+@import "css/normalize.min.css" all;
+@import "css/main.css" all;
+@import "css/header.css" all;
+@import "css/overlay.css" all;
+@import "css/track.css" all;
+@import "css/add-panel.css" all;
+@import "css/basket.css" all;
+@import "css/menu.css" all;
+@import "css/menu-window.css" all;
+@import "css/submenu.css" all;
+@import "css/faq.css" all;
+@import "css/faq-window.css" all;
+@import "css/form.css" all;
+@import "css/content.css" all;
+@import "css/wrapper.css" all;
+@import "css/paragraph.css" all;
+@import "css/link.css" all;
+@import "css/table.css" all;
+@import "css/switch.css" all;
+@import "css/btn.css" all;
+@import "css/turn-item.css" all;
+@import "css/tags.css" all;
+@import "css/blog.css" all;
+@import "css/progress.css" all;
+@import "css/select.css" all;
+@import "css/advantages.css" all;
+@import "css/payment.css" all;
+@import "css/footer-menu.css" all;
+@import "css/social.css" all;
+@import "css/subscribe.css" all;
+@import "css/team.css" all;
+@import "css/footer.css" all;
+@import "css/get-adress.css" all;
+@import "css/reviews.css" all;
+@import "css/f-cost.css" all;
+@import "css/delivery.css" all;
+@import "css/top-slider.css" all;
+@import "css/entrance.css" all;
+@import "css/entrance-window.css" all;
+@import "css/contacts.css" all;
+@import "css/staff.css" all;
+@import "css/vacancies.css" all;
+@import "css/add-services.css" all;
+@import "css/f-vacancy.css" all;
+@import "css/benefit.css" all;
+@import "css/v-adress.css" all;
+@import "css/catalog.css" all;
+@import "css/shops.css" all;
+@import "css/payment-method.css" all;
+@import "css/buy.css" all;
+@import "css/list.css" all;
+@import "css/commission.css" all;
+@import "css/pay.css" all;
+@import "css/shop-list.css" all;
+@import "css/pseudo-table.css" all;
+@import "css/detail-product.css" all;
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+ 
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px){
+
+    
+    
+    
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+
