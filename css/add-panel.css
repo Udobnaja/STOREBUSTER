@@ -2,10 +2,6 @@
     padding: 20px 0 ;
 }
 
-.add-panel__btn{
-    
-}
-
 .add-panel__basket{
     display: inline-block;
 
@@ -13,7 +9,9 @@
 
     text-align: center;
     text-decoration: none;
+}
 
+.add-panel__basket.btn{
     color: #fff;
 }
 
@@ -34,8 +32,11 @@
         width: 120px;
         height: 30px;
 
-        color: #3c3c3b;
         background: #f7de22;
+    }
+    
+    .add-panel__basket.btn{
+        color: #3c3c3b;
     }
 
 
