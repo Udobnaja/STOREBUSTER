@@ -120,10 +120,10 @@
                    </div>
                </div>
                <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
-                <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
-                <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
-                <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
-                <div class="entrance-window entrance">
+               <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
+               <div class="entrance-window entrance">
                     <div class="entrance-window__list entrance__list">
                       <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
                        <div class="headline">Войти</div>
@@ -152,14 +152,14 @@
                         </form>
                     </div>
                 </div>
-                <div class="forgot-password-window">
+               <div class="forgot-password-window">
                     <div class="forgot-password-window__list">
                        <div class="js-close_overlay btn btn--close js-close-btn_forgot-password-window forgot-password-window__close-btn"></div>
                         <div class="headline">Восстановить пароль</div>
                         <form action="" class="form">
                             <lable class="form__label">Введите E-mail, указанный при регистрации</lable>
                             <input type="text" class="form__item form__input">
-                            <div class="btn btn--block" id="reestablish">Отправить</div>
+                            <div class="btn btn--block reestablish" data-i="0">Отправить</div>
                         </form>
                         
                     </div>
@@ -175,7 +175,7 @@
                             <input type="text" class="form__input form__item" placeholder="Ваше имя">
                             <input type="email" class="form__input form__item" placeholder="E-mail">
                             <textarea name="" class="form__item form__textarea"></textarea>
-                            <input type="submit" class="form__item form__submit">
+                            <div class="btn btn--block reestablish" data-i="1">Отправить</div>
                         </form>
                     </div>
                 </div>

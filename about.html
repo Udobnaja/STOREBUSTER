@@ -50,8 +50,8 @@
                </div>
                <div class="header__bottom">
                     <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
-                    <div class="header__tel">
-                        <a href="" class="header__tel-number">8-800-888-888</a> 
+                    <div class="header__tel js-btn_back-call-window js-show_overlay">
+                        <span class="header__tel-number">8-800-888-888</span> 
                            заказать обратный звонок 
                     </div>
                     <div class="clearfix"></div>
@@ -89,10 +89,10 @@
                                   </ul>
                               </li>
                               <li class="menu__item">
-                                  <a href="about.html" class="menu__link menu__link--active link">О нас</a>
+                                  <a href="about.html" class="menu__link  link">О нас</a>
                                   <ul class="header__submenu">
                                       <li class="submenu__item">
-                                          <a href="about.html" class="submenu__link submenu__link--active link">Контакты</a>
+                                          <a href="about.html" class="submenu__link  link">Контакты</a>
                                       </li>
                                       <li class="submenu__item">
                                           <a href="agent.html" class="submenu__link  link">Как мы работаем</a>
@@ -116,14 +116,15 @@
                        <a href="often-questions.html" class="faq-window__link  link">FAQ</a><br>
                        <a href="agent.html" class="faq-window__link  link">Как это работает</a><br>
                        <a href="payment-method.html" class="faq-window__link  link">Способы оплаты</a><br>
-                       <a href="feedback.html" class="faq-window__link  link">Обратная связь</a>
+                       <a href="feedback.html" class="faq-window__link faq-window__link--active  link">Обратная связь</a>
                    </div>
                </div>
                <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
-                <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
-                <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
-                <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
-                <div class="entrance-window entrance">
+               <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
+               <div class="entrance-window entrance">
                     <div class="entrance-window__list entrance__list">
                       <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
                        <div class="headline">Войти</div>
@@ -152,16 +153,35 @@
                         </form>
                     </div>
                 </div>
-                <div class="forgot-password-window">
+               <div class="forgot-password-window">
                     <div class="forgot-password-window__list">
                        <div class="js-close_overlay btn btn--close js-close-btn_forgot-password-window forgot-password-window__close-btn"></div>
                         <div class="headline">Восстановить пароль</div>
                         <form action="" class="form">
                             <lable class="form__label">Введите E-mail, указанный при регистрации</lable>
                             <input type="text" class="form__item form__input">
-                            <div class="btn btn--block" id="reestablish">Отправить</div>
-                        </form>
-                        
+                            <div class="btn btn--block reestablish" data-i="0">Отправить</div>
+                        </form> 
+                    </div>
+                </div>
+               <div class="back-call-window">
+                    <div class="back-call-window__list">
+                       <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
+                        <div class="headline">Обратный звонок</div>
+                        <form action="" class="form">
+                            <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
+                            <input type="tel" class="form__item form__input">
+                            <input type="text" class="form__item form__input">
+                            <div class="row">
+                                <div class="col-xs-50">
+                                    <div class="btn btn--block">Перезвонить сейчас</div>
+                                </div>
+                                <div class="col-xs-50">
+                                    <input type="text" class="form__item form__input">
+                                </div>
+                            </div>
+                            <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
+                        </form> 
                     </div>
                 </div>         
             </header>

@@ -222,9 +222,16 @@ $(function(){
     //Только для визцального представления,
     //Этот скрипт не будет существовать
 
-     $('#reestablish').click(function(e){
+    var arrPhrases = [
+        "<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>",
+        "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>"
+    ],
+        count;
+    
+     $('.reestablish').click(function(e){
+         count = $(this).data('i');
          $(this).parent()
-         .html("<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>");
+         .html(arrPhrases[count]);
          setTimeout(function() {
              location.reload();
             }, 2000
