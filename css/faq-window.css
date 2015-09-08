@@ -51,6 +51,14 @@
     font: 15px/40px 'ProximaNovaBold';
 }
 
+.faq-window__link--active.link{
+    font-size: 19px;
+
+    padding-top: 10px;
+
+    border-bottom: none;
+}
+
 .faq-window__close-btn{
     top: 3%;
     right: 8%;;
