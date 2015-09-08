@@ -224,7 +224,8 @@ $(function(){
 
     var arrPhrases = [
         "<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>",
-        "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>"
+        "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>",
+        "<p class='paragraph paragraph--centered'>Вы заказали у нас обратный звонок. <br>В течение нескольких минут мы перезвоним Вам.<br>Спасибо!</p>"
     ],
         count;
     

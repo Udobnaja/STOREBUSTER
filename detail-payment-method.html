@@ -50,8 +50,8 @@
                </div>
                <div class="header__bottom">
                     <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
-                    <div class="header__tel">
-                        <a href="" class="header__tel-number">8-800-888-888</a> 
+                    <div class="header__tel js-btn_back-call-window js-show_overlay">
+                        <span class="header__tel-number">8-800-888-888</span> 
                            заказать обратный звонок 
                     </div>
                     <div class="clearfix"></div>
@@ -75,7 +75,7 @@
                                   </ul>
                               </li>
                               <li class="menu__item">
-                                  <a href="catalog-shops.html" class="menu__link  link">Магазины</a>
+                                  <a href="catalog-shops.html" class="menu__link menu__link--active  link">Магазины</a>
                                   <ul class="header__submenu">
                                       <li class="submenu__item">
                                           <a href="catalog.html" class="submenu__link  link">Товары с Amazoon</a>
@@ -84,7 +84,7 @@
                                           <a href="catalog.html" class="submenu__link  link">Товары с  E-bay</a>
                                       </li>
                                       <li class="submenu__item">
-                                          <a href="catalog-shops.html" class="submenu__link  link">Каталог магазинов</a>
+                                          <a href="catalog-shops.html" class="submenu__link submenu__link--active  link">Каталог магазинов</a>
                                       </li>
                                   </ul>
                               </li>
@@ -116,21 +116,22 @@
                        <a href="often-questions.html" class="faq-window__link  link">FAQ</a><br>
                        <a href="agent.html" class="faq-window__link  link">Как это работает</a><br>
                        <a href="payment-method.html" class="faq-window__link  link">Способы оплаты</a><br>
-                       <a href="feedback.html" class="faq-window__link faq-window__link--active  link">Обратная связь</a>
+                       <a href="feedback.html" class="faq-window__link link">Обратная связь</a>
                    </div>
                </div>
                <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
                <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay"></div>
                <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay"></div>
                <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
                <div class="entrance-window entrance">
                     <div class="entrance-window__list entrance__list">
                       <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
                        <div class="headline">Войти</div>
                        <form action="" class="form entrance__form">
-                            <p class="paragraph">
+                            <label class="form__label">
                                 Войти через адрес электронной почты
-                            </p>
+                            </label>
                             <input type="email" class="form__item form__input" placeholder="E-mail">
                             <input type="password" class="form__item form__input" placeholder="Пароль">
                             <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
@@ -160,8 +161,30 @@
                             <lable class="form__label">Введите E-mail, указанный при регистрации</lable>
                             <input type="text" class="form__item form__input">
                             <div class="btn btn--block reestablish" data-i="0">Отправить</div>
-                        </form>
-                        
+                        </form> 
+                    </div>
+                </div>
+               <div class="back-call-window">
+                    <div class="back-call-window__list">
+                       <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
+                        <div class="headline">Обратный звонок</div>
+                        <form action="" class="form">
+                            <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
+                            <input type="tel" class="form__item form__input" placeholder="89062306602">
+                            <input type="text" class="form__item form__input" placeholder="Ваше имя и фамилия">
+                            <div class="row">
+                                <div class="col-xs-100 col-msm-50">
+                                    <div class="btn btn--block btn--lightYellow back-call-window__call">Перезвонить сейчас</div>
+                                </div>
+                                <div class="col-xs-100 col-msm-50">
+                                    <div class="bootstrap-timepicker timepicker">
+                                        <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
+                                        <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
+                        </form> 
                     </div>
                 </div>         
             </header>
@@ -450,10 +473,17 @@
             </div>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
            <script src="js/jquery.fs.selecter.js"></script>
-            <script src="js/main.js"></script>
-            <script>
+           <script src="js/jquery.timepicker.min.js"></script>
+           <script src="js/main.js"></script>
+           <script>
                $("select").selecter();
-            </script>
+           </script>
+            <script>        
+                    $('#timepicker').timepicker();
+                    $('.back-call-window__call').on('click', function (){
+                        $('#timepicker').timepicker('setTime', new Date());
+                    });
+           </script>  
                       
     </body>
 </html>

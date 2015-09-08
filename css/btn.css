@@ -38,3 +38,11 @@
 
     background: url(/images/btn__close.png) no-repeat center;
 }
+
+.btn--lightYellow{
+    background: #fef39c;
+}
+
+.btn--lightYellow:hover{
+    box-shadow: 0 0 0 3px #fef39c;
+}

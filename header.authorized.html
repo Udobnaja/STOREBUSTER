@@ -47,8 +47,8 @@
                </div>
                <div class="header__bottom">
                     <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
-                    <div class="header__tel">
-                        <a href="" class="header__tel-number">8-800-888-888</a> 
+                    <div class="header__tel js-btn_back-call-window js-show_overlay">
+                        <span class="header__tel-number">8-800-888-888</span> 
                            заказать обратный звонок 
                     </div>
                     <div class="clearfix"></div>
@@ -117,7 +117,31 @@
                    </div>
                </div>
                <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
-               <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
+               <div class="overlay js-overlay_faq-window js-hide_overlay"></div>
+               <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay"></div>
+               <div class="back-call-window">
+                    <div class="back-call-window__list">
+                       <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
+                        <div class="headline">Обратный звонок</div>
+                        <form action="" class="form">
+                            <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
+                            <input type="tel" class="form__item form__input" placeholder="89062306602">
+                            <input type="text" class="form__item form__input" placeholder="Ваше имя и фамилия">
+                            <div class="row">
+                                <div class="col-xs-100 col-msm-50">
+                                    <div class="btn btn--block btn--lightYellow back-call-window__call">Перезвонить сейчас</div>
+                                </div>
+                                <div class="col-xs-100 col-msm-50">
+                                    <div class="bootstrap-timepicker timepicker">
+                                        <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
+                                        <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
+                        </form> 
+                    </div>
+                </div>       
             </header>
             <div class="light-blue">
                 <div class="content">
@@ -381,11 +405,17 @@
              
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
              <script src="js/jquery.fs.selecter.js"></script>
-             <script src="js/main.js"></script>
-                    
-             <script>
-                $("select").selecter();
-             </script>
+               <script src="js/jquery.timepicker.min.js"></script>
+               <script src="js/main.js"></script>
+               <script>
+                   $("select").selecter();
+               </script>
+                <script>        
+                        $('#timepicker').timepicker();
+                        $('.back-call-window__call').on('click', function (){
+                            $('#timepicker').timepicker('setTime', new Date());
+                        });
+               </script>  
                       
     </body>
 </html>
