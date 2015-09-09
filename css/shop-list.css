@@ -1,15 +1,17 @@
 .shop-list{
-    padding: 45px 0 0 0;
+    padding: 20px 20px 0 20px;
     list-style-type: none;
-    margin: 0 0 45px 0;
+    margin: 0;
 }
 
 .shop-list__item{
-    padding: 15px 0;
+    padding: 0;
 }
 
 .shop-list__link.link{
     border: none;
+    display: block;
+    text-align: center;
 }
 
 .shop-list__link{
@@ -24,9 +26,15 @@
 
 @media only screen and (min-width: 768px){
     
-    
+    .shop-list{
+        padding: 30px;
+    }
     .shop-list__item{
         display: inline-block;
         padding: 0;
+    }
+    
+    .shop-list__link.link{
+        display: inline-block;
     }
 }

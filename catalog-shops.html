@@ -76,17 +76,6 @@
                               </li>
                               <li class="menu__item">
                                   <a href="catalog-shops.html" class="menu__link menu__link--active link">Магазины</a>
-                                  <ul class="header__submenu">
-                                      <li class="submenu__item">
-                                          <a href="catalog.html" class="submenu__link  link">Товары с Amazoon</a>
-                                      </li>
-                                      <li class="submenu__item">
-                                          <a href="catalog.html" class="submenu__link  link">Товары с  E-bay</a>
-                                      </li>
-                                      <li class="submenu__item">
-                                          <a href="catalog-shops.html" class="submenu__link submenu__link--active  link">Каталог магазинов</a>
-                                      </li>
-                                  </ul>
                               </li>
                               <li class="menu__item">
                                   <a href="about.html" class="menu__link  link">О нас</a>
@@ -192,18 +181,30 @@
                         <h1 class="content__headline">
                                 Каталог магазинов
                         </h1>
-                        <div class="switch">
+                        <!--<div class="switch">
                             <input type="radio" id="england" name="radio" class="switch__elem  switch__elem--england" checked>
                             <label for="england" class="switch__e-clone"><span>Англия</span></label>
 
                             <input type="radio" id="germany" name="radio" class="switch__elem  switch__elem--germany">
                             <label for="germany" class="switch__e-clone"><span>Германия</span></label>
                         </div>
+                        
+                        -->
                         <div class="blue">
-                            <form action="" class="form catalog__form">
+                           <ul class="shop-list">
+                                <li class="shop-list__item"><a href="catalog.html" class="link shop-list__link ">e-bay</a></li>
+                                <li class="shop-list__item"><a href="catalog1.html" class="link shop-list__link">amazon</a></li>
+                                <li class="shop-list__item">
+                                    <a href="catalog-shops.html" class="link shop-list__link shop-list__link--active">каталог магазинов</a>
+                                </li>
+                            </ul>
+                            <form action="" class="form search-form">
                                <div class="row">
                                     <div class="col-xs-100 col-msm-75">
-                                        <input type="text" class="form__item form__input form__item--no-b-margin">
+                                       <div class="form__search">
+                                           <input type="text" class="form__item form__input form__input-search no-indent--bottom">
+                                           <div class="form__search-ico"><i class="fa fa-search"></i></div>
+                                       </div>
                                     </div> 
                                     <div class="col-xs-100 col-msm-25">
                                         <input type="submit" class="form__item form__submit form__submit--msm-100" value="Найти">

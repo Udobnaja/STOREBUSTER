@@ -15,6 +15,18 @@
     height: 75px;
     padding: 20px;
     margin-bottom: 25px;
+    
+    -webkit-transition: all .2s linear;
+       -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+         -o-transition: all .2s linear;
+            transition: all .2s linear;
+}
+
+.form__item:focus{
+    padding-left: 20px;
+    border: 1px solid #414a57;
+    outline: none;
 }
 
 .form__input{
@@ -35,7 +47,7 @@
 }
 
 .form__submit{
-    width: 66%;
+    width: 100%;
     max-width: 280px;
     margin: 0 auto;
 
