@@ -82,18 +82,18 @@ function defineClassName(t, requiredString){
     };
     
     defineClassName.showOverlay = function(){
-        $('.js-overlay_' + className).show();
+        $('.js-overlay_' + className).addClass('overlay--show');
         $('.' + className ).addClass(className + '--show');
         $('.' + className + '__list').addClass(className + '__list--show');
     };
     
     defineClassName.hideOverlay = function(){
-        t.hide();
+        t.removeClass('overlay--show');
         removeClases();
     };
     
     defineClassName.closeOverlay = function(){
-        $('.js-overlay_' + className).hide();
+        $('.js-overlay_' + className).removeClass('overlay--show');
         removeClases();
     };
     
@@ -217,6 +217,13 @@ $(function(){
      $('.js-stopProp').click(function(e){
         e.stopPropagation();
      });
+    
+    $('.form__password-ico').on('click',function(){
+        var t;
+        t = ($(this).parent().find('input').attr('type') == 'text') ? 'password' : 'text';
+        $(this).parent().find('input').attr('type', t);
+        $(this).toggleClass('form__password-ico--active');
+    });
         
     
     

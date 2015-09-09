@@ -131,15 +131,20 @@
                       <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
                        <div class="headline">Войти</div>
                        <form action="" class="form entrance__form">
-                            <p class="paragraph">
-                                Войти через адрес электронной почты
-                            </p>
-                            <input type="email" class="form__item form__input" placeholder="E-mail">
-                            <input type="password" class="form__item form__input" placeholder="Пароль">
-                            <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
                             <label class="form__label">
-                                Войти через социальную сеть
+                                Войти через адрес электронной почты
                             </label>
+                            <input type="email" class="form__item form__input" placeholder="E-mail">
+                            <div class="form__password">
+                                <input type="password" class="form__item form__input" placeholder="Пароль">
+                                <div class="form__password-ico">
+                                    <i class="fa fa-eye"></i>
+                                </div>
+                            </div>
+                            <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
+                            <p class="paragraph">
+                                Войти через социальную сеть
+                            </p>
                             <div class="row entrance__social-ico">
                                 <div class="col-xs-33 centered">
                                     <a href="" class="link entrance__ico entrance__ico--facebook"><i class="fa fa-facebook"></i></a>
@@ -174,16 +179,9 @@
                             <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
                             <input type="tel" class="form__item form__input" placeholder="89062306602">
                             <input type="text" class="form__item form__input" placeholder="Ваше имя и фамилия">
-                            <div class="row">
-                                <div class="col-xs-100 col-msm-50">
-                                    <div class="btn btn--block btn--lightYellow back-call-window__call">Перезвонить сейчас</div>
-                                </div>
-                                <div class="col-xs-100 col-msm-50">
-                                    <div class="bootstrap-timepicker timepicker">
-                                        <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
-                                        <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
-                                    </div>
-                                </div>
+                            <div class="timepicker">
+                                <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
+                                <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
                             </div>
                             <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
                         </form> 

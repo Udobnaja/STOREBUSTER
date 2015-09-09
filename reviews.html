@@ -133,7 +133,12 @@
                                 Войти через адрес электронной почты
                             </label>
                             <input type="email" class="form__item form__input" placeholder="E-mail">
-                            <input type="password" class="form__item form__input" placeholder="Пароль">
+                            <div class="form__password">
+                                <input type="password" class="form__item form__input" placeholder="Пароль">
+                                <div class="form__password-ico">
+                                    <i class="fa fa-eye"></i>
+                                </div>
+                            </div>
                             <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
                             <p class="paragraph">
                                 Войти через социальную сеть
@@ -172,21 +177,14 @@
                             <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
                             <input type="tel" class="form__item form__input" placeholder="89062306602">
                             <input type="text" class="form__item form__input" placeholder="Ваше имя и фамилия">
-                            <div class="row">
-                                <div class="col-xs-100 col-msm-50">
-                                    <div class="btn btn--block btn--lightYellow back-call-window__call">Перезвонить сейчас</div>
-                                </div>
-                                <div class="col-xs-100 col-msm-50">
-                                    <div class="bootstrap-timepicker timepicker">
-                                        <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
-                                        <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
-                                    </div>
-                                </div>
+                            <div class="timepicker">
+                                <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
+                                <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
                             </div>
                             <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
                         </form> 
                     </div>
-                </div>         
+                </div>          
             </header>
             <div class="light-blue">
                 <div class="content">
@@ -519,8 +517,8 @@
             </script>
             <script>        
                 $('#timepicker').timepicker();
-                $('.back-call-window__call').on('click', function (){
-                    $('#timepicker').timepicker('setTime', new Date());
+                $('#timepicker').on('click', function (){
+                    $(this).timepicker('setTime', new Date());
                 });
          </script>
     </body>

@@ -159,35 +159,37 @@ fix-panel__wrapper:after{
     border-top-color: #fef39c;
 }
 
+
+
 .calculator-window{
     position: absolute;
     z-index: 30;
     top: 50px;
     left: 50%;
 
-    visibility: hidden;
-
     width: 96%;
     min-width: 320px;
     max-width: 1440px;
-    height: auto;
-
-    -webkit-transform: translateX(-50%);
-       -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    
+-webkit-transition: all .3s;
+       -moz-transition: all .3s;
+            transition: all .3s;
+       -webkit-transform: translateX(-50%) ;
+       -moz-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%) ;
+            transform: translateX(-50%) ;
 
     background: #fff;
 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
+
     line-height: 2;
+    opacity: 0;
     margin-bottom: 50px;
 }
 
 .calculator-window--show{
-    visibility: visible;
+  opacity: 1;
+     
 }
 
 .calculator-window__list{
@@ -318,6 +320,7 @@ fix-panel__wrapper:after{
     overflow-y: auto;
 
     width: 75%;
+    max-width: 634px;
     height: 150px;
     margin: 0;
 
@@ -417,6 +420,48 @@ fix-panel__wrapper:after{
     padding: 20px;
 }
 
+.form__password{
+    position: relative
+}
+
+.form__password-ico{
+    font-size: 37px;
+    line-height: 2;
+
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    width: 73px;
+    height: 73px;
+
+    cursor: pointer;
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+        -ms-transition: all .15s linear;
+         -o-transition: all .15s linear;
+            transition: all .15s linear;
+    text-align: center;
+
+    color: #b4b4b4;
+}
+
+.form__password-ico:hover,
+.form__password-ico--active{
+    color: #f7de22;
+}
+
+.form__password-ico:hover{
+    -webkit-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
+}
+
+/*
+.registration-form__password-ico--active:hover{
+    color: #4d4d4d;
+}
+*/
+
 
 
 
@@ -456,10 +501,6 @@ fix-panel__wrapper:after{
 
     .calculator-window__close-btn{
         top: 2.5%;
-    }
-    
-    .ui-timepicker-wrapper{
-        width: 300px;
     }
     
     .agreement-window__list{
