@@ -349,6 +349,75 @@ fix-panel__wrapper:after{
     padding: 10px 20px;
 }
 
+.agreement-window{
+    position: absolute;
+    z-index: 30;
+    top: 50px;
+    left: 50%;
+
+    visibility: hidden;
+
+    width: 96%;
+    min-width: 320px;
+    max-width: 1440px;
+    height: auto;
+
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+    background: #fff;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+.agreement-window--show{
+    visibility: visible;
+}
+
+.agreement-window__list{
+    position: relative;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    list-style-type: none;
+
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+            transition: all .3s;
+    -webkit-transform: translateY(20%);
+       -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+            transform: translateY(20%);
+
+    opacity: 0;
+}
+
+.agreement-window__list--show{
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+.agreement-window__close-btn{
+    top: 30px;
+    right: 30px;
+}
+
+.agreement-window__content{
+    padding: 20px;
+}
+
+
 
 
 
@@ -391,6 +460,19 @@ fix-panel__wrapper:after{
     
     .ui-timepicker-wrapper{
         width: 300px;
+    }
+    
+    .agreement-window__list{
+        padding: 40px;
+    }
+    
+    .agreement-window__content{
+        padding: 40px;
+    }
+    
+    .agreement-window__close-btn{
+        top: 60px;
+        right: 60px;
     }
     
 }
