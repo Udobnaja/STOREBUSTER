@@ -401,12 +401,12 @@
              </div>
             <div class="overlay js-overlay_calculator-window overlay--black js-hide_overlay overlay--scroll">
                 <div class="calculator-window ">
-                    <div class="calculator-window__list blue">
+                    <div class="calculator-window__list blue js-stopProp">
                           <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
                             <div class="content__headline">
                                 Сколько это будет стоить?
                             </div>
-                            <form action="" class="form f-cost js-stopProp">
+                            <form action="" class="form f-cost ">
                                <div class="f-cost__wrapper">
                                     <div class="row ">
                                         <div class="col-xs-100 col-sm-50 col-msm-33 ">
@@ -550,9 +550,16 @@
           
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
            <script src="js/jquery.fs.selecter.js"></script>
+           <script src="js/jquery.timepicker.min.js"></script>
            <script src="js/main.js"></script> 
            <script>
                $("select").selecter();
+            </script>
+            <script>        
+                $('#timepicker').timepicker();
+                $('#timepicker').on('click', function (){
+                    $(this).timepicker('setTime', new Date());
+                });
             </script>
                       
     </body>
