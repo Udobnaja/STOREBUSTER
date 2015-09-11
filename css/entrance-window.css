@@ -1,40 +1,40 @@
 .entrance-window{
-    position: fixed;
-    z-index: 2000;
-    top: 50%;
+   position: absolute;
+    z-index: 30;
+    top: 60px;
     left: 50%;
 
-    visibility: hidden;
-
-    width: 100%;
+    width: 96%;
     min-width: 320px;
     max-width: 840px;
-    height: auto;
-    padding: 60px 0;
-
-    -webkit-transform: translateX(-50%) translateY(-50%);
-       -moz-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    
+-webkit-transition: all .3s;
+       -moz-transition: all .3s;
+            transition: all .3s;
+       -webkit-transform: translateX(-50%) ;
+       -moz-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%) ;
+            transform: translateX(-50%) ;
 
     background: #fff;
 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
+
+    line-height: 2;
+    opacity: 0;
+    margin-bottom: 60px;
 }
 
 .entrance-window--show{
-    visibility: visible;
+    opacity: 1;
 }
 
 .entrance-window__list{
     position: relative;
 
     width: 75.5%;
-    max-width: 710px;
+    max-width: 740px;
     margin: 0 auto;
-    padding: 0;
+    padding: 60px 0;
 
     list-style-type: none;
 
@@ -61,7 +61,4 @@
 
 @media only screen and (min-width: 768px){
     
-    .entrance-window{
-        width: 50%;
-    }
 }
