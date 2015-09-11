@@ -121,12 +121,16 @@
                             <label class="form__label">
                                 Войти через адрес электронной почты
                             </label>
-                            <input type="email" class="form__item form__input" placeholder="E-mail">
-                            <div class="form__password">
-                                <input type="password" class="form__item form__input" placeholder="Пароль">
+                            <div class="form__holder">
+                                <input type="email" class="form__item form__input js-required" name="entrance__email" placeholder="E-mail">
+                                <div class="form__ico-result"></div>
+                            </div>
+                            <div class="form__holder">
+                                <input type="password" class="form__item form__input js-required"  placeholder="Пароль">
                                 <div class="form__password-ico">
                                     <i class="fa fa-eye"></i>
                                 </div>
+                                <div class="form__ico-result"></div>
                             </div>
                             <a href="" class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
                             <p class="paragraph">
@@ -153,23 +157,32 @@
                         <div class="headline">Восстановить пароль</div>
                         <form action="" class="form">
                             <lable class="form__label">Введите E-mail, указанный при регистрации</lable>
-                            <input type="text" class="form__item form__input">
+                            <div class="form__holder">
+                                <input type="text" class="form__item form__input js-required" placeholder="E-mail">
+                                <div class="form__ico-result"></div>
+                            </div>
                             <div class="btn btn--block reestablish" data-i="0">Отправить</div>
-                        </form>
-                        
+                        </form> 
                     </div>
-                </div> 
-                <div class="back-call-window">
+                </div>
+               <div class="back-call-window">
                     <div class="back-call-window__list">
                        <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
                         <div class="headline">Обратный звонок</div>
                         <form action="" class="form">
                             <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
-                            <input type="tel" class="form__item form__input" placeholder="89062306602">
-                            <input type="text" class="form__item form__input" placeholder="Ваше имя и фамилия">
-                            <div class="timepicker">
-                                <input id="timepicker" type="text" class="form__input form__item" placeholder="Другое время">
+                            <div class="form__holder">
+                                <input type="tel" class="form__item form__input js-required" placeholder="Телефон">
+                                <div class="form__ico-result"></div>
+                            </div>
+                            <div class="form__holder">
+                                <input type="text" class="form__item form__input js-required" placeholder="Ваше имя и фамилия">
+                                <div class="form__ico-result"></div>
+                            </div>
+                            <div class="timepicker form__holder">
+                                <input id="timepicker" type="text" class="form__input form__item js-required" placeholder="Другое время">
                                 <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
+                                <div class="form__ico-result"></div>
                             </div>
                             <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
                         </form> 
@@ -183,9 +196,18 @@
                             Вакансия для человека
                         </h1>
                         <form action="" class="form wrapper wrapper--815">
-                            <input type="text" class="form__item form__input" placeholder="Ваше имя, фамилия, отчество">
-                            <input type="tel" class="form__item form__input" placeholder="Телефон">
-                            <input type="email" class="form__item form__input" placeholder="E-mail">
+                            <div class="form__holder">
+                                <input type="text" class="form__item form__input js-required" placeholder="Имя, Фамилия">
+                                <div class="form__ico-result"></div>
+                            </div>
+                            <div class="form__holder">
+                                <input type="tel" class="form__item form__input js-required" placeholder="Телефон">
+                                 <div class="form__ico-result"></div>
+                            </div>
+                            <div class="form__holder">
+                                <input type="email" class="form__item form__input js-required" placeholder="E-mail">
+                                 <div class="form__ico-result"></div>
+                            </div>
                             <textarea name="" id="" class="form__item form__input form__textarea" placeholder="Опыт работы"></textarea>
                             <textarea name="" id="" class="form__item form__input form__textarea" placeholder="Образование, курсы, тренинги"></textarea>
                             <label for="">Прикрепите свою фотографию (размер, расширение):</label>

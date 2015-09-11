@@ -81,6 +81,17 @@ function defineClassName(t, requiredString){
         $('.' + className + '__list').removeClass(className + '__list--show');
     };
     
+    function removeInputs(){
+        if($('.' + className ).find('form')){
+           var arrInputs = $('.' + className ).find('.form__input');
+            for(var i = 0; i<arrInputs.length; i++){
+                inputTringger($(arrInputs[i]));
+                inputTringger.focusIs();
+                $(arrInputs[i]).val("");
+            };
+        };
+    };
+    
     defineClassName.showOverlay = function(){
         $('.js-overlay_' + className).addClass('overlay--show');
         $('.' + className ).addClass(className + '--show');
@@ -90,11 +101,13 @@ function defineClassName(t, requiredString){
     defineClassName.hideOverlay = function(){
         t.removeClass('overlay--show');
         removeClases();
+        removeInputs();
     };
     
     defineClassName.closeOverlay = function(){
         $('.js-overlay_' + className).removeClass('overlay--show');
         removeClases();
+        removeInputs();
     };
     
     defineClassName.roll = function(){
@@ -122,6 +135,46 @@ function defineClassName(t, requiredString){
         return false;
     }
 };
+
+function inputTringger(elem){
+    var holderText,
+        arrHolderText = [
+            "Поле *",
+            " обязательно для заполнения"
+        ];
+    
+    inputTringger.blurIs = function(){
+ 
+            if (elem.val().replace(/\s+/g, '') == "") {
+                elem
+                    .addClass('form__item--error')
+                    .parent().find('.form__ico-result')
+                    .addClass('form__ico-result--error')
+                    .append('<i class="fa fa-exclamation-triangle"></i>');
+                elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
+            } else {
+                elem
+                    .parent().find('.form__ico-result')
+                    .addClass('form__ico-result--success')
+                    .append('<i class="fa fa-check"></i>');
+            }
+    };
+    
+    inputTringger.focusIs = function(){
+        if (elem.hasClass('form__item--error')){
+            holderText = elem.attr('placeholder');
+            elem
+                .removeClass('form__item--error')
+                .attr('placeholder', holderText
+                      .replace(holderText.substring(0,6),"")
+                      .replace(holderText.substring(holderText.lastIndexOf(" обязательно для заполнения"),holderText.length),""));
+        }
+        elem
+            .parent().find('.form__ico-result')
+            .removeClass('form__ico-result--error form__ico-result--success')
+            .empty();
+    };
+}
 
 function windowSize(){
      if ($(window).width() >= '768'){
@@ -180,6 +233,8 @@ function createUpload(){
 
 $(function(){ 
     
+     
+    
      $('.js-show_overlay').click(function(event){
         defineClassName($(this),'js-btn_', event);
         defineClassName.showOverlay();
@@ -198,7 +253,6 @@ $(function(){
         defineClassName($(this),'js-close-btn_');
         defineClassName.closeOverlay();
         $('body').css('overflow', 'auto');
-
     });
     
     $('.delivery__turn').click(function(){
@@ -248,6 +302,19 @@ $(function(){
          );
     });  
     //
+    
+   $('.js-required').on('blur',function() {
+        inputTringger($(this));
+        inputTringger.blurIs();
+   });
+
+    
+   
+    $('.js-required').on('focus',function() {
+        inputTringger($(this));
+        inputTringger.focusIs();
+    });
+
     
     windowSize();
     
