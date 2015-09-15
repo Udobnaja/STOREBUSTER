@@ -1,20 +1,18 @@
-.reviews__container{
-    margin-bottom: 40px;
-    padding: 20px;
-}
-
 .reviews__img{
     display: none;
 }
 
-.reviews__container:nth-child(even){
+.reviews__container{
+    margin-top: 0;
+}
+
+.reviews__container:nth-child(even) .reviews__txt-container{
     color: #fff;
     background: #414a57;
 }
 
-.reviews__container:nth-child(odd){
+.reviews__container:nth-child(odd) .reviews__txt-container{
     border: 1px solid #b4b4b4;
-    background: #fff;
 }
 
 .reviews__paragraph{
@@ -23,29 +21,12 @@
 
 .reviews__txt-container{
     float: none;
+
+    padding: 30px;
 }
 
 @media only screen and (min-width: 768px){
     
-    .reviews__container{
-        margin-bottom: 0;
-        padding: 5px 20px;
-    }
-
-    .reviews__container:nth-child(even),
-    .reviews__container:nth-child(odd){
-        border: none;
-        background: #fff;
-    }
-
-    .reviews__container:nth-child(even) .reviews__txt-container{
-        background: #414a57;
-    }
-
-    .reviews__container:nth-child(odd) .reviews__txt-container{
-        border: 1px solid #b4b4b4;
-    }
-
     .reviews__txt-container{
         float: left;
 
@@ -55,9 +36,10 @@
     .reviews__img{
         position: relative;
 
+        display: block;
+
         padding-right: 30px;
         padding-left: 0;
-        display: block;
     }
 
     .reviews__img:before{

@@ -2,7 +2,7 @@
     line-height: 2;
 
     position: absolute;
-    z-index: 30;
+    z-index: 0;
     top: 60px;
     left: 50%;
 
@@ -22,6 +22,7 @@
 
 .menu-window--show{
     opacity: 1;
+    z-index: 30;
 }
 
 .menu-window__list{

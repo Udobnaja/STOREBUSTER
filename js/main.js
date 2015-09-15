@@ -184,7 +184,11 @@ function windowSize(){
     
     if ($(window).width() >= '992'){
          defineMinHeight('.detail-product__foto','.detail-product__desk');
+        defineMaxVacanciescHeight();
      }
+    else{
+        $('.vacancies__elem').height('auto');
+    }
     
 };
 
@@ -320,7 +324,6 @@ $(function(){
     
     
     defineMinHeight('.reviews__img','.reviews__txt-container');   
-    defineMaxVacanciescHeight();
     createUpload();
     
 });
@@ -335,8 +338,7 @@ window.onload = function() {
         windowSize();
         buildGrid('.blog__prev');
         buildGrid('.detail-product__col');
-        defineMinHeight('.reviews__img','.reviews__txt-container');
-        defineMaxVacanciescHeight();
+        defineMinHeight('.reviews__img','.reviews__txt-container');       
 });
 
 

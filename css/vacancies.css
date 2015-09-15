@@ -1,5 +1,5 @@
 .vacancies__elem{
-    padding: 30px 60px;
+    padding: 10px 30px;
 
     background: #f7de22;
 }
@@ -9,5 +9,9 @@
     .vacancies{
         width: 78%;
         margin: 0 auto;
+    }
+    
+    .vacancies__elem{
+        padding: 30px 60px;
     }
 }
