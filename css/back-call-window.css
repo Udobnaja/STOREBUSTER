@@ -1,5 +1,5 @@
-.entrance-window{
-   position: absolute;
+.back-call-window{
+    position: absolute;
     z-index: 30;
     top: 60px;
     left: 50%;
@@ -18,17 +18,16 @@
 
     background: #fff;
 
-
     line-height: 2;
     opacity: 0;
     margin-bottom: 60px;
 }
 
-.entrance-window--show{
+.back-call-window--show{
     opacity: 1;
 }
 
-.entrance-window__list{
+.back-call-window__list{
     position: relative;
 
     width: 75.5%;
@@ -49,7 +48,7 @@
     opacity: 0;
 }
 
-.entrance-window__list--show{
+.back-call-window__list--show{
     -webkit-transform: translateY(0);
        -moz-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -58,7 +57,26 @@
     opacity: 1;
 }
 
+.back-call-window__call.btn{
+    max-width:  100%;
+}
 
-@media only screen and (min-width: 768px){
-    
+.back-call-window__close-btn{
+    top: 20px;
+    right: 20px;
+}
+
+
+@media only screen and (min-width: 480px) {
+    .back-call-window__close-btn{
+        top: 30px;
+        right: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .back-call-window__close-btn{
+        top: 40px;
+        right: 40px;
+    }
 }

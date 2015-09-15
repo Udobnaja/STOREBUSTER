@@ -1,5 +1,5 @@
-.entrance-window{
-   position: absolute;
+.agreement-window{
+    position: absolute;
     z-index: 30;
     top: 60px;
     left: 50%;
@@ -24,17 +24,15 @@
     margin-bottom: 60px;
 }
 
-.entrance-window--show{
+.agreement-window--show{
     opacity: 1;
 }
 
-.entrance-window__list{
+.agreement-window__list{
     position: relative;
 
-    width: 75.5%;
-    max-width: 710px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 20px;
 
     list-style-type: none;
 
@@ -49,7 +47,7 @@
     opacity: 0;
 }
 
-.entrance-window__list--show{
+.agreement-window__list--show{
     -webkit-transform: translateY(0);
        -moz-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -58,7 +56,29 @@
     opacity: 1;
 }
 
+.agreement-window__close-btn{
+    top: 30px;
+    right: 30px;
+}
+
+.agreement-window__content{
+    padding: 20px;
+}
 
 @media only screen and (min-width: 768px){
+    
+    
+    .agreement-window__list{
+        padding: 40px;
+    }
+    
+    .agreement-window__content{
+        padding: 40px;
+    }
+    
+    .agreement-window__close-btn{
+        top: 60px;
+        right: 60px;
+    }
     
 }

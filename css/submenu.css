@@ -1,3 +1,4 @@
+
 .submenu__item{
     font-family: 'ProximaNovaRegular';
 }
@@ -6,6 +7,10 @@
     color: #000;
     border-bottom: none;
 }
+
+.submenu__link--active.link{
+        border-bottom: 1px solid #3c3c3b;
+    }
 
 @media only screen and (min-width: 768px){
     
@@ -20,9 +25,11 @@
     }
     
     .submenu__link:hover,
-    .submenu__link--active{
+    .submenu__link--active.link{
         background: rgba(255, 255, 255, 0.65);
+        border-bottom: none;
     }
+    
 }
 
 @media only screen and (min-width: 992px){

@@ -1,6 +1,6 @@
 
 .basket{
-        padding: 0 20px 90px 20px;
+    padding: 0 20px 90px 20px;
 }
 
 .basket__form{
@@ -11,17 +11,16 @@
     display: block;
 }
 
-
-    
-
 .basket__elem{
     margin: 20px auto;
+
     background: #fff;
 }
 
 .basket__key{
-    text-align: left;
     padding: 15px 0 0;
+
+    text-align: left;
 }
 
 .basket__textarea,
@@ -46,29 +45,25 @@
 }
 
 
-@media only screen and (min-width: 480px){
-    
-}
-
 @media only screen and (min-width: 768px){
     .basket{
         padding: 0 30px 90px 30px;
     }
-    
 }
 
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: 992px){
     .basket__key{
         padding: 105px 0;
+
         text-align: center;
     }
-    
+
     .basket__price{
         padding: 76px 0;
+
         text-align: center;
     }
-    
+
     .basket__product{
         border-right: 1px solid #8e8e8e;
     }

@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Шопоголик</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
         <link  link rel="stylesheet" href="style.css">
         <link  link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -51,14 +51,15 @@
                <div class="header__bottom">
                     <a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="" class="img img img--response"></a>
                     <div class="header__tel js-btn_back-call-window js-show_overlay">
-                        <span class="header__tel-number">8-800-888-888</span> 
+                        <a href="" class="header__tel-number">8-800-888-888</a> 
                            заказать обратный звонок 
                     </div>
                     <div class="clearfix"></div>
                </div>
                <div class="header__menu menu">
                   <div class="menu__wrapper">
-                     <div class="menu-window">
+                      <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay overlay--menu overlay--scroll">
+                         <div class="menu-window">
                           <ul class="menu-window__list menu__list">
                               <li class="menu__item">
                                   <a href="delivery.html" class="menu__link  link">Услуги</a>
@@ -94,6 +95,7 @@
                               <li class="menu__item"><a href="delivery-single-page.html" class="menu__link  link">Доставка, гарантия, возврат</a></li>
                           </ul>
                       </div>
+                      </div>
                       <div class="header__faq js-btn_faq-window js-show_overlay">?</div>
                       <span class="menu__ico js-btn_menu-window js-show_overlay"><i class="fa fa-bars"></i></span>
                       <span class="menu__name">меню</span> 
@@ -108,7 +110,6 @@
                        <a href="feedback.html" class="faq-window__link faq-window__link--active  link">Обратная связь</a>
                    </div>
                </div>
-               <div  class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay"></div>
                <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay overlay--scroll">
                    <div class="entrance-window entrance js-stopProp">
                        <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
@@ -152,7 +153,31 @@
                    </div>
                </div>
                <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
-               <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay"></div>
+               <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay overlay--scroll">
+                    <div class="back-call-window js-stopProp">
+                        <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
+                        <div class="back-call-window__list">                 
+                            <div class="headline">Обратный звонок</div>
+                            <form action="" class="form">
+                                <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
+                                <div class="form__holder">
+                                    <input type="tel" class="form__item form__input js-required" placeholder="Телефон">
+                                    <div class="form__ico-result"></div>
+                                </div>
+                                <div class="form__holder">
+                                    <input type="text" class="form__item form__input js-required" placeholder="Ваше имя и фамилия">
+                                    <div class="form__ico-result"></div>
+                                </div>
+                                <div class="timepicker form__holder">
+                                    <input id="timepicker" type="text" class="form__input form__item js-required" placeholder="Другое время">
+                                    <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
+                                    <div class="form__ico-result"></div>
+                                </div>
+                                <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
+                            </form> 
+                        </div>
+                    </div>
+               </div>
                <div class="overlay js-overlay_faq-window js-hide_overlay"></div>  
                <div class="forgot-password-window">
                     <div class="forgot-password-window__list">
@@ -165,29 +190,6 @@
                                 <div class="form__ico-result"></div>
                             </div>
                             <div class="btn btn--block reestablish" data-i="0">Отправить</div>
-                        </form> 
-                    </div>
-                </div>
-               <div class="back-call-window">
-                    <div class="back-call-window__list">
-                       <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
-                        <div class="headline">Обратный звонок</div>
-                        <form action="" class="form">
-                            <lable class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</lable>
-                            <div class="form__holder">
-                                <input type="tel" class="form__item form__input js-required" placeholder="Телефон">
-                                <div class="form__ico-result"></div>
-                            </div>
-                            <div class="form__holder">
-                                <input type="text" class="form__item form__input js-required" placeholder="Ваше имя и фамилия">
-                                <div class="form__ico-result"></div>
-                            </div>
-                            <div class="timepicker form__holder">
-                                <input id="timepicker" type="text" class="form__input form__item js-required" placeholder="Другое время">
-                                <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
-                                <div class="form__ico-result"></div>
-                            </div>
-                            <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
                         </form> 
                     </div>
                 </div>          
@@ -380,149 +382,149 @@
             <div class="overlay js-overlay_calculator-window overlay--black js-hide_overlay overlay--scroll">
                 <div class="calculator-window ">
                     <div class="calculator-window__list blue js-stopProp">
-                        <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
-                        <div class="content__headline">
-                            Сколько это будет стоить?
-                        </div>
-                        <form action="" class="form f-cost " >
-                           <div class="f-cost__wrapper">
-                                <div class="row ">
-                                    <div class="col-xs-100 col-sm-50 col-msm-33 ">
-                                        <label for="" class="form__label">Вес посылки</label>
-                                        <input type="text" class="form__item form__input no-indent--bottom">
-                                    </div>
-                                    <div class="col-xs-100 col-sm-50 col-msm-33 ">
-                                        <label for="" class="form__label">Ваша страна</label>
-                                        <select name="" id="" class="form__item no-indent--bottom">
-                                            <option value="">Россия</option>
-                                            <option value="">Украина</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xs-100 col-sm-50 col-msm-33 ">
-                                        <label for="" class="form__label">Страна назначения</label>
-                                        <select name="" id="" class="form__item">
-                                            <option value="">Англия</option>
-                                            <option value="">Германия</option>
-                                        </select>
-                                    </div>
-                                </div>
+                          <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
+                            <div class="content__headline">
+                                Сколько это будет стоить?
                             </div>
-                           <div class="f-cost--white centered">
-                                <a href="calculator.html" class="link headline">
-                                    Дополнительные опции
-                                 </a>
-                            </div>
-                           <div class="delivery">
-                                <div class="row">
-                                    <div class="col-xs-100 col-msm-50 col-md-25">
-                                        <div class="delivery__item">
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                                                <div class="delivery__name">Shopogolic <br>Express</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__price">2000</div>
-                                                <div class="delivery__time">18 дней</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__l-commission">
-                                                    Комиссия <br>платежной <br>системы
-                                                </div>
-                                                <div class="delivery__r-commission">
-                                                    1,88р
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="delivery__subitem delivery-desc">
-                                                 В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
-                                            </div>
+                            <form action="" class="form f-cost ">
+                               <div class="f-cost__wrapper">
+                                    <div class="row ">
+                                        <div class="col-xs-100 col-msm-33 ">
+                                            <label for="" class="form__label">Вес посылки</label>
+                                            <input type="text" class="form__item form__input no-indent--bottom">
                                         </div>
-                                    </div>
-                                    <div class="col-xs-100 col-msm-50 col-md-25">
-                                        <div class="delivery__item">
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                                                <div class="delivery__name">Shopogolic <br>Express</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__price">2000</div>
-                                                <div class="delivery__time">18 дней</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__l-commission">
-                                                    Комиссия <br>платежной <br>системы
-                                                </div>
-                                                <div class="delivery__r-commission">
-                                                    1,88р
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="delivery__subitem delivery-desc">
-                                                 В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
-                                            </div>
+                                        <div class="col-xs-100 col-sm-50 col-msm-33 ">
+                                            <label for="" class="form__label">Ваша страна</label>
+                                            <select name="" id="" class="form__item no-indent--bottom">
+                                                <option value="">Россия</option>
+                                                <option value="">Украина</option>
+                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-100 col-msm-50 col-md-25">
-                                        <div class="delivery__item">
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                                                <div class="delivery__name">Shopogolic <br>Express</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__price">2000</div>
-                                                <div class="delivery__time">18 дней</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__l-commission">
-                                                    Комиссия <br>платежной <br>системы
-                                                </div>
-                                                <div class="delivery__r-commission">
-                                                    1,88р
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                             <div class="delivery__subitem delivery-desc">
-                                                 В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-100 col-msm-50 col-md-25">
-                                        <div class="delivery__item">
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                                                <div class="delivery__name">Shopogolic <br>Express</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__price">2000</div>
-                                                <div class="delivery__time">18 дней</div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="delivery__subitem">
-                                                <div class="delivery__l-commission">
-                                                    Комиссия <br>платежной <br>системы
-                                                </div>
-                                                <div class="delivery__r-commission">
-                                                    1,88р
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                             <div class="delivery__subitem delivery-desc">
-                                                 В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
-                                            </div>
+                                        <div class="col-xs-100 col-sm-50 col-msm-33 ">
+                                            <label for="" class="form__label">Страна назначения</label>
+                                            <select name="" id="" class="form__item">
+                                                <option value="">Англия</option>
+                                                <option value="">Германия</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                       
-                </div>
+                               <div class="f-cost--white centered">
+                                    <a href="calculator.html" class="link headline">
+                                        Дополнительные опции
+                                     </a>
+                                </div>
+                               <div class="delivery">
+                                    <div class="row">
+                                        <div class="col-xs-100 col-msm-50 col-md-25">
+                                            <div class="delivery__item">
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                                                    <div class="delivery__name">Shopogolic <br>Express</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__price">2000</div>
+                                                    <div class="delivery__time">18 дней</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__l-commission">
+                                                        Комиссия <br>платежной <br>системы
+                                                    </div>
+                                                    <div class="delivery__r-commission">
+                                                        1,88р
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="delivery__subitem delivery-desc">
+                                                     В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-100 col-msm-50 col-md-25">
+                                            <div class="delivery__item">
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                                                    <div class="delivery__name">Shopogolic <br>Express</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__price">2000</div>
+                                                    <div class="delivery__time">18 дней</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__l-commission">
+                                                        Комиссия <br>платежной <br>системы
+                                                    </div>
+                                                    <div class="delivery__r-commission">
+                                                        1,88р
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="delivery__subitem delivery-desc">
+                                                     В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-100 col-msm-50 col-md-25">
+                                            <div class="delivery__item">
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                                                    <div class="delivery__name">Shopogolic <br>Express</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__price">2000</div>
+                                                    <div class="delivery__time">18 дней</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__l-commission">
+                                                        Комиссия <br>платежной <br>системы
+                                                    </div>
+                                                    <div class="delivery__r-commission">
+                                                        1,88р
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                 <div class="delivery__subitem delivery-desc">
+                                                     В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-100 col-msm-50 col-md-25">
+                                            <div class="delivery__item">
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                                                    <div class="delivery__name">Shopogolic <br>Express</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__price">2000</div>
+                                                    <div class="delivery__time">18 дней</div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="delivery__subitem">
+                                                    <div class="delivery__l-commission">
+                                                        Комиссия <br>платежной <br>системы
+                                                    </div>
+                                                    <div class="delivery__r-commission">
+                                                        1,88р
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                 <div class="delivery__subitem delivery-desc">
+                                                     В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                    </div>
                 </div>
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

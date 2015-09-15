@@ -2,15 +2,14 @@
     position: fixed;
     z-index: 20;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
 
     visibility: hidden;
 
     width: 100%;
     min-width: 320px;
-
 
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
@@ -33,4 +32,12 @@
     overflow: scroll;
     overflow-x: auto;
     overflow-y: scroll;
+}
+
+@media only screen and (min-width: 768px){
+    .overlay--menu{
+        visibility: visible;
+        background: transparent;
+        position: static;
+    }
 }

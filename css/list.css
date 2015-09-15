@@ -8,10 +8,13 @@
 .list__item{
     position: relative;
 
-    padding: 30px 50px;
+    overflow: hidden;
+
+    padding: 20px;
 
     text-align: center;
 }
+
 
 .list__item--official{
     padding: 5px 20px;
@@ -27,37 +30,45 @@
     background: #f7de22;
 }
 
-.list__item--blue:nth-child(odd):before,
-.list__item--blue:nth-child(odd):after,
-.list__item--yellow:nth-child(odd):before,
-.list__item--yellow:nth-child(odd):after{
-    position: absolute;
-    top: -10%;
 
-    display: block;
+@media only screen and (min-width: 768px){
+    
+    .list__item{
+        padding: 30px 50px;
+    }
 
-    width: 50px;
+    .list__item--blue:nth-child(odd):before,
+    .list__item--blue:nth-child(odd):after,
+    .list__item--yellow:nth-child(odd):before,
+    .list__item--yellow:nth-child(odd):after{
+        position: absolute;
+        top: -10%;
 
-    content: '';
-    -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
-       -moz-transform: rotate(15deg); /* Для Firefox */
-        -ms-transform: rotate(15deg); /* Для IE */
-         -o-transform: rotate(15deg); /* Для Opera */
-            transform: rotate(15deg);
+        display: block;
 
-    background: #fdfeff;
-}
+        width: 0px;
 
-.list__item--blue:nth-child(odd):before,
-.list__item--yellow:nth-child(odd):before{
-    left: -20px;
+        content: '';
+        -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+           -moz-transform: rotate(15deg); /* Для Firefox */
+            -ms-transform: rotate(15deg); /* Для IE */
+             -o-transform: rotate(15deg); /* Для Opera */
+                transform: rotate(15deg);
 
-    height: 110%;
-}
+        background: #fdfeff;
+    }
 
-.list__item--blue:nth-child(odd):after,
-.list__item--yellow:nth-child(odd):after{
-    right: -20px;
+    .list__item--blue:nth-child(odd):before,
+    .list__item--yellow:nth-child(odd):before{
+        left: -20px;
 
-    height: 120%;
+        height: 110%;
+    }
+
+    .list__item--blue:nth-child(odd):after,
+    .list__item--yellow:nth-child(odd):after{
+        right: -20px;
+
+        height: 120%;
+    }
 }

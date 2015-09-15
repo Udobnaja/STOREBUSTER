@@ -3,6 +3,10 @@
     padding: 20px;
 }
 
+.reviews__img{
+    display: none;
+}
+
 .reviews__container:nth-child(even){
     color: #fff;
     background: #414a57;
@@ -53,6 +57,7 @@
 
         padding-right: 30px;
         padding-left: 0;
+        display: block;
     }
 
     .reviews__img:before{

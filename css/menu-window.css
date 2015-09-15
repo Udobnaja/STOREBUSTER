@@ -1,26 +1,27 @@
 .menu-window{
-    position: fixed;
-    z-index: 11;
-    top: 50%;
+    line-height: 2;
+
+    position: absolute;
+    z-index: 30;
+    top: 60px;
     left: 50%;
 
-    visibility: hidden;
-
     width: 203px;
-    height: auto;
+    margin-bottom: 60px;
 
-    -webkit-transform: translateX(-50%) translateY(-50%);
-       -moz-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+            transition: all .3s;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
+    opacity: 0;
 }
 
 .menu-window--show{
-    visibility: visible;
+    opacity: 1;
 }
 
 .menu-window__list{
@@ -53,18 +54,19 @@
 }
 
 @media only screen and (min-width: 768px){
-
     .menu-window{
         position: static;
-
-        visibility: visible;
+        z-index: 11;
 
         width: 100%;
+        margin-bottom: 0;
 
         -webkit-transform: none;
            -moz-transform: none;
             -ms-transform: none;
                 transform: none;
+
+        opacity: 1;
 
         -webkit-backface-visibility: visible;
            -moz-backface-visibility: visible;
@@ -85,7 +87,6 @@
 }
 
 @media only screen and (min-width: 1200px){
-    
     .menu-window{
         position: absolute;
         top: -55px;

@@ -1,0 +1,34 @@
+.footer-bottom{
+    padding: 50px 0;
+
+    background: #414a57;
+}
+
+.footer-bottom__wrapper{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px){
+
+    .footer-bottom__left-part{
+        max-width: 1060px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    .footer-bottom__left-part{
+        float: left;
+
+        width: 70%;
+    }
+
+    .footer-bottom__right-part{
+        float: right;
+
+        width: 30%;
+    }
+}

@@ -1,0 +1,55 @@
+.timepicker{
+    position: relative;
+}
+
+.timepicker__ico{
+    font-size: 35px;
+
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    width: 73px;
+    height: 73px;
+
+    text-align: center;
+
+    background: #fef39c;
+}
+
+.ui-timepicker-wrapper{
+    z-index: 10001;
+
+    overflow-y: auto;
+
+    width: 75%;
+    max-width: 634px;
+    height: 150px;
+    margin: 0;
+
+    border: 1px solid #b4b4b4;
+    outline: none;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    background-image: initial;
+    background-attachment: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-clip: initial;
+    background-origin: initial;
+    background-size: initial;
+
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+}
+
+.ui-timepicker-list{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.ui-timepicker-list li{
+    padding: 10px 20px;
+}

@@ -140,7 +140,7 @@ function inputTringger(elem){
     var holderText,
         arrHolderText = [
             "Поле *",
-            " обязательно для заполнения"
+            " обязательно"
         ];
     
     inputTringger.blurIs = function(){
@@ -167,7 +167,7 @@ function inputTringger(elem){
                 .removeClass('form__item--error')
                 .attr('placeholder', holderText
                       .replace(holderText.substring(0,6),"")
-                      .replace(holderText.substring(holderText.lastIndexOf(" обязательно для заполнения"),holderText.length),""));
+                      .replace(holderText.substring(holderText.lastIndexOf(" обязательно"),holderText.length),""));
         }
         elem
             .parent().find('.form__ico-result')

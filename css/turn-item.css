@@ -34,3 +34,22 @@
     border-bottom: none;
     border-left: 10px solid transparent;
 }
+
+
+.turn-item--add-options:after{
+    top: auto;
+    bottom: -33px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+
+@media only screen and (min-width: 480px){
+    .turn-item--add-options:after{
+        bottom: auto;
+        left: auto;
+        top: 7px;
+        right: -35px;
+        margin-left: 0;
+    }
+}

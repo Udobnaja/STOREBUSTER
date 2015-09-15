@@ -129,6 +129,7 @@
 
     cursor: pointer;
     text-align: center;
+    
 }
 
 
@@ -136,10 +137,11 @@
     font: 20px/18px 'ProximaNovaBold';
 
     display: block;
+}
 
-    text-decoration: none;
-
-    color: #3c3c3b;
+a.header__tel-number{
+    text-decoration: none !important;
+    color: #3c3c3b !important;
 }
 
 
@@ -152,15 +154,11 @@
 
 .header__submenu{
     margin: 0;
-    margin-bottom: 15px;
     padding: 0;
-    padding-bottom: 15px;
 
     list-style-type: none;
 
     text-align: center;
-
-    border-bottom: 1px solid #fff;
 }
 
 .header__faq{
