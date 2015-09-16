@@ -46,7 +46,7 @@
     }
 
     .progress__step{
-        width: 155px;
+        width: 150px;
         height: 255px;
          margin: 0 auto;
         padding-top: 45px;
@@ -73,7 +73,7 @@
     }
 
     .progress__step:after{
-        left: 155px;
+        left: 150px;
 
         border-top: 255px solid;
         border-right: 40px solid transparent;
@@ -103,11 +103,9 @@
         background: #fef39c;
     }
 
-
-
     .progress__ico{
         color: #f7de22;
-    background: #fff;
+        background: #fff;
     }
 
     .progress__paragraph{
@@ -118,7 +116,7 @@
         position: absolute;
         z-index: 2;
         top: 35px;
-        right: -55px;
+        right: -50px;
 
         width: 0;
         height: 0;
@@ -147,6 +145,10 @@
     .progress{
         width: 605px;
     }
+    
+    .progress__step{
+        width: 155px;
+    }
 
     .progress__step--penultimate{
         margin-left: 105px;
@@ -154,6 +156,14 @@
 
     .progress__step--last{
         margin: 0;
+    }
+    
+    .progress__arrow{
+        right: -55px;
+    }
+    
+    .progress__step:after{
+        left: 155px;
     }
 }
 

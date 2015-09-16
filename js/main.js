@@ -304,28 +304,61 @@ $(function(){
     });
         
     
-    
+    function goodAnswer(submit){
     //Только для визцального представления,
     //Этот скрипт не будет существовать
 
-    var arrPhrases = [
-        "<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>",
-        "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>",
-        "<p class='paragraph paragraph--centered'>Вы заказали у нас обратный звонок. <br>В течение нескольких минут мы перезвоним Вам.<br>Спасибо!</p>",
-        "<p class='paragraph paragraph--centered'>Ваша заявка принята. В течение ближайшего времени мы перезвоним Вам.</p>"
-    ],
-        count;
-    
-     $('.reestablish').click(function(e){
-         count = $(this).data('i');
-         $(this).parent()
-         .html(arrPhrases[count]);
-         setTimeout(function() {
-             location.reload();
-            }, 2000
-         );
-    });  
+        var arrPhrases = [
+            "<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>",
+            "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>",
+            "<p class='paragraph paragraph--centered'>Вы заказали у нас обратный звонок. <br>В течение нескольких минут мы перезвоним Вам.<br>Спасибо!</p>",
+            "<p class='paragraph paragraph--centered'>Ваша заявка принята. В течение ближайшего времени мы перезвоним Вам.</p>",
+            "<h1 class='headline'>Регистрация прошла успешно</h1><p class='paragraph paragraph--centered'>В течение нескольких минут на Ваш E-mail придет письмо с уведомлением о регистрации и ссылкой на ее подтверждение.</p>",
+            "<p class='paragraph paragraph--centered'>Операция выполнена успешно.<br>Будет выполнен переход в личный кабинет.</p>",
+        ],
+            count;
+
+         
+             count = submit.data('i');
+             submit.parent()
+             .html(arrPhrases[count]);
+             setTimeout(function() {
+                 location.reload();
+                }, 2000
+             );
+ 
     //
+    };
+    
+    $('.js-required-check').change(function(){
+        if (this.checked) {
+            $('.form_checkLabel').removeClass('form_checkLabel--error');
+        } 
+    });
+    
+    $('.form__submit').on('click',function(){
+        var arrRequired = [];
+        arrRequired = $(this)
+            .parent()
+            .find('.js-required');
+        for (var i = 0; i < arrRequired.length; i++){
+            inputTringger($(arrRequired[i]));
+            inputTringger.focusIs();
+            inputTringger.blurIs();
+        };
+        if ($(this).find('.js-required-check')){
+            
+            if($('.js-required-check').prop('checked')==false){
+               $('.form_checkLabel').addClass('form_checkLabel--error');
+            } 
+        }
+        
+        if(!($(this).parent().find('.form_checkLabel').hasClass('form_checkLabel--error')) && !($(this).parent().find('.js-required').hasClass('form__item--error'))){
+            goodAnswer($(this));
+        };
+        
+        return false;
+    });
     
    $('.js-required').on('blur',function() {
         inputTringger($(this));

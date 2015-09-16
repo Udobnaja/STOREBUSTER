@@ -154,7 +154,7 @@
                                             <a href="" class="link entrance__ico entrance__ico--twitter"><i class="fa fa-twitter"></i></a>
                                         </div>
                                     </div>
-                                    <input type="submit" class="form__item form__submit entrance__submit" value="Войти" >
+                                    <input type="submit" class="form__item form__submit entrance__submit" data-i="5" value="Войти" >
                                 </form>
                         </div>
                    </div>
@@ -180,7 +180,7 @@
                                     <span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
                                     <div class="form__ico-result"></div>
                                 </div>
-                                <div class="btn btn--block reestablish" data-i="2">Заказать обратный звонок</div>
+                                <input type="submit" class="form__item form__submit" data-i="2" value="Заказать обратный звонок">
                             </form> 
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                                 <input type="text" class="form__item form__input js-required" placeholder="E-mail">
                                 <div class="form__ico-result"></div>
                             </div>
-                            <div class="btn btn--block reestablish" data-i="0">Отправить</div>
+                            <input type="submit" class="form__item form__submit" data-i="0">
                         </form> 
                     </div>
                 </div>          
@@ -410,11 +410,11 @@
                             </div>
                             <div class="form__ico-result"></div>
                         </div>
-                        <input type="checkbox" class="form__checkbox" name="agree" id="form__checkbox">
+                        <input type="checkbox" class="js-required-check form__checkbox" name="agree" id="form__checkbox">
                         <label for="form__checkbox" class="form_checkLabel">Принимаю 
                             <a href="" class="link js-btn_agreement-window js-show_overlay">соглашение</a>
                         </label>
-                        <input type="submit" class="form__item form__submit form__submit--top-indent" value="Получить">
+                        <input type="submit"  data-i="4" class="form__item form__submit form__submit--top-indent" value="Получить">
                     </form>
                 </div>
                 <div class="separator"></div>
@@ -887,7 +887,7 @@
                      </div>
                  </div>
              </div>
-            <div class="overlay js-overlay_calculator-window overlay--black js-hide_overlay overlay--scroll">
+             <div class="overlay js-overlay_calculator-window overlay--black js-hide_overlay overlay--scroll">
                 <div class="calculator-window ">
                     <div class="calculator-window__list blue js-stopProp">
                           <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
@@ -917,8 +917,8 @@
                                         </div>
                                     </div>
                                 </div>
-                               <div class="f-cost--white centered">
-                                    <a href="calculator.html" class="link headline">
+                               <div class="f-cost--white centered headline">
+                                    <a href="calculator.html" class="link link--inline">
                                         Дополнительные опции
                                      </a>
                                 </div>

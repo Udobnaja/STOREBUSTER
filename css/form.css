@@ -39,6 +39,10 @@
     outline: none;
 }
 
+.form__submit:focus{
+    border: none;
+}
+
 .form__input{
     border: 1px solid #b4b4b4;
     background: #fff;
@@ -120,6 +124,12 @@
 
     color: #414a57;
     background: #f7de22;
+}
+
+.form__checkbox:not(:checked) + .form_checkLabel--error.form_checkLabel:before,
+.form__checkbox:checked + .form_checkLabel--error.form_checkLabel:before{
+    border: 1px solid #d34836;
+    background: #fff;
 }
 
 .form__checkbox:not(:checked) + .form_checkLabel:after{

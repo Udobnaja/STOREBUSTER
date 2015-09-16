@@ -121,7 +121,8 @@
 }
 
 .header__tel{
-    line-height: 1.2;
+    font-size: 12px;
+    line-height: 1.6;
 
     float: right;
 
@@ -129,12 +130,12 @@
 
     cursor: pointer;
     text-align: center;
-    
 }
 
 
+
 .header__tel-number{
-    font: 20px/18px 'ProximaNovaBold';
+    font: 17px/18px 'ProximaNovaBold';
 
     display: block;
 }
@@ -204,6 +205,9 @@ a.header__tel-number{
     }
 
     .header__tel{
+        font-size: 15px;
+        line-height: 1.2;
+
         width: auto;
         padding-top: 10px;
     }
