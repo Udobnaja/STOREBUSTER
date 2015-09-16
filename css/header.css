@@ -174,11 +174,21 @@ a.header__tel-number{
     height: 33px;
 
     cursor: pointer;
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+        -ms-transition: all .15s linear;
+         -o-transition: all .15s linear;
+            transition: all .15s linear;
     text-align: center;
 
     border: 6px solid #f7de22;
     -webkit-border-radius: 50%;
             border-radius: 50%;
+}
+
+.header__faq:hover{
+    -webkit-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
 }
 
 

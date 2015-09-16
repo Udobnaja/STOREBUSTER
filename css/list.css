@@ -46,7 +46,7 @@
 
         display: block;
 
-        width: 0px;
+        width: 50px;
 
         content: '';
         -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */

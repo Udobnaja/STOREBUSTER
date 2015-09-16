@@ -382,6 +382,12 @@ $(function(){
         stopFixPanel();
     }
     
+    $('window').on('touchmove', function(e) { 
+        //Prevent the window from being scrolled
+        e.preventDefault();
+        stopFixPanel();
+    });
+    
 });
 
 window.onload = function() {
