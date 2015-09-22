@@ -29,10 +29,11 @@ gulp.task('server', function () {
     //смотрим за изменениями в html  выполняем команду html
     gulp.watch('*.html', ['html']);
     gulp.watch('css/*.css', ['css']);
+    gulp.watch('js/*.js', ['js']);
 });
 
 //Задача для сборки
-gulp.task('build', ['html', 'css', 'images']);
+gulp.task('build', ['html', 'css', 'images', 'js']);
 
 //Сборка html файлов
 gulp.task('html', function () {
@@ -64,3 +65,10 @@ gulp.task('images', function () {
         }))
         .pipe(gulp.dest(params.out + '/images'));
 });
+
+gulp.task('js', function () {
+    gulp.src('js/*.js')
+        .pipe(gulp.dest(params.out + '/js'))
+        .pipe(reload({stream : true}));
+});
+
