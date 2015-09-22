@@ -12,9 +12,22 @@
   },
   "homepage": "https://github.com/Udobnaja/STOREBUSTER#readme",
   "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "autoprefixer-core": "^6.0.1",
     "browser-sync": "^2.9.1",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-csscomb": "^3.0.6",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-group-css-media-queries": "^1.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jsdoc": "^0.1.4",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uncss": "^1.0.3",
+    "html2bl": "dab/html2bl"
+  },
+  "dependencies": {
+    "imagemin-pngquant": "^4.2.0"
   }
 }

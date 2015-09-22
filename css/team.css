@@ -7,12 +7,12 @@
 .team__text{
     display: inline-block;
 
-    height: 46px;
     padding-right: 10px;
 
     vertical-align: middle;
 
     color: #fff;
+    margin-top: -30px;
 }
 
 .team__link{
@@ -20,6 +20,7 @@
     height: 46px;
 
     background: url(/images/jetmix.png) no-repeat center center;
+    margin-top: 20px;
 }
 
 .team__link.link{
@@ -35,13 +36,3 @@
     }
 }
 
-@media only screen and (min-width: 1200px){
-    
-    .team__text{
-        height: 75px;
-    }
-
-    .team__link{
-        height: 75px;
-    }
-}

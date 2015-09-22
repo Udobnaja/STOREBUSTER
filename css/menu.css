@@ -34,6 +34,8 @@
                 transition: all .3s;
 
         border-bottom: 3px solid transparent;
+        hyphens: manual;
+        white-space: nowrap;
     }
 
     

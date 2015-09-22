@@ -1,0 +1,46 @@
+.terms-agreement{
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.terms-agreement__item{   
+    color: #fff;
+    text-align: center;
+}
+
+.terms-agreement__item:first-child{
+    margin-bottom: 20px;
+}
+
+.terms-agreement__link.link{
+    color: #fff;
+    border-color: #fff;
+    margin-top: 20px;
+}
+
+.terms-agreement__link.link:hover{
+    border-color: transparent;
+}
+
+.terms-agreement__link:first-child{
+        margin-right: 44px;
+    }
+
+
+@media only screen and (min-width: 768px){
+    .terms-agreement__item{ 
+        display: inline-block;
+        text-align: left;
+        margin-right: 44px;
+    }
+    
+    .terms-agreement__item:first-child{
+        margin-bottom: 0;
+    }
+    
+    .terms-agreement__link.link{
+        margin-top: 0;
+    }
+}

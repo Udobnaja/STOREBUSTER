@@ -49,6 +49,10 @@
     border: none;
 }
 
+.catalog__img-link.link{
+    display: block;
+}
+
 .catalog__name-link{
     line-height: 1.5;
 

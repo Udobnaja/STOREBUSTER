@@ -58,6 +58,7 @@
 
 .form__textarea{
     height: 350px;
+    border: 1px solid #b4b4b4;
 }
 
 .form__submit{

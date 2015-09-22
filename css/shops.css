@@ -3,3 +3,7 @@
     max-width: 1170px;
     padding: 20px;
 }
+
+.shops__img-link.link{
+    display: block;
+}

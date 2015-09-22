@@ -78,6 +78,7 @@ body{
 
     white-space: normal;
     position: relative;
+    hyphens: auto;
 }
 
 strong,

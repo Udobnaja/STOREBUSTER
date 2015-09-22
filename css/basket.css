@@ -11,9 +11,10 @@
     display: block;
 }
 
-.basket__elem{
+.basket__elem.row{
     margin: 20px auto;
-
+}
+.basket__elem{
     background: #fff;
 }
 

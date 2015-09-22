@@ -2,8 +2,12 @@
     display: none;
 }
 
-.reviews__container{
+.reviews__container.row{
     margin-top: 0;
+}
+
+.reviews__container.reviews__container--first{
+    margin-top: -15px;
 }
 
 .reviews__container:nth-child(even) .reviews__txt-container{
@@ -13,6 +17,7 @@
 
 .reviews__container:nth-child(odd) .reviews__txt-container{
     border: 1px solid #b4b4b4;
+    background: #fff;
 }
 
 .reviews__paragraph{

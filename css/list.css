@@ -16,7 +16,7 @@
 }
 
 
-.list__item--official{
+.list__item.list__item--official{
     padding: 5px 20px;
 
     text-align: left;

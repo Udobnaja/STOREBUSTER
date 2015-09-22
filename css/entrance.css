@@ -47,12 +47,12 @@
 }
 
 
-.entrance__social-ico{
+.entrance__social-ico.row{
     max-width: 370px;
     margin: 0 auto;
 }
 
-.entrance__submit{
+.entrance__submit.form__submit{
     margin-top: 30px;
 }
 

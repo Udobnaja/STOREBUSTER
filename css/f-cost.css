@@ -22,7 +22,7 @@
     background: #fff;
 }
 
-.f-cost__filters{
+.f-cost__filters.row{
     margin-top: 0;
 }
 

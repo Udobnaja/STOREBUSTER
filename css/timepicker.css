@@ -3,7 +3,8 @@
 }
 
 .timepicker__ico{
-    font-size: 35px;
+    font-size: 30px;
+    line-height: 2.4;
 
     position: absolute;
     top: 1px;
