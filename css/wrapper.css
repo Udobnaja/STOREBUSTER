@@ -18,6 +18,10 @@
     max-width: 940px;
 }
 
+.wrapper--1120{
+    max-width: 1120px;
+}
+
 .wrapper--1170{
     max-width: 1170px;
 }

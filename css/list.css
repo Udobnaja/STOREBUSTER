@@ -15,6 +15,33 @@
     text-align: center;
 }
 
+.list__item--yellow-rectangle{
+    background: #f7de22;
+}
+
+.list__item--yellow-b-triangle{
+    overflow: visible;
+}
+
+.list__item--yellow-b-triangle:after{
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -50px;
+    width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 50px solid #f7de22;
+    z-index: 3;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.list__item--lightYellow-rectangle{
+    background: #fef39c;
+}
+
 
 .list__item.list__item--official{
     padding: 5px 20px;

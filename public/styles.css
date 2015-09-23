@@ -1956,6 +1956,41 @@ a.header__tel-number
     text-align: center;
 }
 
+.list__item--yellow-rectangle
+{
+    background: #f7de22;
+}
+
+.list__item--yellow-b-triangle
+{
+    overflow: visible;
+}
+
+.list__item--yellow-b-triangle:after
+{
+    position: absolute;
+    z-index: 3;
+    bottom: -50px;
+    left: 50%;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+    margin-left: -40px;
+
+    content: '';
+
+    border-top: 50px solid #f7de22;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+}
+
+.list__item--lightYellow-rectangle
+{
+    background: #fef39c;
+}
+
 .list__item.list__item--official
 {
     padding: 5px 20px;
@@ -3979,6 +4014,11 @@ th
 .wrapper--940
 {
     max-width: 940px;
+}
+
+.wrapper--1120
+{
+    max-width: 1120px;
 }
 
 .wrapper--1170

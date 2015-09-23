@@ -94,19 +94,19 @@ function inputTringger(elem) {
     */
     
     inputTringger.blurIs = function () {
- 
-        if (elem.val().replace(/\s+/g, '') === "") {
+
+        if (elem.val().replace(/\s+/g, '')) {
+            elem
+                .parent().find('.form__ico-result')
+                .addClass('form__ico-result--success')
+                .append('<i class="fa fa-check"></i>');
+        } else {
             elem
                 .addClass('form__item--error')
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--error')
                 .append('<i class="fa fa-exclamation-triangle"></i>');
             elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
-        } else {
-            elem
-                .parent().find('.form__ico-result')
-                .addClass('form__ico-result--success')
-                .append('<i class="fa fa-check"></i>');
         }
     };
     
@@ -444,10 +444,11 @@ $(function () {
             inputTringger.blurIs();
         });
        
-        $('.form_checkLabel', this)[
-            ($('.js-required-check').prop('checked')) ? 'removeClass' : 'addClass'
-        ]('form_checkLabel--error');
-        
+        if ($('.form_checkLabel', this).length) {
+            $('.form_checkLabel', this)[
+                ($('.js-required-check').prop('checked')) ? 'removeClass' : 'addClass'
+            ]('form_checkLabel--error');
+        }
         if (!($('.form_checkLabel', this).hasClass('form_checkLabel--error')) && !($('.js-required', this).hasClass('form__item--error'))) {
             goodAnswer($('.form__submit', this));
         }
