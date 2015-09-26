@@ -115,6 +115,10 @@ strong,
     background: #fff;
 }
 
+.yellow{
+    background: #f7de22;
+}
+
 
 .centered{
     text-align: center;
@@ -297,6 +301,7 @@ col-sm-25,
 .col-msm-30,
 .col-msm-33,
 .col-msm-50,
+.col-msm-66,
 .col-msm-70,
 .col-msm-75,
 .col-msm-80,
@@ -436,6 +441,10 @@ col-sm-25,
     .col-msm-80{
         width: 80%;
     }
+    
+    .col-msm-66{
+        width: 66.6666666%;
+    }
 
     .divider{
         width: 96%;
@@ -453,6 +462,14 @@ col-sm-25,
     
     .offset-msm-50{
         margin-right: 50%
+    }
+    
+    .msm-vissible{
+        display: block;
+    }
+    
+    .msm-hidden{
+        display: none;
     }
 }
 

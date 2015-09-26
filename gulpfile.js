@@ -9,7 +9,10 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     gcmq = require('gulp-group-css-media-queries'),
     cssmin = require('gulp-cssmin'),
-    csscomb = require('gulp-csscomb');
+    csscomb = require('gulp-csscomb'),
+    iconfont = require('gulp-iconfont'),
+    consolidate = require('gulp-consolidate'),
+    runTimestamp = Math.round(Date.now()/1000);
 
 var params = {
     out : 'public',
@@ -70,5 +73,27 @@ gulp.task('js', function () {
     gulp.src('js/*.js')
         .pipe(gulp.dest(params.out + '/js'))
         .pipe(reload({stream : true}));
+});
+
+gulp.task('Iconfont', function(){
+   gulp.src(['images/*.svg'])
+    .pipe(iconfont({ fontName: 'storeBusters' }))
+    .on('glyphs', function(glyphs) {
+      var options = {
+        glyphs: glyphs.map(function(glyph) {
+          // this line is needed because gulp-iconfont has changed the api from 2.0
+          return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+        }),
+        fontName: 'storeBusters',
+        fontPath: '/fonts/', 
+        className: 'font-ico'
+      };
+      gulp.src('fonts-ico.css')
+        .pipe(consolidate('lodash', options))
+        .pipe(rename({ basename : 'storeBusters' }))
+        .pipe(gulp.dest('css/')); // set path to export your CSS
+
+    })
+    .pipe(gulp.dest( params.out +'/fonts/')); // set path to export your fonts
 });
 

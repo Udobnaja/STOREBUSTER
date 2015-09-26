@@ -755,14 +755,6 @@
     padding: 20px 0;
 }
 
-.detail-product__desk,
-.detail-product__seller,
-.detail-product__paiment,
-.detail-product__characteristics
-{
-    padding: 30px;
-}
-
 .detail-product__col
 {
     position: absolute;
@@ -1951,7 +1943,8 @@ a.header__tel-number
 
     overflow: hidden;
 
-    padding: 20px;
+    margin: 10px 0;
+    padding: 15px 20px;
 
     text-align: center;
 }
@@ -1970,20 +1963,20 @@ a.header__tel-number
 {
     position: absolute;
     z-index: 3;
-    bottom: -50px;
+    bottom: -30px;
     left: 50%;
 
     display: block;
 
     width: 0;
     height: 0;
-    margin-left: -40px;
+    margin-left: -35px;
 
     content: '';
 
-    border-top: 50px solid #f7de22;
-    border-right: 40px solid transparent;
-    border-left: 40px solid transparent;
+    border-top: 30px solid #f7de22;
+    border-right: 35px solid transparent;
+    border-left: 35px solid transparent;
 }
 
 .list__item--lightYellow-rectangle
@@ -2144,6 +2137,11 @@ strong,
 .white
 {
     background: #fff;
+}
+
+.yellow
+{
+    background: #f7de22;
 }
 
 .centered
@@ -2338,6 +2336,7 @@ col-sm-25,
 .col-msm-30,
 .col-msm-33,
 .col-msm-50,
+.col-msm-66,
 .col-msm-70,
 .col-msm-75,
 .col-msm-80,
@@ -3556,6 +3555,72 @@ th
     padding: 0;
 }
 
+@font-face
+{
+    font-family: 'storeBusters';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('/fonts/storeBusters.eot');
+    src: url('/fonts/storeBusters.eot?#iefix') format('eot'),
+    url('/fonts/storeBusters.woff') format('woff'),
+    url('/fonts/storeBusters.ttf') format('truetype'),
+    url('/fonts/storeBusters.svg#storeBusters') format('svg');
+}
+
+.font-ico:before
+{
+    font-family: 'storeBusters';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+
+    display: inline-block;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-ico-lg
+{
+    font-size: 1.3333333333333333em;
+    line-height: .75em;
+
+    vertical-align: -15%;
+}
+
+.font-ico-2x
+{
+    font-size: 2em;
+}
+
+.font-ico-3x
+{
+    font-size: 3em;
+}
+
+.font-ico-4x
+{
+    font-size: 4em;
+}
+
+.font-ico-5x
+{
+    font-size: 5em;
+}
+
+.font-ico-fw
+{
+    width: 1.2857142857142858em;
+
+    text-align: center;
+}
+
+.font-ico-pencil:before
+{
+    content: '\EA01';
+}
+
 .submenu__item
 {
     font-family: 'ProximaNovaRegular';
@@ -3820,6 +3885,11 @@ th
     margin-right: 44px;
 }
 
+.text-cell
+{
+    padding: 30px;
+}
+
 .timepicker
 {
     position: relative;
@@ -3894,6 +3964,34 @@ th
     font: 35px/41px 'ProximaNovaBold';
 
     margin-bottom: 40px;
+}
+
+.track-table
+{
+    margin: 0;
+
+    border: 3px solid #f5fafe;
+}
+
+.track-table__row,
+.track-table__row.row
+{
+    margin-top: 0;
+}
+
+.track-table__cell
+{
+    margin: 0;
+}
+
+.track-table__content
+{
+    padding: 15px 30px;
+}
+
+.track-table__img
+{
+    margin-top: 10px;
 }
 
 .track__link.link
@@ -4009,6 +4107,11 @@ th
 .wrapper--815
 {
     max-width: 815px;
+}
+
+.wrapper--830
+{
+    max-width: 830px;
 }
 
 .wrapper--940
@@ -4536,14 +4639,6 @@ th
         padding: 50px;
     }
 
-    .detail-product__desk,
-    .detail-product__seller,
-    .detail-product__paiment,
-    .detail-product__characteristics
-    {
-        padding: 45px 50px;
-    }
-
     .f-cost__virtual-adress
     {
         margin-top: 70px;
@@ -4772,7 +4867,7 @@ th
 
     .list__item
     {
-        padding: 30px 50px;
+        padding: 20px 50px;
     }
 
     .list__item--blue:nth-child(odd):before,
@@ -4854,6 +4949,11 @@ th
         width: 80%;
     }
 
+    .col-msm-66
+    {
+        width: 66.6666666%;
+    }
+
     .divider
     {
         width: 96%;
@@ -4874,6 +4974,16 @@ th
     .offset-msm-50
     {
         margin-right: 50%;
+    }
+
+    .msm-vissible
+    {
+        display: block;
+    }
+
+    .msm-hidden
+    {
+        display: none;
     }
 
     .menu-window
@@ -5165,6 +5275,40 @@ th
     }
 
     .terms-agreement__link.link
+    {
+        margin-top: 0;
+    }
+
+    .text-cell
+    {
+        padding: 45px 50px;
+    }
+
+    .track-table
+    {
+        margin: 50px auto;
+
+        border: none;
+    }
+
+    .track-table__row,
+    .track-table__row.row
+    {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .track-table__cell
+    {
+        padding-left: 0;
+    }
+
+    .track-table__content
+    {
+        padding: 30px;
+    }
+
+    .track-table__img
     {
         margin-top: 0;
     }

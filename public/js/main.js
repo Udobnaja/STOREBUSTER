@@ -258,16 +258,28 @@ function defineMinHeight(className, curClassName) {
 * Присваивает найденую максимальную высоту всем блокам с именем класса vacancies__elem
 */
 
-function defineMaxVacanciescHeight() {
+function defineMaxHeight(p, element) {
     'use strict';
     var h = 0,
-        elem = $('.vacancies__elem'),
-        i;
-    elem.height('auto');
-    for (i = 0; i < elem.length; i++) {
-        h = ($(elem[i]).height() > h) ? $(elem[i]).height() : h;
+        parent = $(p),
+        i,
+        j,
+        elem;
+    for (j = 0; j < parent.length; j++) {
+        elem = $(parent[j]).find(element);
+        elem.height('auto');
+        for (i = 0; i < elem.length; i++) {
+            h = ($(elem[i]).height() > h) ? $(elem[i]).height() : h;
+        }
+        elem.height(h);
     }
-    elem.height(h);
+    
+}
+
+function autoHeight(element) {
+    'use strict';
+    var el = $(element);
+    el.height('auto');
 }
 
 
@@ -276,13 +288,17 @@ function windowSize() {
     'use strict';
     if ($(window).width() >= '768') {
         buildSubmenu();
-    } else {reBuildSubmenu(); }
+        defineMaxHeight('.track-table__row', '.track-table__content');
+    } else {
+        reBuildSubmenu();
+        autoHeight('.track-table__content');
+    }
     
     if ($(window).width() >= '992') {
         defineMinHeight('.detail-product__foto', '.detail-product__desk');
-        defineMaxVacanciescHeight();
+        defineMaxHeight('.vacancies__row', '.vacancies__elem');
     } else {
-        $('.vacancies__elem').height('auto');
+        autoHeight('.vacancies__elem');
     }
     
 }
@@ -495,6 +511,7 @@ window.onload = function () {
 
 $(window).resize(function () {
     'use strict';
+    autoHeight('.track-table__content');
     windowSize();
     buildGrid('.blog__prev');
     buildGrid('.detail-product__col');

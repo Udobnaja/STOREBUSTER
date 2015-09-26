@@ -25,13 +25,6 @@
     padding: 20px 0;
 }
 
-.detail-product__desk,
-.detail-product__seller,
-.detail-product__paiment,
-.detail-product__characteristics{
-    padding: 30px;
-}
-
 .detail-product__col{
     position: absolute;
     top: 0;
@@ -53,14 +46,6 @@
     background: #fff;
 }
 
-@media only screen and (min-width: 768px){
-    .detail-product__desk,
-    .detail-product__seller,
-    .detail-product__paiment,
-    .detail-product__characteristics{
-        padding: 45px 50px;
-    }
-}
 
 @media only screen and (min-width: 992px){
     

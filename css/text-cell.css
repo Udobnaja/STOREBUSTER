@@ -1,0 +1,9 @@
+.text-cell{
+    padding: 30px;
+}
+
+@media only screen and (min-width: 768px){
+    .text-cell{
+        padding: 45px 50px;
+    }
+}
