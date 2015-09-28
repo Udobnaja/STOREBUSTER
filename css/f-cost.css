@@ -26,10 +26,10 @@
     margin-top: 0;
 }
 
-.f-cost__pkg:not(:checked) + .form_checkLabel:after,
-.f-cost__pkg:checked + .form_checkLabel:after,
-.f-cost__v-adress:not(:checked) + .form_checkLabel:after,
-.f-cost__v-adress:checked + .form_checkLabel:after{
+.form__checkbox.f-cost__pkg:not(:checked) + .form_checkLabel:after,
+.form__checkbox.f-cost__pkg:checked + .form_checkLabel:after,
+.form__checkbox.f-cost__v-adress:not(:checked) + .form_checkLabel:after,
+.form__checkbox.f-cost__v-adress:checked + .form_checkLabel:after{
     top: -30px;
 }
 
