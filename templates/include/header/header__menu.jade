@@ -1,0 +1,25 @@
+.header__menu.menu
+    .menu__wrapper
+        .overlay.js-overlay_menu-window.overlay--yellow.js-hide_overlay.overlay--menu.overlay--scroll
+                
+            nav(role='navigation').menu-window
+                ul.menu-window__list.menu__list
+                    li.menu__item
+                        a(href='delivery.html').menu__link.link Услуги
+                        ul.header__submenu.submenu
+                            li.submenu__item: a(href='delivery.html').submenu__link.link Услуги и тарифы
+                            li.submenu__item: a(href='wholesale-goods.html').submenu__link.link Услуги для бизнеса
+                            li.submenu__item: a(href='virtual-address.html').submenu__link.link Виртуальный адрес
+                    li.menu__item: a(href='catalog-shops.html').menu__link.link Магазины
+                    li.menu__item
+                        a(href='about.html').menu__link.link О нас
+                        ul.header__submenu.submenu
+                            li.submenu__item: a(href='about.html').submenu__link.link Контакты
+                            li.submenu__item: a(href='agent.html').submenu__link.link Как мы работаем
+                            li.submenu__item: a(href='news.html').submenu__link.link Блог
+                    li.menu__item: a(href='delivery-single-page.html').menu__link.link Доставка, гарантия, возврат
+                            
+        div(role='button').header__faq.js-btn_faq-window.js-show_overlay ?
+        span(role='button' aria-describedby='menu__name').menu__ico.js-btn_menu-window.js-show_overlay
+            i.fa.fa-bars
+        span.menu__name#menu__name меню

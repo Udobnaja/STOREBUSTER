@@ -1,0 +1,73 @@
+block header
+    header(role='banner').header
+        include header__top
+
+        include header__bottom
+
+        include header__menu
+
+        include ../faq-window/faq-window
+
+        .overlay.js-overlay_entrance-window.overlay--black.js-hide_overlay.overlay--scroll
+            .entrance-window.entrance.js-stopProp
+                .js-close_overlay.btn.btn--close.js-close-btn_entrance-window.entrance__close-btn
+                .entrance-window__list.entrance__list
+                    .headline Войти
+                    form(action='').form.entrance__form
+                        label.form__label Войти через адрес электронной почты
+                        .form__holder
+                            input(type='email' name='entrance__email' placeholder='E-mail' required).form__item.form__input.js-required
+                            .form__ico-result
+                        .form__holder
+                            input(type='password' placeholder='Пароль' name='' required).form__item.form__input.js-required
+                            .form__password-ico
+                                i.fa.fa-eye
+                            .form__ico-result
+                        a.link.js-close_overlay.js-close-btn_entrance-window.js-btn_forgot-password-window.js-show_overlay Забыли пароль?
+                        p.paragraph Войти через социальную сеть
+                        .row.entrance__social-ico
+                            .col-xs-33.centered
+                                a.link.entrance__ico.entrance__ico--facebook
+                                    i.fa.fa-facebook
+                            .col-xs-33.centered
+                                a.link.entrance__ico.entrance__ico--google-plus
+                                    i.fa.fa-google-plus
+                            .col-xs-33.centered
+                                a.link.entrance__ico.entrance__ico--twitter
+                                    i.fa.fa-twitter
+                        input(type='submit' value='Войти' data-i=5).form__item.form__submit.entrance__submit
+
+        .overlay.js-overlay_forgot-password-window.overlay--black.js-hide_overlay
+
+        .overlay.js-overlay_back-call-window.overlay--black.js-hide_overlay.overlay--scroll
+            .back-call-window.js-stopProp
+                .js-close_overlay.btn.btn--close.js-close-btn_back-call-window.back-call-window__close-btn
+                .back-call-window__list
+                    .headline Обратный звонок
+                    form(action='').form
+                        label.form__label Введите номер мобильного телефона и мы перезвоним Вам
+                        .form__holder
+                            input(type='tel' placeholder='Телефон' name='' required).form__item.form__input.js-required
+                            .form__ico-result
+                        .form__holder
+                            input(type='text' placeholder='Ваше имя и фамилия' name='' required).form__item.form__input.js-required
+                            .form__ico-result
+                        .timepicker.form__holder
+                            input(type='text' placeholder='Другое время' required).form__input.form__item.js-required#timepicker
+                            span.timepicker__ico: i.fa.fa-clock-o
+                            .form__ico-result
+                        input(type='submit' value='Заказать обратный звонок' data-i=2).form__item.form__submit
+
+        .overlay.js-overlay_faq-window.js-hide_overlay
+
+        .forgot-password-window
+            .forgot-password-window__list
+                .js-close_overlay.btn.btn--close.js-close-btn_forgot-password-window.forgot-password-window__close-btn
+                .headline Восстановить пароль
+                form(action='').form
+                    label.form__label Введите E-mail, указанный при регистрации
+                    .form__holder
+                        input(type='email' placeholder='E-mail' name='' required).form__item.form__input.js-required
+                        .form__ico-result
+                    input(type='submit' data-i=0).form__item.form__submit
+

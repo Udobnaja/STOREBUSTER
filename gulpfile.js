@@ -12,15 +12,20 @@ var gulp = require('gulp'),
     csscomb = require('gulp-csscomb'),
     iconfont = require('gulp-iconfont'),
     consolidate = require('gulp-consolidate'),
-    runTimestamp = Math.round(Date.now()/1000);
+    runTimestamp = Math.round(Date.now()/1000),
+    jade = require('jade'),
+    gulpJade = require('gulp-jade'),
+    svgicons2svgfont = require('svgicons2svgfont'),
+    fs = require('fs'),
+    fontStream = svgicons2svgfont({
+      fontName: 'storeBusters'
+    });
 
 var params = {
     out : 'public',
     htmlSrc : '*.html',
     levels : 'css'
 };
-
-    /*getFileNames = require('html2bl').getFileNames(params);*/
 
 gulp.task('default', ['server', 'build']);
 
@@ -75,14 +80,14 @@ gulp.task('js', function () {
         .pipe(reload({stream : true}));
 });
 
-gulp.task('Iconfont', function(){
+/*gulp.task('Iconfont', function(){
    gulp.src(['images/*.svg'])
     .pipe(iconfont({ fontName: 'storeBusters' }))
     .on('glyphs', function(glyphs) {
       var options = {
         glyphs: glyphs.map(function(glyph) {
           // this line is needed because gulp-iconfont has changed the api from 2.0
-          return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+          return { name: glyph.name, glyph: glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() }
         }),
         fontName: 'storeBusters',
         fontPath: '/fonts/', 
@@ -92,8 +97,52 @@ gulp.task('Iconfont', function(){
         .pipe(consolidate('lodash', options))
         .pipe(rename({ basename : 'storeBusters' }))
         .pipe(gulp.dest('css/')); // set path to export your CSS
+       console.log(glyphs);
+       
+       gulp.src('templates/i.html')
+        .pipe(consolidate('lodash', options))
+        .pipe(rename({ basename:'sample' }))
+        .pipe(gulp.dest('templates/'));
 
     })
     .pipe(gulp.dest( params.out +'/fonts/')); // set path to export your fonts
 });
+*/
+
+
+gulp.task('Iconfont', function(){
+  return gulp.src(['images/*.svg'])
+    .pipe(iconfont({
+      fontName: 'storeBusters', // required
+      appendUnicode: true, // recommended option
+      formats: ['ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
+      timestamp: runTimestamp, // recommended to get consistent builds when watching files
+      normalize: true,
+      fontHeight: 1001,
+      centerHorizontally: true,
+    }))
+    .on('glyphs', function(glyphs, options) {
+      gulp.src('fonts-ico.css')
+        .pipe(consolidate('lodash', {
+          glyphs: glyphs,
+          fontName: 'storeBusters',
+          fontPath: '/fonts/',
+          className: 'font-ico'
+        }))
+        .pipe(gulp.dest('css/'));
+        console.log(glyphs, options);
+      })
+    .pipe(gulp.dest(params.out +'/fonts/'));
+});
+
+gulp.task('templates', function() {
+ 
+  gulp.src('templates/pages/*.jade')
+    .pipe(gulpJade({
+      jade: jade,
+      pretty: true
+    }))
+    .pipe(gulp.dest('templates/public/'))
+});
+
 

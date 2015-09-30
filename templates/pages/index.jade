@@ -1,0 +1,65 @@
+extends ../block.templates/template
+
+block header
+    include ../include/header/header
+    
+block content
+    .content
+        .content__wrapper
+            include ../include/top-slider/top-slider
+        .divider
+        .content__wrapper
+            include ../include/advantages/advantages
+        .divider
+        .content__wrapper
+            .content__headline Как это работает?
+            include ../include/progress/progress            
+            .centered
+                a(href='agent.html').link.link--centered другие схемы работы
+        .separator
+        .content__wrapper
+            .content__headline
+                |Получите личный адрес в Англии, 
+                |Германии бесплатно
+                
+            include ../include/form-registration/form-registration
+        .separator
+        .content__wrapper
+            .content__headline Популярные товары
+            include ../include/catalog/catalog
+            
+        .separator
+        .content__wrapper
+            .content__headline Магазины без комиссии
+            p.paragraph.paragraph--centered
+                |Покупайте в самых популярных магазинах Англии без комиссии!
+                br
+                |Asos, Diesel, Puma, Ralph Lauren и ещё 95 магазинов без процентов.
+                br
+                |При заказе вы получаете бесплатно все услуги пакета «Покупка с Shopogolic.net»
+            a(href='catalog-shops.html').btn.btn--block Подробнее
+            
+        .separator
+        include ../include/reviews/reviews.index.jade
+        
+        .divider
+        .content__wrapper.content__wrapper--blueBordered
+            .content__headline Сколько это будет стоить?
+            include ../include/f-cost/f-cost
+                
+            
+
+block footer
+    include ../include/footer/footer
+append script
+    script(src='js/owl.carousel.js')
+    script
+        |$("#top-slider").owlCarousel({
+        |pagination : true, // Show next and prev buttons
+        |slideSpeed : 800,
+        |paginationSpeed : 800,
+        |singleItem : true,
+        |autoPlay : 5000,
+        |stopOnHover : true
+        |});
+    

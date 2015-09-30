@@ -9,6 +9,15 @@
   font-style: normal;
 }
 
+.<%= className %>{
+    display: inline-block;
+    font: normal normal normal 14px/1 <%= fontName %>;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .<%= className %>:before {
   display: inline-block;
   font-family: "<%= fontName %>";
@@ -33,5 +42,5 @@
   text-align: center;
 }
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
 <% }); %>
