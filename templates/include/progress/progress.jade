@@ -1,43 +1,4 @@
-.progress
-            
-    .row
+extends ../../block.templates/template__progress
 
-        .col-xs-50.col-msm-33.col-lg-20
-            .progress__step.progress__step--yellow
-                .progress__ico
-                    i.font-ico.font-ico-delivery
-                .progress__paragraph.paragraph Регистрация
-                .progress__arrow.progress__arrow--yellow
-
-        .col-xs-50.col-msm-33.col-lg-20
-            .progress__step.progress__step--lightYellow
-                .progress__ico
-                    i.fa.fa-bars
-                .progress__paragraph.paragraph
-                    |Заполнение
-                    br
-                    |формы
-                .progress__arrow.progress__arrow--lightYellow
-
-        .col-xs-50.col-msm-33.col-lg-20
-            .progress__step.progress__step--yellow
-                .progress__ico
-                    i.fa.fa-credit-card
-                .progress__paragraph.paragraph Оплата товара
-                .progress__arrow.progress__arrow--yellow
-
-        .col-xs-50.col-msm-33.col-lg-20
-            .progress__step.progress__step--lightYellow.progress__step--penultimate
-                .progress__ico
-                    i.fa.fa-cube
-                .progress__paragraph.paragraph
-                    |Доставка 
-                    |и консолидация
-                .progress__arrow.progress__arrow--lightYellow
-
-        .col-xs-50.col-msm-33.col-lg-20
-            .progress__step.progress__step--yellow.progress__step--last
-                .progress__ico
-                    i.fa.fa-credit-card
-                .progress__paragraph.paragraph Оплата посылки
-                .progress__arrow.progress__arrow--yellow
+block link
+    a(href='agent.html').link.link--centered другие схемы работы

@@ -5105,24 +5105,9 @@ th
         width: 16%;
     }
 
-    .progress
-    {
-        width: 605px;
-    }
-
     .progress__step
     {
         width: 155px;
-    }
-
-    .progress__step--penultimate
-    {
-        margin-left: 105px;
-    }
-
-    .progress__step--last
-    {
-        margin: 0;
     }
 
     .progress__arrow
@@ -5133,6 +5118,16 @@ th
     .progress__step:after
     {
         left: 155px;
+    }
+
+    .progress__step--last
+    {
+        margin: 0;
+    }
+
+    .progress__step--penultimate
+    {
+        margin-left: 105px;
     }
 
     .pseudo-table__row
@@ -5774,6 +5769,11 @@ th
     }
 
     .progress
+    {
+        width: 950px;
+    }
+
+    .progress--1170
     {
         width: 84%;
         max-width: 1170px;

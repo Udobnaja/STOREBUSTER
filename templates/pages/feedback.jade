@@ -1,0 +1,25 @@
+extends ../block.templates/template
+
+block header
+    include ../include/header/header
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Обратная связь
+                
+                form(action='').form.wrapper.wrapper--815
+                    .form__holder
+                        input(type='text' placeholder='Ваше имя' required).form__input.form__item.js-required
+                        .form__ico-result
+                    .form__holder
+                        input(type='email' placeholder='E-mail' required).form__input.form__item.js-required
+                        .form__ico-result
+                    .form__holder
+                        textarea(name='' placeholder='Сообщение' required).form__item.form__textarea.js-required
+                        .form__ico-result
+                    input(type='submit' data-i='1' value='Отправить').form__item.form__submit
+                
+block footer
+    include ../include/footer/footer

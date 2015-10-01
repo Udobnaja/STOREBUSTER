@@ -43,6 +43,14 @@ body
     
     include ../include/fix-panel/fix-panel
     
+    .overlay.js-overlay_calculator-window.overlay--black.js-hide_overlay.overlay--scroll
+        .calculator-window
+            .calculator-window__list.blue.js-stopProp
+                .js-close_overlay.btn.btn--close.js-close-btn_calculator-window.calculator-window__close-btn
+                include ../include/f-cost/f-cost__popup
+                
+    block agreement
+    
     block script
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
         script(src='js/jquery.timepicker.min.js')

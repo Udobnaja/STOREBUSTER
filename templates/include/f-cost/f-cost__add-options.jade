@@ -1,0 +1,39 @@
+ 
+.row
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        label(for='').form__label Стоимость товара
+        input(type='text').form__item.form__input.no-indent--bottom
+
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        label(for='').form__label Доставка по стране
+        input(type='text').form__item.form__input.no-indent--bottom
+
+.row.f-cost__filters
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        .form__item.no-indent--bottom.form__item--dashed
+            input(type='checkbox' name='').form__checkbox#clear
+            label(for='clear').form_checkLabel Очистка
+
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        .form__item.no-indent--bottom.form__item--dashed
+            input(type='checkbox' name='').form__checkbox#foto
+            label(for='foto').form_checkLabel Фото
+
+    .col-xs-100.col-msm-33.col-lg-25
+        .form__item.no-indent--bottom.form__item--dashed
+            input(type='checkbox' name='').form__checkbox.f-cost__pkg#pkg
+            label(for='pkg').form_checkLabel
+                .f-cost__pkg-txt
+                    |Дополнительная
+                    br
+                    |упаковка
+
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        .form__item.no-indent--bottom.form__item--dashed
+            input(type='checkbox' name='').form__checkbox#ver
+            label(for='ver').form_checkLabel Проверка
+
+    .col-xs-100.col-sm-50.col-msm-33.col-lg-25
+        .form__item.no-indent--bottom.form__item--dashed
+            input(type='checkbox' name='').form__checkbox#insurance
+            label(for='insurance').form_checkLabel Страховка

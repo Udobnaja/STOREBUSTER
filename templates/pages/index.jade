@@ -12,16 +12,11 @@ block content
             include ../include/advantages/advantages
         .divider
         .content__wrapper
-            .content__headline Как это работает?
-            include ../include/progress/progress            
-            .centered
-                a(href='agent.html').link.link--centered другие схемы работы
-        .separator
-        .content__wrapper
-            .content__headline
-                |Получите личный адрес в Англии, 
-                |Германии бесплатно
+            .content__headline How it working?
+            include ../include/progress/progress--1170
                 
+        .separator
+        .content__wrapper                
             include ../include/form-registration/form-registration
         .separator
         .content__wrapper
@@ -44,13 +39,16 @@ block content
         
         .divider
         .content__wrapper.content__wrapper--blueBordered
-            .content__headline Сколько это будет стоить?
             include ../include/f-cost/f-cost
                 
             
 
 block footer
     include ../include/footer/footer
+    
+block agreement 
+    include ../include/agreement/agreement
+            
 append script
     script(src='js/owl.carousel.js')
     script

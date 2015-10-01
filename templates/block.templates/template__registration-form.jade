@@ -1,0 +1,26 @@
+block headline
+    .content__headline
+        |Sign Up and get your address right now for free
+
+form(action='').form.centered.wrapper.wrapper--710
+
+    block reg-Email
+
+    .form__holder
+        input(type='text' placeholder='Ф. И.' required).form__item.form__input.js-required
+        .form__ico-result
+    .form__holder
+        input(type='email' placeholder='E-mail' required).form__item.form__input.js-required
+        .form__ico-result
+    .form__holder
+        input(type='password' placeholder='Пароль' required).form__item.form__input.js-required
+        .form__password-ico: i.fa.fa-eye
+        .form__ico-result
+        
+    block reg-social
+    
+    input(type='checkbox' name='agree' required).js-required-check.form__checkbox#form__checkbox
+    label(for='form__checkbox').form_checkLabel
+        |Принимаю 
+        a.link.js-btn_agreement-window.js-show_overlay  соглашение
+    input(type='submit' value='Получить' data-i=4).form__item.form__submit.form__submit--top-indent

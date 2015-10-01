@@ -1,0 +1,128 @@
+extends ../block.templates/template
+
+block header
+    include ../include/header/header
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Our service fees
+                
+                //<div class="switch">
+                //<input type="radio" id="england" name="radio" class="switch__elem switch__elem--england" checked>
+                //<label for="england" class="switch__e-clone"><span>Англия</span></label>
+
+                //<input type="radio" id="germany" name="radio" class="switch__elem switch__elem--germany">
+                //<label for="germany" class="switch__e-clone"><span>Германия</span></label>
+                
+                .pseudo-table.blue
+                    .row.pseudo-table__row.blue.xs-hidden.sm-vissible
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell Shopping as&shy;sistant
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell Virtual address
+                    .row.pseudo-table__row.white
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Goods pur&shy;chas&shy;ing
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 5%
+                            |or
+                            span.strong.font--30 £5
+                            br
+                            |£ minimum
+                        .col-xs-100.col-sm-33.col-md-15.centered
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £0
+                        .col-xs-100.col-md-55.pseudo-table__cell
+                            |We will buy goods on your behalf, receive it from shop, check it. You can store it up to 45 days for free.
+                    .row.pseudo-table__row.blue
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Par&shy;cel receiving from shop
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            |free
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £1.50
+                        .col-xs-100.col-md-55.pseudo-table__cell 
+                            |If you buy goods and with your virtual address we charge for ev&shy;ery par&shy;cel what we receive
+                    .row.pseudo-table__row.white
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Consol&shy;idation
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            |free
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell 
+                            .sm-hidden Virtual address
+                            |free
+                        .col-xs-100.col-md-55.pseudo-table__cell We put your goods in one big box  with&shy;out any charge.
+                    .row.pseudo-table__row.blue
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Stor&shy;age up to 45 days
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            |free
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            |free
+                        .col-xs-100.col-md-55.pseudo-table__cell
+                            |You can buy goods 45 days and store it on our ware&shy;house for free. Af&shy;ter 45 days we will 
+                            |charge £10.00  for one week
+                            
+            .divider.divider--white
+            .content__wrapper
+                .content__headline Additional service
+                .pseudo-table.blue
+                    .row.pseudo-table__row.blue.xs-hidden.sm-vissible
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell Shopping as&shy;sistant
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell Virtual addres
+                    .row.pseudo-table__row.white
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Goods, item checking
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 £2.0
+                        .col-xs-100.col-sm-33.col-md-15.centered
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £2.0
+                        .col-xs-100.col-md-55.pseudo-table__cell We can check your item before shipping, so you can be sure you will receive right item.
+                    .row.pseudo-table__row.blue
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted
+                            |Shoe boxes, hang&shy;ers, promo ma&shy;te&shy;rials removals
+                            br
+                            |(per par&shy;cel)
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 £5.0
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £5.0
+                        .col-xs-100.col-md-55.pseudo-table__cell
+                            |We sure you do not need additional weight and old packaging, so we can clear your all or&shy;ders before shipping
+                    .row.pseudo-table__row.white
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Item photos (3 pcs)
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 £1.50
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £1.50
+                        .col-xs-100.col-md-55.pseudo-table__cell We make 3 pic&shy;tures of your or&shy;der
+                    .row.pseudo-table__row.blue
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Or&shy;der col&shy;lection
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 £0.90 
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £0.90 
+                        .col-xs-100.col-md-55.pseudo-table__cell Return to sell&shy;er (+ postage fees)
+                    .row.pseudo-table__row.white
+                        .col-xs-100.col-sm-33.col-md-15.pseudo-table__cell.centered.sm-lefted Item photos (3 pcs)
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Shopping as&shy;sistant
+                            span.strong.font--30 £5.0
+                        .col-xs-100.col-sm-33.col-md-15.centered.pseudo-table__cell
+                            .sm-hidden Virtual address
+                            span.strong.font--30 £5.0
+                        .col-xs-100.col-md-55.pseudo-table__cell We will return unwanted or&shy;der back to shop.
+                
+block footer
+    include ../include/footer/footer

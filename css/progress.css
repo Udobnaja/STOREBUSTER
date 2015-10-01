@@ -142,20 +142,8 @@
 
 @media only screen and (min-width: 768px){
     
-    .progress{
-        width: 605px;
-    }
-    
     .progress__step{
         width: 155px;
-    }
-
-    .progress__step--penultimate{
-        margin-left: 105px;
-    }
-
-    .progress__step--last{
-        margin: 0;
     }
     
     .progress__arrow{
@@ -165,19 +153,33 @@
     .progress__step:after{
         left: 155px;
     }
+    
+    .progress__step--last {
+        margin: 0;
+    }
+    
+    .progress__step--penultimate {
+        margin-left: 105px;
+    }
 }
 
 @media only screen and (min-width: 1200px){
     
     .progress{
+        width: 950px;
+    }
+    
+    .progress--1170{
         width: 84%;
         max-width: 1170px;
     }
-
+    
     .progress__step--last,
-    .progress__step--penultimate{
-        margin: 0 auto;;
+    .progress__step--penultimate {
+        margin: 0 auto;
     }
+
+    
 
     .progress__ico{
         font-size: 45px;

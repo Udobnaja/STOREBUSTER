@@ -38,10 +38,12 @@ gulp.task('server', function () {
     gulp.watch('*.html', ['html']);
     gulp.watch('css/*.css', ['css']);
     gulp.watch('js/*.js', ['js']);
+    gulp.watch('templates/*/*.jade', ['templates']);
+
 });
 
 //Задача для сборки
-gulp.task('build', ['html', 'css', 'images', 'js']);
+gulp.task('build', ['html', 'css', 'images', 'js', 'templates']);
 
 //Сборка html файлов
 gulp.task('html', function () {
@@ -142,7 +144,7 @@ gulp.task('templates', function() {
       jade: jade,
       pretty: true
     }))
-    .pipe(gulp.dest('templates/public/'))
+    .pipe(gulp.dest(params.out))
 });
 
 
