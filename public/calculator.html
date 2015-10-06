@@ -12,8 +12,7 @@
   <meta name="format-detection" content="telephone=no">
   <!--Для BlackBerry - запрет на преобразование любых номеров в ссылки-->
   <meta http-equiv="x-rim-auto-match" content="none">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><!--[if lt IE 9]>
+  <link rel="stylesheet" href="styles.css"><!--[if lt IE 9]>
   <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script><![endif]-->
 </head>
 <body><!--[if lt IE 8]>
@@ -27,7 +26,7 @@
           <div class="header__top-panel"><a href="registration.html" class="header__btn btn header__btn--yellow">Регистрация</a>
             <div role="button" class="header__btn btn header__btn--lightYellow js-btn_entrance-window js-show_overlay">Вход в кабинет</div>
           </div>
-          <div class="add-panel"><a href="basket.html" class="add-panel__btn btn add-panel__basket">Корзина<i class="fa fa-shopping-cart add-panel__basket-ico"></i></a></div>
+          <div class="add-panel"><a href="basket.html" class="add-panel__btn btn add-panel__basket">Корзина<i class="font-ico font-ico-basket add-panel__basket-ico"></i></a></div>
           <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -87,9 +86,9 @@
             </div><a class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль?</a>
             <p class="paragraph">Войти через социальную сеть</p>
             <div class="row entrance__social-ico">
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--facebook"><i class="fa fa-facebook"></i></a></div>
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--google-plus"><i class="fa fa-google-plus"></i></a></div>
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--twitter"><i class="fa fa-twitter"></i></a></div>
+              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--facebook"><i class="font-ico font-ico-facebook"></i></a></div>
+              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--google-plus"><i class="font-ico font-ico-google"></i></a></div>
+              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--twitter"><i class="font-ico font-ico-twitter"></i></a></div>
             </div>
             <input type="submit" value="Войти" data-i='5' class="form__item form__submit entrance__submit">
           </form>
@@ -137,171 +136,175 @@
       </div>
     </div>
   </header>
-  <div class="content">
-    <div class="content__wrapper content__wrapper--blueBordered">
-      <div class="content__headline">How much is it?</div>
-      <form action="" class="form form-cost">
-        <div class="f-cost__wrapper">
-          <div class="row">
-            <div class="col-xs-100 col-msm-33">
-              <label for="" class="form__label">Вес посылки</label>
-              <input type="text" class="form__item form__input no-indent--bottom">
-            </div>
-            <div class="col-xs-100 col-sm-50 col-msm-33">
-              <label for="" class="form__label">Ваша страна</label>
-              <select name="" class="form__item no-indent--bottom">
-                <option value="Россия">Россия</option>
-                <option value="Украина">Украина                               </option>
-              </select>
-            </div>
-            <div class="col-xs-100 col-sm-50 col-msm-33">
-              <label for="" class="form__label">Страна назначения</label>
-              <select name="" class="form__item">
-                <option value="Англия">Россия</option>
-                <option value="Германия">Украина</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="f-cost--white">
-          <div class="content__headline content__headline--no-indent js-turn-item_add-options roll"><span class="turn-item turn-item--closed turn-item--add-options">Дополнительные опции</span></div>
-          <div class="f-cost__wrapper add-options"> 
+  <div class="light-blue">
+    <div class="content">
+      <div class="content__wrapper content__wrapper--blueBordered">
+        <div class="content__headline">How much is it?</div>
+        <form action="" class="form form-cost">
+          <div class="f-cost__wrapper">
             <div class="row">
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <label for="" class="form__label">Стоимость товара</label>
+              <div class="col-xs-100 col-msm-33">
+                <label for="" class="form__label">Вес посылки</label>
                 <input type="text" class="form__item form__input no-indent--bottom">
               </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <label for="" class="form__label">Доставка по стране</label>
-                <input type="text" class="form__item form__input no-indent--bottom">
+              <div class="col-xs-100 col-sm-50 col-msm-33">
+                <label for="" class="form__label">Ваша страна</label>
+                <select name="" class="form__item no-indent--bottom">
+                  <option value="Россия">Россия</option>
+                  <option value="Украина">Украина                               </option>
+                </select>
               </div>
-            </div>
-            <div class="row f-cost__filters">
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <div class="form__item no-indent--bottom form__item--dashed">
-                  <input type="checkbox" name="" id="clear" class="form__checkbox">
-                  <label for="clear" class="form_checkLabel">Очистка</label>
-                </div>
-              </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <div class="form__item no-indent--bottom form__item--dashed">
-                  <input type="checkbox" name="" id="foto" class="form__checkbox">
-                  <label for="foto" class="form_checkLabel">Фото</label>
-                </div>
-              </div>
-              <div class="col-xs-100 col-msm-33 col-lg-25">
-                <div class="form__item no-indent--bottom form__item--dashed">
-                  <input type="checkbox" name="" id="pkg" class="form__checkbox f-cost__pkg">
-                  <label for="pkg" class="form_checkLabel">
-                    <div class="f-cost__pkg-txt">Дополнительная<br>упаковка</div>
-                  </label>
-                </div>
-              </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <div class="form__item no-indent--bottom form__item--dashed">
-                  <input type="checkbox" name="" id="ver" class="form__checkbox">
-                  <label for="ver" class="form_checkLabel">Проверка</label>
-                </div>
-              </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33 col-lg-25">
-                <div class="form__item no-indent--bottom form__item--dashed">
-                  <input type="checkbox" name="" id="insurance" class="form__checkbox">
-                  <label for="insurance" class="form_checkLabel">Страховка</label>
-                </div>
-              </div>
-            </div>
-            <div class="centered js-turn-item_add-options roll"><a class="link link--centered turn-item turn-item--closed">свернуть</a></div>
-          </div>
-        </div>
-        <div class="delivery"> 
-          <div class="row">
-            <div class="col-xs-100 col-msm-50 col-md-25">
-              <div class="delivery__item">
-                <div class="delivery__subitem">
-                  <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                  <div class="delivery__name">Shopogolic<br>Express</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__price">2000</div>
-                  <div class="delivery__time">18 дней</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                  <div class="delivery__r-commission">1,88р</div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-              </div>
-            </div>
-            <div class="col-xs-100 col-msm-50 col-md-25">
-              <div class="delivery__item">
-                <div class="delivery__subitem">
-                  <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                  <div class="delivery__name">Shopogolic<br>Express</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__price">2000</div>
-                  <div class="delivery__time">18 дней</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                  <div class="delivery__r-commission">1,88р</div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-              </div>
-            </div>
-            <div class="col-xs-100 col-msm-50 col-md-25">
-              <div class="delivery__item">
-                <div class="delivery__subitem">
-                  <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                  <div class="delivery__name">Shopogolic<br>Express</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__price">2000</div>
-                  <div class="delivery__time">18 дней</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                  <div class="delivery__r-commission">1,88р</div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-              </div>
-            </div>
-            <div class="col-xs-100 col-msm-50 col-md-25">
-              <div class="delivery__item">
-                <div class="delivery__subitem">
-                  <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
-                  <div class="delivery__name">Shopogolic<br>Express</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__price">2000</div>
-                  <div class="delivery__time">18 дней</div>
-                </div>
-                <div class="divider"></div>
-                <div class="delivery__subitem">
-                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                  <div class="delivery__r-commission">1,88р</div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
+              <div class="col-xs-100 col-sm-50 col-msm-33">
+                <label for="" class="form__label">Страна назначения</label>
+                <select name="" class="form__item">
+                  <option value="Англия">Россия</option>
+                  <option value="Германия">Украина</option>
+                </select>
               </div>
             </div>
           </div>
-        </div>
-      </form>
+          <div class="f-cost--white">
+            <div class="content__headline content__headline--no-indent js-turn-item_add-options roll"><span class="turn-item turn-item--closed turn-item--add-options">Дополнительные опции</span></div>
+            <div class="f-cost__wrapper add-options"> 
+              <label for="" class="form__label">Стоимость товара</label>
+              <div class="row">
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <input type="text" class="form__item form__input no-indent--bottom">
+                </div>
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <div class="form__item no-indent--bottom form__item--dashed">
+                    <input type="checkbox" name="" id="clear" class="form__checkbox">
+                    <label for="clear" class="form_checkLabel">Очистка</label>
+                  </div>
+                </div>
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <div class="form__item no-indent--bottom form__item--dashed">
+                    <input type="checkbox" name="" id="foto" class="form__checkbox">
+                    <label for="foto" class="form_checkLabel">Фото</label>
+                  </div>
+                </div>
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <div class="form__item no-indent--bottom form__item--dashed">
+                    <input type="checkbox" name="" id="insurance" class="form__checkbox">
+                    <label for="insurance" class="form_checkLabel">Страховка  </label>
+                  </div>
+                </div>
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <div class="form__item no-indent--bottom form__item--dashed">
+                    <input type="checkbox" name="" id="pkg" class="form__checkbox f-cost__pkg">
+                    <label for="pkg" class="form_checkLabel">
+                      <div class="f-cost__pkg-txt">Дополнительная<br>упаковка</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-xs-100 col-sm-50 col-md-33">
+                  <div class="form__item no-indent--bottom form__item--dashed">
+                    <input type="checkbox" name="" id="ver" class="form__checkbox">
+                    <label for="ver" class="form_checkLabel">Проверка</label>
+                  </div>
+                </div>
+              </div>
+              <p class="paragraph paragraph--centered js-turn-item_add-options roll"><a class="link link--centered turn-item turn-item--closed">свернуть</a></p>
+            </div>
+          </div>
+          <div class="delivery"> 
+            <div class="row">
+              <div class="col-xs-100 col-msm-50 col-md-25">
+                <div class="delivery__item">
+                  <div class="delivery__subitem">
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
+                    <div class="delivery__name">Shopogolic<br>Express</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__price">2000</div>
+                    <div class="delivery__time">18 дней</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
+                    <div class="delivery__r-commission">1,88р</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
+                  <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
+                </div>
+              </div>
+              <div class="col-xs-100 col-msm-50 col-md-25">
+                <div class="delivery__item">
+                  <div class="delivery__subitem">
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
+                    <div class="delivery__name">Shopogolic<br>Express</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__price">2000</div>
+                    <div class="delivery__time">18 дней</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
+                    <div class="delivery__r-commission">1,88р</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
+                  <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
+                </div>
+              </div>
+              <div class="col-xs-100 col-msm-50 col-md-25">
+                <div class="delivery__item">
+                  <div class="delivery__subitem">
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
+                    <div class="delivery__name">Shopogolic<br>Express</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__price">2000</div>
+                    <div class="delivery__time">18 дней</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
+                    <div class="delivery__r-commission">1,88р</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
+                  <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
+                </div>
+              </div>
+              <div class="col-xs-100 col-msm-50 col-md-25">
+                <div class="delivery__item">
+                  <div class="delivery__subitem">
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
+                    <div class="delivery__name">Shopogolic<br>Express</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__price">2000</div>
+                    <div class="delivery__time">18 дней</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="delivery__subitem">
+                    <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
+                    <div class="delivery__r-commission">1,88р</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
+                  <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <footer role="contentinfo" class="footer">
@@ -327,7 +330,7 @@
         </div>
         <div class="footer-top__right-part">
           <div class="footer__adress">Великобритания:<br><a href="" class="link">+44 75633 59 211</a><br><a href="mailto:shopogolic@shopogolic.net" class="link">shopogolic@shopogolic.net</a></div>
-          <div class="footer__social social"><a href="" class="social__link link"><i class="fa fa-vk"></i></a><a href="mailto:shopogolic@shopogolic.net" class="social__link link"><i class="fa fa-envelope"></i></a><a href="" class="social__link link"><i class="fa fa-facebook"></i></a></div>
+          <div class="footer__social social"><a href="" class="social__link link"><i class="font-ico font-ico-vkontakte"></i></a><a href="mailto:shopogolic@shopogolic.net" class="social__link link"><i class="font-ico font-ico-mail"></i></a><a href="" class="social__link link"><i class="font-ico font-ico-facebook_footer"></i></a></div>
           <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -366,8 +369,8 @@
   <div class="fix-panel">
     <div class="fix-panel__wrapper">
       <div class="fix-panel__container">
-        <div class="fix-panel__btn btn js-btn_calculator-window js-show_overlay"><i class="fa fa-calculator"></i></div>
-        <div class="fix-panel__btn btn"><i class="fa fa-comments-o"></i></div>
+        <div class="fix-panel__btn btn js-btn_calculator-window js-show_overlay"><i class="font-ico font-ico-calculator"></i></div>
+        <div class="fix-panel__btn btn"><i class="font-ico font-ico-livechat"></i></div>
       </div>
     </div>
   </div>
@@ -405,7 +408,9 @@
               <div class="col-xs-100 col-msm-50 col-md-25">
                 <div class="delivery__item">
                   <div class="delivery__subitem">
-                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
                     <div class="delivery__name">Shopogolic<br>Express</div>
                   </div>
                   <div class="divider"></div>
@@ -426,7 +431,9 @@
               <div class="col-xs-100 col-msm-50 col-md-25">
                 <div class="delivery__item">
                   <div class="delivery__subitem">
-                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
                     <div class="delivery__name">Shopogolic<br>Express</div>
                   </div>
                   <div class="divider"></div>
@@ -447,7 +454,9 @@
               <div class="col-xs-100 col-msm-50 col-md-25">
                 <div class="delivery__item">
                   <div class="delivery__subitem">
-                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
                     <div class="delivery__name">Shopogolic<br>Express</div>
                   </div>
                   <div class="divider"></div>
@@ -468,7 +477,9 @@
               <div class="col-xs-100 col-msm-50 col-md-25">
                 <div class="delivery__item">
                   <div class="delivery__subitem">
-                    <div class="delivery__logo"><i class="fa fa-yelp"></i></div>
+                    <div class="delivery__logo">
+                      <!--i.fa.fa-yelp-->
+                    </div>
                     <div class="delivery__name">Shopogolic<br>Express</div>
                   </div>
                   <div class="divider"></div>

@@ -1,0 +1,98 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Корзина
+                //
+                 <div class="switch">
+                    <input type="radio" id="england" name="radio" class="switch__elem switch__elem--england" checked>
+                    <label for="england" class="switch__e-clone"><span>Англия</span></label>
+                    <input type="radio" id="germany" name="radio" class="switch__elem switch__elem--germany">
+                    <label for="germany" class="switch__e-clone"><span>Германия</span></label>
+                 </div>
+                 
+                ul.shop-list.blue
+                    .shop-list__item: a.link.shop-list__link.shop-list__link--active товары из всех магазинов
+                    .shop-list__item: a.link.shop-list__link e-bay
+                    .shop-list__item: a.link.shop-list__link amazon
+                    .shop-list__item: a.link.shop-list__link другие магазины
+                    
+                mixin bascetElem(id)
+                    - var i = 0
+                        while i < 3
+                            - var idCounter = 'form__checkbox_' + (id + i)
+                            .row.basket__elem
+                            
+                                .col-xs-100.col-md-20
+                                    .basket__key
+                                        input(id= idCounter type='checkbox' name='').form__checkbox
+                                        label(for= idCounter).form_checkLabel 14570444024
+                                .col-md-60.basket__product
+                                    .row
+                                        .col-xs-100.col-msm-30.basket__img
+                                            img(src='/images/1316879278_080928apple.jpg' alt='').img--response
+                                        .col-xs-100.col-msm-70
+                                            strong Travel Select Orange 4pc Amsterdam Light  Expandable Rolling Luggage Suitcase Set
+                                            br
+                                            a(href='').link Сайт покупки
+                                            br
+                                            br
+                                            |Окончание продажи лота: 25 июля
+                                            br
+                                            br
+                                            case i
+                                                when 0
+                                                    a(href='').link добавить комментарий
+                                                when 1
+                                                    a.link отменить | 
+                                                    a.link сохранить
+                                                when 2
+                                                    a.link удалить | 
+                                                    a.link изменить
+                                                default
+                                                    a(href='').link добавить комментарий
+                                        .col-xs-100.no-indent--bottom
+                                        
+                                            case i
+                                                when 2
+                                                    form(action='').form.basket__form
+                                                        textarea(name='' placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
+                                                    .basket__comment.
+                                                        Товар очень понравился. Собственно я могу смело рекомендовать данный продукт.                                                                                   Натуральный, хорошо помогает при сухости кожи и волос, а главное быстро. Надеюсь, что и всем
+                                                        заинтересовавшимся и купившим поможет так же хорошо, как и мне.
+                                                        
+                                                default 
+                                                    form(action='').form.basket__form.basket__form--show
+                                                        textarea(name='' placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
+                                                    .basket__comment
+
+                                .col-xs-100.col-md-20.no-indent--top
+                                    .basket__price цена
+                                        br
+                                        span.strong.font--30 500е
+                                - i++
+                    
+                    
+                form(action='').form
+                    .blue.basket
+                    
+                        mixin shop(id, name)
+                            .basket__shop-name= name
+                            +bascetElem(id)
+                            .row.basket__elem
+                                .col-xs-100.col-md-20.offset-md-80.centered Коммисия: 
+                                    span.strong 500e
+                            .row.basket__elem.basket__elem--transparent
+                                .col-xs-100.col-md-20.offset-md-80.centered
+                                    span.strong Итого: 500e
+                        
+                        +shop(0, 'E-bay')
+                        +shop(3, 'Amazon')
+                        +shop(6, 'Другие магазины')
+  
+                       
+
+            
+           

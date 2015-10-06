@@ -1,0 +1,26 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline  Вакансия для человека
+                form(action='').form.wrapper.wrapper--815
+                    .form__holder
+                        input(type='text' placeholder='Имя, Фамилия' required).form__item.form__input.js-required
+                        .form__ico-result
+                    .form__holder
+                        input(type='tel' placeholder='Телефон' required).form__item.form__input.js-required
+                        .form__ico-result
+                    .form__holder
+                        input(type='email' placeholder='E-mail' required).form__item.form__input.js-required
+                        .form__ico-result
+                    textarea(name='' placeholder='Опыт работы').form__item.form__input.form__textarea
+                    textarea(name='' placeholder='Образование, курсы, тренинги').form__item.form__input.form__textarea
+                    label(for='') Прикрепите свою фотографию (размер, расширение):
+                    label(for='').form__upload.form__item.form__input
+                        span.form__upload-txt.form__input Файл не выбран
+                        span.form__upload-btn Прикрепить
+                        input(type="file").form__file
+                    .clearfix
+                    input(type='submit' value='Отправить' data-i=3).form__item.form__submit

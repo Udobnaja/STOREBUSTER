@@ -27,6 +27,7 @@
     color: #fff;
     border-radius: 50%;
     background: #f7de22;
+    line-height: 1.9;
 }
 
 .progress__paragraph{
@@ -186,6 +187,8 @@
 
         width: 87px;
         height: 87px;
+        
+        line-height: 2;
     }
 
     .progress__arrow{

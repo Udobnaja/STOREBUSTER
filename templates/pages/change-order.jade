@@ -1,0 +1,46 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Добавление товара 
+                form(action='').form.wrapper.wrapper--815
+                    label(for='').form__label 1. Ссылка на товар
+                    input(type='text' readonly).form__item.form__input
+                    label(for='').form__label 2. Название товара
+                    input(type='text').form__item.form__input 
+                    .row
+                        .col-xs-100.col-msm-50
+                            .row
+                                .col-xs-100.col-sm-50
+                                    label(for='').form__label 3. Цена товара
+                                    input(type='text').form__item.form__input.no-indent--bottom
+                                .col-xs-100.col-sm-50
+                                    label(for='').form__label 4. Цена доставки
+                                    input(type='text').form__item.form__input.no-indent--bottom
+                    .row
+                        .col-xs-100.col-msm-75
+                            .row.inverted-indent--top
+                                .col-xs-100.col-sm-50.col-msm-33
+                                    label(for='').form__label 5. Количество
+                                    input(type='text').form__item.form__input.no-indent--bottom
+                                .col-xs-100.col-sm-50.col-msm-33
+                                    label(for='').form__label 6.  Размер
+                                    input(type='text').form__item.form__input.no-indent--bottom
+                                .col-xs-100.col-sm-50.col-msm-33
+                                    label(for='').form__label 7. Цвет
+                                    input(type='text').form__item.form__input.no-indent--bottom
+                                    
+                    .row
+                        .col-xs-100.col-sm-50.col-msm-33
+                            .form__item.no-indent--bottom.form__item--dashed
+                                input(type='checkbox' name='').form__checkbox#clear
+                                label(for='clear').form_checkLabel Проверка товара
+                        .col-xs-100.col-sm-50.col-msm-33
+                            .form__item.no-indent--bottom.form__item--dashed
+                                input(type='checkbox' name='').form__checkbox#foto
+                                label(for='foto').form_checkLabel Фото
+                                
+                    input(type='submit' value='Сохранить').form__item.form__submit.form__submit--top-indent
+ 

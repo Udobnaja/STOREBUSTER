@@ -1,7 +1,4 @@
 extends ../block.templates/template
-
-block header
-    include ../include/header/header
     
 block content
     .content
@@ -40,24 +37,20 @@ block content
         .divider
         .content__wrapper.content__wrapper--blueBordered
             include ../include/f-cost/f-cost
-                
-            
 
-block footer
-    include ../include/footer/footer
     
 block agreement 
     include ../include/agreement/agreement
             
 append script
     script(src='js/owl.carousel.js')
-    script
-        |$("#top-slider").owlCarousel({
-        |pagination : true, // Show next and prev buttons
-        |slideSpeed : 800,
-        |paginationSpeed : 800,
-        |singleItem : true,
-        |autoPlay : 5000,
-        |stopOnHover : true
-        |});
+    script.
+        $("#top-slider").owlCarousel({
+        pagination : true, // Show next and prev buttons
+        slideSpeed : 800,
+        paginationSpeed : 800,
+        singleItem : true,
+        autoPlay : 5000,
+        stopOnHover : true
+        });
     

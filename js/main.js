@@ -99,13 +99,13 @@ function inputTringger(elem) {
             elem
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--success')
-                .append('<i class="fa fa-check"></i>');
+                .append('<i class="font-ico font-ico-okay"></i>');
         } else {
             elem
                 .addClass('form__item--error')
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--error')
-                .append('<i class="fa fa-exclamation-triangle"></i>');
+                .append('<i class="font-ico font-ico-error"></i>');
             elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
         }
     };

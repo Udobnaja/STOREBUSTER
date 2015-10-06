@@ -313,6 +313,11 @@
     background: #f7de22;
 }
 
+.btn--indent-top
+{
+    margin-top: 50px;
+}
+
 .btn--block:hover
 {
     box-shadow: 0 0 0 3px #f7de22;
@@ -490,6 +495,21 @@
     display: inline-block;
 
     padding-top: 15px;
+}
+
+.circle-ico
+{
+    font-size: 65px;
+    line-height: 1.8;
+
+    box-sizing: border-box;
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+
+    color: #fff;
+    border-radius: 50%;
+    background: #414a57;
 }
 
 .commission
@@ -840,7 +860,7 @@
 .entrance__ico
 {
     font-size: 38px;
-    line-height: 2;
+    line-height: 1.9;
 
     width: 70px;
     height: 70px;
@@ -1184,24 +1204,12 @@
     url('/fonts/storeBusters.svg#storeBusters') format('svg');
 }
 
-.font-ico
-{
-    font: normal normal normal 14px/1 storeBusters;
-    font-size: inherit;
-
-    display: inline-block;
-
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .font-ico:before
 {
     font-family: 'storeBusters';
     font-weight: normal;
     font-style: normal;
-    line-height: 1;
+    line-height: inherit;
 
     display: inline-block;
 
@@ -1244,19 +1252,139 @@
     text-align: center;
 }
 
-.font-ico-reg:before
+.font-ico-basket:before
 {
     content: '\EA01';
 }
 
-.font-ico-g:before
+.font-ico-calculator:before
 {
     content: '\EA02';
 }
 
-.font-ico-delivery:before
+.font-ico-chart:before
 {
     content: '\EA03';
+}
+
+.font-ico-chat:before
+{
+    content: '\EA04';
+}
+
+.font-ico-cubes:before
+{
+    content: '\EA05';
+}
+
+.font-ico-delivery:before
+{
+    content: '\EA06';
+}
+
+.font-ico-error:before
+{
+    content: '\EA07';
+}
+
+.font-ico-facebook:before
+{
+    content: '\EA08';
+}
+
+.font-ico-facebook_footer:before
+{
+    content: '\EA09';
+}
+
+.font-ico-form-fill:before
+{
+    content: '\EA0A';
+}
+
+.font-ico-google:before
+{
+    content: '\EA0B';
+}
+
+.font-ico-headphones:before
+{
+    content: '\EA0C';
+}
+
+.font-ico-livechat:before
+{
+    content: '\EA0D';
+}
+
+.font-ico-mail:before
+{
+    content: '\EA0E';
+}
+
+.font-ico-okay:before
+{
+    content: '\EA0F';
+}
+
+.font-ico-package:before
+{
+    content: '\EA10';
+}
+
+.font-ico-palm:before
+{
+    content: '\EA11';
+}
+
+.font-ico-payment:before
+{
+    content: '\EA12';
+}
+
+.font-ico-pigeon:before
+{
+    content: '\EA13';
+}
+
+.font-ico-queen:before
+{
+    content: '\EA14';
+}
+
+.font-ico-registration:before
+{
+    content: '\EA15';
+}
+
+.font-ico-search:before
+{
+    content: '\EA16';
+}
+
+.font-ico-speaker:before
+{
+    content: '\EA17';
+}
+
+.font-ico-twitter:before
+{
+    content: '\EA18';
+}
+
+.font-ico-view_password:before
+{
+    content: '\EA19';
+}
+
+.font-ico-virtual-point:before
+{
+    content: '\EA1A';
+}
+
+.font-ico-vkontakte:before
+{
+    content: '\EA1B';
 }
 
 .footer-bottom
@@ -3160,6 +3288,7 @@ th
 .progress__ico
 {
     font-size: 40px;
+    line-height: 1.9;
 
     width: 78px;
     height: 78px;
@@ -3991,8 +4120,6 @@ th
 .track-table
 {
     margin: 0;
-
-    border: 3px solid #f5fafe;
 }
 
 .track-table__row,
@@ -4008,12 +4135,30 @@ th
 
 .track-table__content
 {
-    padding: 15px 30px;
+    padding: 0 20px 0;
+}
+
+.track-table__hidden-headline
+{
+    font-family: 'ProximaNovaBold';
+
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+.track-table__hidden-headline--yellow
+{
+    margin-bottom: 15px;
+
+    background: #f7de22;
 }
 
 .track-table__img
 {
-    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .track__link.link
@@ -5304,8 +5449,6 @@ th
     .track-table
     {
         margin: 50px auto;
-
-        border: none;
     }
 
     .track-table__row,
@@ -5325,9 +5468,20 @@ th
         padding: 30px;
     }
 
+    .track-table__hidden-headline
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .track-table__hidden-headline--yellow
+    {
+        margin-bottom: 0;
+    }
+
     .track-table__img
     {
-        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .track__link
@@ -5788,6 +5942,7 @@ th
     .progress__ico
     {
         font-size: 45px;
+        line-height: 2;
 
         width: 87px;
         height: 87px;

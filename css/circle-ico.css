@@ -1,0 +1,11 @@
+.circle-ico{    
+    font-size: 65px;
+    line-height: 1.8;
+    box-sizing: border-box;
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 50%;
+    background: #414a57;
+}

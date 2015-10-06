@@ -1,0 +1,94 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline   Отследить посылку
+                form(action='').form.wrapper.wrapper--830
+                    label(for='').form__label Введите трек-номер
+                    .row
+                        .col-xs-100.col-msm-66
+                            .form__holder
+                                input(type='text' required).form__input.form__item.js-required.no-indent--bottom
+                                .form__ico-result
+                        .col-xs-100.col-msm-33
+                            input(type='submit' value='Найти').form__item.form__submit.no-indent--bottom
+                            
+                .centered
+                    a.link.link--centered Как узнать трек-номер?
+                    
+            .content__wrapper.wrapper.wrapper--1120
+                p.paragraph.paragraph--centered Посылка №: <strong>CD009421853RU</strong>
+                .row.no-indent--top
+                    .col-xs-100.col-msm-50
+                        .text-cell.blue
+                            strong Получатель:
+                            br
+                            |Козодоев Артем Витальевич
+                            br
+                            br
+                            strong Место назначения:
+                            br
+                            | Почтовое отделение 347900 «ТАГАНРОГ»
+                            br
+                            br
+                            strong Адрес почтового отделения:
+                            |347900, Таганрог, Ростовская обл.,
+                            br
+                            |Фрунзе, 38
+                            
+                    .col-xs-100.col-msm-50
+                        .text-cell
+                            strong Информация о посылке:
+                            br
+                            |Посылка обыкновенная
+                            br
+                            |Без разряда
+                            br
+                            |Без отметки
+                            br
+                            br
+                            strong Вес:
+                            br
+                            |8,65 кг
+                            
+                .track-table
+                    .row.xs-hidden.msm-vissible.track-table__row
+                        .track-table__cell.col-xs-100.col-msm-25.centered.strong
+                            .yellow.track-table__content Дата
+                        .track-table__cell.col-xs-100.col-msm-50.centered.strong
+                            .yellow.track-table__content Статус
+                        .track-table__cell.col-xs-100.col-msm-25.centered.strong
+                            .yellow.track-table__content Курьерская службаёя
+                    mixin rows(list)
+                        -var i = 0
+                        -var className
+                            each item in list
+                                -className = !(i%2) ? 'track-table__content' : 'track-table__content blue'
+                                -i++
+                                .row.track-table__row
+                                    .track-table__cell.col-xs-100.col-msm-25
+                                        div(class= className)
+                                            .msm-hidden.track-table__hidden-headline.track-table__hidden-headline--yellow Дата
+                                            != item[0]
+
+                                    .track-table__cell.col-xs-100.col-msm-50 
+                                        div(class= className)
+                                            .msm-hidden.track-table__hidden-headline Статус
+                                            != item[1]
+
+                                    .track-table__cell.col-xs-100.col-msm-25.centered
+                                        div(class= className)
+                                            .msm-hidden.track-table__hidden-headline Курьерская служба
+                                            img(src='images/track-ico.png' alt='').img.img--response.track-table__img
+                    +rows([
+                        ['23 июля 2015 год<br>19:02', 'Доставлено'],
+                        ['17 июля 2015 год<br>08:19', 'В пути &mdash; Прибыла в промежуточный пункт 347949 Таганрог почтамт'],
+                        ['17 июля 2015 год<br>08:19', 'В пути &mdash; Покинула промежуточный пункт<br>102 Москва-Казанский Вкз. ПЖДП ММПО PI-30'],
+                        ['17 июля 2015 год<br>08:19', 'Покинула таможню<br>102901 Москва-Казанский Вкз. ПЖДП ММПО PI-30'],
+                        ['17 июля 2015 год<br>08:19', 'Покинула таможню<br>102901 Москва-Казанский Вкз. ПЖДП ММПО PI-30'],
+                        ['17 июля 2015 год<br>08:19', 'В пути &mdash; Прибыла на тирриторию РФ'],
+                        ['17 июля 2015 год<br>08:19', 'Импорт международной почты<br>500100 Russian Post'],
+                        
+                    ])

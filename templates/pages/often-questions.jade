@@ -1,0 +1,71 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Часто Задаваемые Вопросы
+                .blue
+                    form(action='').form.faq__form
+                        .row
+                            .col-xs-100.col-msm-75
+                                .form__search
+                                    input(type='text').form__item.form__input.form__input-search.no-indent--bottom
+                                    .form__search-ico
+                                        i.font-ico.font-ico-search
+                            .col-xs-100.col-msm-25
+                                input(type='submit' value='Найти').form__item.form__input.form__submit.form__submit--msm-100
+                                
+            .content__wrapper
+                //sub questions to question
+                    <li class="faq__elem">
+                        <div class="faq__question roll js-turn-item_sub-wrapper">
+                            Что такое shopogolic.net
+                        </div>
+                        <ol class="faq__sub-wrapper sub-wrapper" style="display: block;">
+                           <li class="faq__sub-elem">
+                               <div class="faq__sub-question roll js-turn-item_sub-answer">
+                                    Вопросы по покупке товаров.
+                               </div>
+                               <div class="faq__sub-answer sub-answer">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
+
+                               </div>
+                           </li>
+                           <li class="faq__sub-elem">
+                               <div class="faq__sub-question roll js-turn-item_sub-answer">
+                                    Вопросы пам пам.
+                               </div>
+                               <div class="faq__sub-answer sub-answer">
+                                   Lorem ipsum 
+                               </div>
+                           </li>
+
+                        </ol>
+                    </li>
+                mixin faqList(list)
+                    ol.faq
+                        each item in list
+                            li.faq__elem
+                                .faq__question.roll.js-turn-item_answer!= item[0]
+                                .faq__answer.answer!= item[1]
+                                
+                +faqList([
+                    ['What is storebustres?', 'We are web ser&shy;vice and help to buy and ship goods from UK and Eu&shy;rope to anywhere in the world.'],
+                    ['How to order goods if shop not accept my card?','Just sign up and you be able to fill the from with link for item, size, col&shy;or and oth&shy;er options, af&shy;ter pay&shy;ment we will buy your goods.'],
+                    ['How working virtual address?', 'Virtual address is address in our ware&shy;house with your unique ID number. It works very simple you buy goods and enter our address in checkout. Shop send goods to our ware&shy;house, we receive it and can store for you or consol&shy;idate with oth&shy;er goods and ship it to your home address.'],
+                    ['What payment do you accept?', 'We accept any VISA or MAS&shy;TER&shy;CARD and Paypal, all trans&shy;actions is safe and we not store any pay&shy;ment details.'],
+                    ['How to consolidate orders?', 'When we get your or&shy;der you will receive confirmation email. You be able to consol&shy;idate few or&shy;ders in your account, choose de&shy;liv&shy;ery and ship it to your home address.'],
+                    ['How long I can store my orders in your warehouse?', 'You can keep or&shy;ders up to 45 days. If you need more time for small fee you will be able to store your goods for unlim&shy;ited time.'],
+                    ['Can I return order back to shop?', 'Yes you will be able to return goods if the shop accept returns. If you bought goods at auction from the individual goods unfortunately it is impos&shy;sible to return. We rec&shy;ommend to check cloth&shy;ing sizes sev&shy;eral times that then to avoid mis&shy;under&shy;standing. In case of return you need to pay small fee for return + postage.'],
+                    ['How to receive parcel from UK?', 'When par&shy;cel shipped you get tracking number, usu&shy;ally when par&shy;cel arrived to your address you will receive email or text from local couri&shy;er compa&shy;ny and par&shy;cel will be de&shy;liv&shy;ered to your address or local post office.'],
+                    ['Do I need to pay TAXES?', 'Shipping rates do not include any duty charges or taxes. These will be lev&shy;ied by the des&shy;tination country accord&shy;ing to local laws and paying such charges is your responsibility. Please check your duty taxes before sending or&shy;ders with your local customs agency. '],
+                    ['Do you ship to PO boxes?', 'No unfortunately we cannot ship to your PO box, you can use only your address.'],
+                    ['Can I buy on Amazon or Ebay?','Yes you can use our shopping as&shy;sistant or buy goods with your own account and use our address.'],
+                    ['Do I need to pro&shy;vide any passport or driv&shy;ing license?', 'In some cases we can ask to pro&shy;vide you additional doc&shy;u&shy;ments or bank state&shy;ment for secu&shy;rity rea&shy;son.'],
+                    ['What do you mean by volumetric weight?', 'Par&shy;cel weights are calculated on a vol&shy;u&shy;met&shy;ric basis based on both weight and dimen&shy;sions so the vol&shy;u&shy;met&shy;ric weight of your par&shy;cel may be greater than the actual weight it&shy;self.<br><br>Differ&shy;ent couri&shy;ers use slightly differ&shy;ent calcu&shy;lations to determine a par&shy;cel vol&shy;ume so please use the calculator be&shy;low.'],
+                    ['What goods I cannot send through your service?','We do have a list of prohib&shy;ited items which we cannot carry at all. We also have a list of items which we can carry but will only be covered in the event of loss, not dam&shy;age. '],
+                    ['What countries you can ship?','Our country list and shipping cost you can see in our calculator.'],
+                    ['My shipment is damaged?',' If you receive dam&shy;aged ship&shy;ment please con&shy;tact us as soon as pos&shy;sible, make good pic&shy;tures and make claim in your local couri&shy;er office. Also you need to fill claim form what we will send to you.']
+                
+                ])

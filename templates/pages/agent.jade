@@ -1,0 +1,51 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                include ../include/progress/progress--1170.agent-page.jade
+            .divider
+            .content__wrapper
+                include ../include/progress/progress.agent-page.jade
+            .divider
+            .content__wrapper
+                .content__headline Buy in your favou&shy;rite shops
+                .row.blue.shops
+                    mixin shops
+                        .col-xs-100.col-msm-50.col-md-25
+                            a(href='detail-payment-method.html').link.shops__img-link
+                                img(src='/images/oYsoqpi4L2g.jpg').img.img--response
+                            a(href='detail-payment-method.html').link.strong Интернет магазин Aldo
+                            
+                    +shops
+                    +shops
+                    +shops
+                    +shops
+                    +shops
+                    +shops
+                    +shops
+                    +shops
+                    
+                a(href='catalog-shops.html').btn--block.btn Каталог магазинов
+                
+            .divider
+            .content__wrapper
+                .content__headline Why choose Store&shy;Busters?
+                .wrapper.wrapper--1170
+                    .row
+                        mixin icoBlock(mod, classIco, txt)
+                            div(class= mod).col-xs-100.col-md-20.centered
+                                .circle-ico
+                                    i(class= classIco).font-ico
+                                br
+                                =txt
+                        +icoBlock('col-msm-33','font-ico-chart','We have small commission')
+                        +icoBlock('col-msm-33','font-ico-queen','Officially registered in UK')
+                        +icoBlock('col-msm-33','font-ico-palm','hidden fees')
+                        +icoBlock('col-msm-50','font-ico-pigeon','Good online support')
+                        +icoBlock('col-msm-50','font-ico-headphones','Range of delivery couriers')
+
+                     
+                    
+                a(href='registration.html').btn--block.btn Начать покупки

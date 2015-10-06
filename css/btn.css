@@ -23,6 +23,10 @@
     background: #f7de22;
 }
 
+.btn--indent-top{
+    margin-top: 50px;
+}
+
 .btn--block:hover{
     box-shadow: 0 0 0 3px #f7de22;
 }

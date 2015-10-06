@@ -25,16 +25,7 @@ block header
                             .form__ico-result
                         a.link.js-close_overlay.js-close-btn_entrance-window.js-btn_forgot-password-window.js-show_overlay Забыли пароль?
                         p.paragraph Войти через социальную сеть
-                        .row.entrance__social-ico
-                            .col-xs-33.centered
-                                a.link.entrance__ico.entrance__ico--facebook
-                                    i.fa.fa-facebook
-                            .col-xs-33.centered
-                                a.link.entrance__ico.entrance__ico--google-plus
-                                    i.fa.fa-google-plus
-                            .col-xs-33.centered
-                                a.link.entrance__ico.entrance__ico--twitter
-                                    i.fa.fa-twitter
+                        include ../entrance/entrance__social-ico
                         input(type='submit' value='Войти' data-i=5).form__item.form__submit.entrance__submit
 
         .overlay.js-overlay_forgot-password-window.overlay--black.js-hide_overlay

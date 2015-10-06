@@ -1,0 +1,29 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper.payment-method
+                h1.content__headline Способы оплаты
+                mixin elem(name)  
+                    .payment-method__elem
+                        .row
+                            .col-xs-100.col-msm-20
+                                img(src='/images/oYsoqpi4L2g.jpg' alt='').img.img--response
+                            .col-xs-100.col-msm-80
+                                .payment-method__headline= name 
+                                p.paragraph.
+                                    Теперь вы можете оплатить свои покупки вашей банковской картой VISA или Mastercard с минимальным процентов
+                                    за перевод. Наш сайт использует безопасные соединения HTTPS:// и мы не держим никакой конфидециальной 
+                                    информации или ваши данные. Все проходит через английский банк и деньги мгновенно появляются на вашем балансе. 
+                                    Чтобы пополнить ваш баланс достаточно ввести ваши данные карты и подтвердить платеж.
+                                a(href='detail-payment-card.html').link.payment-method__link Подробнее
+                +elem('Карты VISA + 2.95% + 0.20')
+                .divider.divider--100
+                +elem('Paypal + 4.4% + 0,20')
+                .divider.divider--100
+                +elem('Яндекс Деньги 4.0%')
+                .divider.divider--100
+                +elem('Карты VISA + 2.95% + 0.20')
+                .divider.divider--100
+                +elem('Paypal + 4.4% + 0,20')

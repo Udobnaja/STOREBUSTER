@@ -1,0 +1,52 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+            
+                h1.content__headline Оплата заказа
+            
+                .pay
+                    .row
+                    
+                        .col-xs-100.col-md-50.blue.pay__col
+                            table.table
+                                tbody.table__body
+                                    tr.table__row
+                                        td(colspan=2).table__cell.table__cell--no-padding Ваш заказ
+                                    tr.table__row
+                                        td.table__cell.table__cell--top-bordered.table__cell--no-padding.
+                                            Travel Select Orange 4pc Amsterdam Light Expandable Rolling Luggage  Suitcase Set
+                                        td.table__cell.table__cell--top-bordered 30
+                                    tr.table__row
+                                        td.table__cell.table__cell--top-bordered.table__cell--no-padding Стоимость товара
+                                        td.table__cell.table__cell--top-bordered 30
+                                    tr.table__row
+                                        td.table__cell.table__cell--top-bordered.table__cell--no-padding Доставка до склада Шопбастерс
+                                        td.table__cell.table__cell--top-bordered 30
+                                    tr.table__row
+                                        td.table__cell.table__cell--top-bordered.table__cell--no-padding Комиссия 
+                                        td.table__cell.table__cell--top-bordered 30
+                                    tr.table__row
+                                        td.table__cell.table__cell--top-bordered.table__cell--no-padding.strong ВСЕГО 
+                                        td.table__cell.table__cell--top-bordered.strong.font--30 30
+                                        
+                        .col-xs-100.col-md-50.pay__col
+                            table.table
+                                tbody.table__body
+                                    tr.table__row
+                                        td(colspan=4).table__cell Выберите способ оплаты
+                                    mixin rows(payment)
+                                        tr.table__row
+                                            td.table__cell.table__cell--top-bordered.pay__radio
+                                                input(type='radio' name='payment')
+                                            td.table__cell.table__cell--top-bordered.table__cell--no-padding
+                                                != payment
+                                            td.table__cell.table__cell--top-bordered.pay__img-container
+                                                img(src='/images/oYsoqpi4L2g.jpg' alt='').img--response
+                                            td.table__cell.table__cell--top-bordered.centered 30
+                                    +rows('Visa, <br>Mastercard')
+                                    +rows('PayPal')
+                                    +rows('Kiwi')
+                                    +rows('Банковский <br>перевод')

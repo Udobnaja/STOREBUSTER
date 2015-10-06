@@ -67,7 +67,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('images', function () {
-    gulp.src('images/*.{jpg,png,svg}')
+    gulp.src('images/*.{jpg,png}')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -113,7 +113,7 @@ gulp.task('js', function () {
 
 
 gulp.task('Iconfont', function(){
-  return gulp.src(['images/*.svg'])
+  return gulp.src(['images/svg/*.svg'])
     .pipe(iconfont({
       fontName: 'storeBusters', // required
       appendUnicode: true, // recommended option
@@ -121,7 +121,7 @@ gulp.task('Iconfont', function(){
       timestamp: runTimestamp, // recommended to get consistent builds when watching files
       normalize: true,
       fontHeight: 1001,
-      centerHorizontally: true,
+      //centerHorizontally: true,
     }))
     .on('glyphs', function(glyphs, options) {
       gulp.src('fonts-ico.css')

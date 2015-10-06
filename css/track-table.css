@@ -1,6 +1,5 @@
 .track-table{
     margin: 0;
-    border: 3px solid #f5fafe;
 }
 
 .track-table__row,
@@ -13,17 +12,30 @@
 }
 
 .track-table__content{
-    padding: 15px 30px;
+    padding: 0 20px 0;
+}
+
+
+.track-table__hidden-headline{
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'ProximaNovaBold';
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.track-table__hidden-headline--yellow{
+    background: #f7de22;
+    margin-bottom: 15px;
 }
 
 .track-table__img{
-    margin-top: 10px;
+    margin-bottom: 25px
 }
 
 @media only screen and (min-width: 768px){
     .track-table{
         margin: 50px auto;
-        border: none;
     }
     
     .track-table__row,
@@ -38,8 +50,18 @@
     .track-table__content{
         padding: 30px;
     }
+
+    
+    .track-table__hidden-headline{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .track-table__hidden-headline--yellow{
+        margin-bottom: 0;
+    }
     
     .track-table__img{
-        margin-top: 0;
+        margin-bottom: 0
     }
 }

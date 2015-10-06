@@ -9,21 +9,12 @@
   font-style: normal;
 }
 
-.font-ico{
-    display: inline-block;
-    font: normal normal normal 14px/1 storeBusters;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .font-ico:before {
   display: inline-block;
   font-family: "storeBusters";
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
+  line-height: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,6 +33,30 @@
   text-align: center;
 }
 
-.font-ico-reg:before { content: "\EA01" }
-.font-ico-g:before { content: "\EA02" }
-.font-ico-delivery:before { content: "\EA03" }
+.font-ico-basket:before { content: "\EA01" }
+.font-ico-calculator:before { content: "\EA02" }
+.font-ico-chart:before { content: "\EA03" }
+.font-ico-chat:before { content: "\EA04" }
+.font-ico-cubes:before { content: "\EA05" }
+.font-ico-delivery:before { content: "\EA06" }
+.font-ico-error:before { content: "\EA07" }
+.font-ico-facebook:before { content: "\EA08" }
+.font-ico-facebook_footer:before { content: "\EA09" }
+.font-ico-form-fill:before { content: "\EA0A" }
+.font-ico-google:before { content: "\EA0B" }
+.font-ico-headphones:before { content: "\EA0C" }
+.font-ico-livechat:before { content: "\EA0D" }
+.font-ico-mail:before { content: "\EA0E" }
+.font-ico-okay:before { content: "\EA0F" }
+.font-ico-package:before { content: "\EA10" }
+.font-ico-palm:before { content: "\EA11" }
+.font-ico-payment:before { content: "\EA12" }
+.font-ico-pigeon:before { content: "\EA13" }
+.font-ico-queen:before { content: "\EA14" }
+.font-ico-registration:before { content: "\EA15" }
+.font-ico-search:before { content: "\EA16" }
+.font-ico-speaker:before { content: "\EA17" }
+.font-ico-twitter:before { content: "\EA18" }
+.font-ico-view_password:before { content: "\EA19" }
+.font-ico-virtual-point:before { content: "\EA1A" }
+.font-ico-vkontakte:before { content: "\EA1B" }
