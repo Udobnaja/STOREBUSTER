@@ -1,5 +1,10 @@
-extends ../block.templates/template
-    
+extends ../block.templates/template  
+
+prepend header
+    -var faqId = 1
+    -var menuId = 2
+    -var submenuId = '11'
+
 block content
     .light-blue
         .content
@@ -31,21 +36,6 @@ block content
                 
             .divider
             .content__wrapper
-                .content__headline Why choose Store&shy;Busters?
-                .wrapper.wrapper--1170
-                    .row
-                        mixin icoBlock(mod, classIco, txt)
-                            div(class= mod).col-xs-100.col-md-20.centered
-                                .circle-ico
-                                    i(class= classIco).font-ico
-                                br
-                                =txt
-                        +icoBlock('col-msm-33','font-ico-chart','We have small commission')
-                        +icoBlock('col-msm-33','font-ico-queen','Officially registered in UK')
-                        +icoBlock('col-msm-33','font-ico-palm','hidden fees')
-                        +icoBlock('col-msm-50','font-ico-pigeon','Good online support')
-                        +icoBlock('col-msm-50','font-ico-headphones','Range of delivery couriers')
-
-                     
-                    
+                include ../include/choose/choose
+ 
                 a(href='registration.html').btn--block.btn Начать покупки

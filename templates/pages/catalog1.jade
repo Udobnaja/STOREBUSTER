@@ -1,0 +1,49 @@
+extends ../block.templates/template
+
+prepend header
+    - var menuId = 1
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+                h1.content__headline Каталог товаров amazon
+                //
+                    <div class="switch">
+                        <input type="radio" id="england" name="radio" class="switch__elem  switch__elem--england" checked>
+                        <label for="england" class="switch__e-clone"><span>Англия</span></label>
+
+                        <input type="radio" id="germany" name="radio" class="switch__elem  switch__elem--germany">
+                        <label for="germany" class="switch__e-clone"><span>Германия</span></label>
+                    </div>
+                    
+                .blue
+                    - var shoplistId = 1
+                    
+                    include ../mixins/shoplist.jade 
+                                        
+                    +shoplist([
+                        {
+                            name: 'e-bay',
+                            href: 'catalog.html'
+                        },
+                        {
+                            name: 'amazon',
+                            href: 'catalog1.html'
+                        },
+                        {
+                            name: 'каталог магазинов',
+                            href: 'catalog-shops.html'
+                        }
+                    ], shoplistId)
+                    
+                    include ../include/search-form/form
+                    
+                .blue.catalog
+                    .row.no-indet--top
+                        include ../include/catalog/catalog__goods
+                        
+prepend footer
+    - var footerMenuId = 4
+
+                        

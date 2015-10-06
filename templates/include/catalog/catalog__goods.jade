@@ -1,0 +1,19 @@
+.col-xs-100.col-msm-30.col-md-25
+    include catalog__categories
+.col-xs-100.col-msm-70.col-md-75
+    .row
+
+        mixin catalog(content)
+            .col-xs-100.col-msm-50.col-md-33
+              a(href='product-Amazon.html').link.catalog__img-link
+                  img(src='/images/1316879278_080928apple.jpg' alt='').img.img--response
+              a(href='product-Amazon.html').link.catalog__name-link= content
+
+        +catalog('Джинсовая куртка')
+        +catalog('Платье миди в полоску')
+        +catalog('Платье-рубашка с акцентными швами')
+        +catalog('Джинсовое платье мини с вырезом сзади')
+        +catalog('Платье макси с длинными рукавами и двумя разрезами')
+        +catalog('Платье-футболка')
+                      
+                

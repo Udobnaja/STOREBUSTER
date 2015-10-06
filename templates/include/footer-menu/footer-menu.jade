@@ -1,11 +1,46 @@
-.footer-menu
-    nav.footer-menu__content
-        a(href='news.html').footer-menu__link.link Блог
-        a(href='delivery.html').footer-menu__link.link Услуги
-        a(href='about.html').footer-menu__link.link Контакты
-        a(href='reviews.html').footer-menu__link.link Отзывы
-        a(href='catalog-shops.html').footer-menu__link.link Магазины
-        a(href='often-questions.html').footer-menu__link.link FAQ
-        a(href='ref.html').footer-menu__link.link Реферальная программа
-        a(href='delivery-single-page.html').footer-menu__link.link Доставка и гарантия
-        .clearfix
+.footer-menu   
+    mixin footerMenu(elements)
+        nav.footer-menu__content
+            each element, i in elements
+                if (i === footerMenuId)
+                    a(href= element.href).footer-menu__link.footer-menu__link--active.link= element.name
+                else 
+                    a(href= element.href).footer-menu__link.link= element.name
+            .clearfix
+                    
+    +footerMenu([
+        {
+            href : 'news.html',
+            name : 'Блог'
+        },
+        {
+            href : 'delivery.html',
+            name : 'Service'
+        },
+        {
+            href : 'about.html',
+            name : 'Контакты'
+        },
+        {
+            href : 'reviews.html',
+            name : 'Отзывы'
+        },
+        {
+            href : 'catalog-shops.html',
+            name : 'Магазины'
+        },
+        {
+            href : 'often-questions',
+            name : 'FAQ'
+        },
+        {
+            href : 'ref.html',
+            name : 'Реферальная программа'
+        },
+        {
+            href : 'delivery-single-page.html',
+            name : 'Доставка и гарантия'
+        },
+    ])
+
+        

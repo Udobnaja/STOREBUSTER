@@ -1,4 +1,7 @@
 extends ../block.templates/template
+
+prepend header
+    -var faqId = 0
     
 block content
     .light-blue
@@ -6,15 +9,7 @@ block content
             .content__wrapper
                 h1.content__headline Часто Задаваемые Вопросы
                 .blue
-                    form(action='').form.faq__form
-                        .row
-                            .col-xs-100.col-msm-75
-                                .form__search
-                                    input(type='text').form__item.form__input.form__input-search.no-indent--bottom
-                                    .form__search-ico
-                                        i.font-ico.font-ico-search
-                            .col-xs-100.col-msm-25
-                                input(type='submit' value='Найти').form__item.form__input.form__submit.form__submit--msm-100
+                    include ../include/search-form/form
                                 
             .content__wrapper
                 //sub questions to question
@@ -69,3 +64,6 @@ block content
                     ['My shipment is damaged?',' If you receive dam&shy;aged ship&shy;ment please con&shy;tact us as soon as pos&shy;sible, make good pic&shy;tures and make claim in your local couri&shy;er office. Also you need to fill claim form what we will send to you.']
                 
                 ])
+                
+prepend footer
+    - var footerMenuId = 5 

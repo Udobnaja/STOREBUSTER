@@ -1,5 +1,9 @@
 extends ../block.templates/template
-    
+
+prepend header
+    - var submenuId = '01'
+    - var menuId = 0
+
 block content
     .light-blue
         .content
@@ -102,3 +106,6 @@ block content
                     |Если вас заинтересовало наше предложение и вы готовы начать работать и развивать ваш бизнес,
                     br
                     |пишите нам на имеил на shopogolic@shopogolic.net с пометкой «для бизнеса».
+                    
+prepend footer
+    - var footerMenuId = 1

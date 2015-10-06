@@ -1,0 +1,86 @@
+extends ../block.templates/template
+
+prepend header
+    - var menuId = 1
+
+block content
+    .light-blue
+        .content
+            .content__wrapper.detail-product
+                .row
+                    .col-xs-100.col-md-50.detail-product__foto.detail-product__col
+                        .row
+                            .col-xs-100.centered
+                                img(src='images/japan.jpg' alt='').img.img--response
+                            a.col-xs-33.no-indent--bottom
+                                img(src='images/1316879278_080928apple.jpg' alt="").img.img--response
+                            a.col-xs-33.no-indent--bottom
+                                img(src='images/1316879278_080928apple.jpg' alt="").img.img--response
+                            a.col-xs-33.no-indent--bottom
+                                img(src='images/1316879278_080928apple.jpg' alt="").img.img--response
+                    .col-xs-100.col-md-50.detail-product__col
+                        .blue.detail-product__desk.text-cell
+                            .strong  Женское летнее платье Womens Summer Casual Beach Boho Printed Sexy V Neck Mermaid Maxi Long
+                            a.link Подробнее на сайте
+                            .row.no-indent--top.detail-product__info
+                                .col-xs-100.col-sm-50 Размер (женский UK):
+                                .col-xs-100.col-sm-50
+                                    select(name='').form__item.no-indent--bottom
+                                        option(value='') 1
+                                        option(value='') 2
+                                        option(value='') 3
+                                        option(value='') 4
+                                        option(value='') 5
+                                .col-xs-100.col-sm-50 Количество :
+                                .col-xs-100.col-sm-50
+                                    input(type='text' placeholder=1).form__item.form__input.no-indent--bottom.detail-product__quantity
+                                .col-xs-100.col-sm-50
+                                    .detail-product__price 2 254,24 р <br>39,99 е
+                                .col-xs-100.col-sm-50
+                                    |Доставка по стране <br>39,99 е
+                            .row.no-indent--top
+                                .col-xs-100.col-msm-50
+                                    .btn.btn--block Положить в корзину
+                    .col-xs-100.col-md-50.detail-product__col
+                        .text-cell.blue
+                            .detail-product__headline Информация о продавце
+                            .row
+                                .col-xs-100.col-sm-50.
+                                    Продавец: bluefalcon-usa <br> Товар из Portland, Oregon, UK <br> product, eBayId: 131534207147
+                                .col-xs-100.col-sm-50.
+                                    Отзывы: 381 <br> Положительных: 99,7% <br> Оценка 5 из 5, <br> оценили пользователи eBay
+                    .col-xs-100.col-md-50.detail-product__col
+                        .text-cell
+                            .detail-product__headline Способ оплаты
+                            .row.no-indent--top
+                                mixin payment
+                                    .col-xs-50.col-sm-25.centered: img(src='images/payment.png' alt='').img.img--respinse
+                                +payment
+                                +payment
+                                +payment
+                                +payment
+            .content__wrapper
+                .text-cell.blue
+                    .detail-product__headline Основные характеристики товара
+                    .detail-product__characteristics-txt.
+                        Площадь полуострова составляет около 2 млн км². Индокитай омывается с запада Бенгальским заливом и Андаманским морем 
+                        Индийского океана, Малаккским проливом, на юге и востоке — относящимся к Тихому океану Южно-Китайским морем и его заливами                                     Сиамским и Бакбо (Тонкинским). Северная граница полуострова условно проводится от дельты рек Ганг и Брахмапутра к дельте реки                                   Хонгха. Южная оконечность Индокитая южнее перешейка Кра образует вытянутый полуостров Малакка.
+            .content__wrapper
+                .row.no-indent--top
+                    .content__headline Похожие товары
+                    mixin goods
+                        a(href='detailed-product-page-Sniper.html').col-xs-100.col-sm-50.col-md-25.centered
+                            img(src='images/1316879278_080928apple.jpg' alt='').img.img--response
+                    +goods
+                    +goods
+                    +goods
+                    +goods
+
+prepend footer
+    - var footerMenuId = 4
+
+append script
+    script.
+        $("select").selecter({
+            customClass: "detail-product__select"
+        });

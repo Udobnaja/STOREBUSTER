@@ -1,4 +1,7 @@
 extends ../block.templates/template
+
+prepend header
+    - var menuId = 1
     
 block content
     .light-blue
@@ -33,3 +36,6 @@ block content
                                 input(type='text').form__item.form__input.form__item--no-b-margin
                             .col-xs-100.col-msm-25
                                 input(type='submit' value='Купить').form__item.form__submit.form__submit--msm-100
+                                
+prepend footer
+    - var footerMenuId = 4

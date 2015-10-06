@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 
 var params = {
     out : 'public',
-    htmlSrc : '*.html',
+    //htmlSrc : '*.html',
     levels : 'css'
 };
 
@@ -35,7 +35,7 @@ gulp.task('server', function () {
         server : params.out
     });
     //смотрим за изменениями в html  выполняем команду html
-    gulp.watch('*.html', ['html']);
+    //gulp.watch('*.html', ['html']);
     gulp.watch('css/*.css', ['css']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('templates/*/*.jade', ['templates']);
@@ -43,14 +43,15 @@ gulp.task('server', function () {
 });
 
 //Задача для сборки
-gulp.task('build', ['html', 'css', 'images', 'js', 'templates']);
+gulp.task('build', ['templates', 'css', 'js', 'images']);
 
-//Сборка html файлов
+/*Сборка html файлов
 gulp.task('html', function () {
     gulp.src(params.htmlSrc)
         .pipe(gulp.dest(params.out))
         .pipe(reload({stream : true}));
 });
+*/
 
 gulp.task('css', function () {
     
@@ -82,34 +83,7 @@ gulp.task('js', function () {
         .pipe(reload({stream : true}));
 });
 
-/*gulp.task('Iconfont', function(){
-   gulp.src(['images/*.svg'])
-    .pipe(iconfont({ fontName: 'storeBusters' }))
-    .on('glyphs', function(glyphs) {
-      var options = {
-        glyphs: glyphs.map(function(glyph) {
-          // this line is needed because gulp-iconfont has changed the api from 2.0
-          return { name: glyph.name, glyph: glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() }
-        }),
-        fontName: 'storeBusters',
-        fontPath: '/fonts/', 
-        className: 'font-ico'
-      };
-      gulp.src('fonts-ico.css')
-        .pipe(consolidate('lodash', options))
-        .pipe(rename({ basename : 'storeBusters' }))
-        .pipe(gulp.dest('css/')); // set path to export your CSS
-       console.log(glyphs);
-       
-       gulp.src('templates/i.html')
-        .pipe(consolidate('lodash', options))
-        .pipe(rename({ basename:'sample' }))
-        .pipe(gulp.dest('templates/'));
 
-    })
-    .pipe(gulp.dest( params.out +'/fonts/')); // set path to export your fonts
-});
-*/
 
 
 gulp.task('Iconfont', function(){

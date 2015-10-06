@@ -1,5 +1,9 @@
 extends ../block.templates/template
-    
+
+prepend header
+    - var menuId = 2
+    - var submenuId = '10'
+
 block content 
     .light-blue
         .content
@@ -211,6 +215,9 @@ block content
                                     |Котов просьба не беспокоиться. откликнуться на вакансию
                     .centered
                         a(href='vacancy.html').link.link--centered Подать заявку
+                        
+prepend footer
+    - var footerMenuId = 2 
 
 ////<?php echo(isMobile()) ? "draggable: false" : ""; ?>
 prepend script

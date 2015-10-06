@@ -1,0 +1,5 @@
+mixin menu(element, count)
+    if (count === menuId)
+        a(href= element.href).menu__link.menu__link--active.link= element.name
+    else
+        a(href= element.href).menu__link.link= element.name

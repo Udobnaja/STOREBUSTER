@@ -1,0 +1,8 @@
+mixin shoplist(items, shoplistId)
+    ul.shop-list
+        each item, i in items
+            li.shop-list__item
+                if (i === shoplistId)
+                    a(href= item.href).link.shop-list__link.shop-list__link--active= item.name 
+                else
+                    a(href= item.href).link.shop-list__link= item.name

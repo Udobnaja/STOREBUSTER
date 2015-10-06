@@ -1,5 +1,9 @@
 extends ../block.templates/template
-    
+
+prepend header
+    - var submenuId = '00'
+    - var menuId = 0
+
 block content
     .light-blue
         .content
@@ -120,3 +124,6 @@ block content
                             .sm-hidden Virtual address
                             span.strong.font--30 £5.0
                         .col-xs-100.col-md-55.pseudo-table__cell We will return unwanted or&shy;der back to shop.
+                        
+prepend footer
+    - var footerMenuId = 1

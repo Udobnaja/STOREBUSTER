@@ -1,10 +1,23 @@
 .faq-window
     .faq-window__list
         .js-close_overlay.btn.btn--close.js-close-btn_faq-window.faq-window__close-btn
-        a(href='often-questions.html').faq-window__link.link FAQ
-        br
-        a(href='agent.html').faq-window__link.link How it working?
-        br
-        a(href='payment-method.html').faq-window__link.link Способы оплаты
-        br
-        a(href='feedback.html').faq-window__link.link Обратная связь
+        include ../../mixins/faq
+                
+        +faq([
+            {
+                name: 'FAQ',
+                href: 'often-questions.html'
+            },
+            {
+                name: 'How it working?',
+                href: 'agent.html'
+            },
+            {
+                name: 'Способы оплаты',
+                href: 'payment-method.html'
+            },
+            {
+                name: 'Обратная связь',
+                href: 'feedback.html'
+            },
+        ], faqId)

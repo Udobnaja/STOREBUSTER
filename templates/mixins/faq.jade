@@ -1,0 +1,8 @@
+mixin faq(items)
+    each item, i in items
+        if (i === faqId)
+            a(href= item.href).faq-window__link.faq-window__link--active.link= item.name
+            br
+        else
+            a(href= item.href).faq-window__link.link= item.name
+            br

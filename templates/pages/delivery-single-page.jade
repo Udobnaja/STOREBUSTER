@@ -1,4 +1,7 @@
 extends ../block.templates/template
+
+prepend header
+    - var menuId = 3
     
 block content
     .light-blue
@@ -52,4 +55,6 @@ block content
                     быть к Вам как можно ближе мы регулярно открываем новые пункты самовывоза. Нам очень важны Ваши отзывы. 
                     Пожалуйста, поделитесь предложениями и мнением о сайте и сервисе на нашем форуме.
 
+prepend footer
+    - var footerMenuId = 7
     

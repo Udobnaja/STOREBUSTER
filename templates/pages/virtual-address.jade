@@ -1,5 +1,9 @@
 extends ../block.templates/template
-    
+
+prepend header
+    - var submenuId = '02'
+    - var menuId = 0
+
 block content
     .light-blue
         .content
@@ -65,13 +69,10 @@ block content
     .light-blue
         .content
             .content__wrapper
-                .content__headline Why choose us?
-                ul.benefit-list
-                    li.benefit-list__item No hidden fees
-                    li.benefit-list__item No contracts, just pay and send when it needed
-                    li.benefit-list__item Free consolidaton and free storage up to 45 days
-                    li.benefit-list__item Good online customer support
-                    li.benefit-list__item Few shipping carriers to save your money
+                include ../include/choose/choose
+                
+prepend footer
+    - var footerMenuId = 1
     
 block agreement 
     include ../include/agreement/agreement

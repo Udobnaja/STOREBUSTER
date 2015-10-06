@@ -1,0 +1,12 @@
+mixin submenu(elements, count)
+    ul.header__submenu.submenu
+        each element, i in elements
+            li.submenu__item
+                if (count + i === submenuId)
+                    a(href= element.href).submenu__link.submenu__link--active.link!= element.name
+                else 
+                    a(href= element.href).submenu__link.link!= element.name
+                
+            
+                
+                

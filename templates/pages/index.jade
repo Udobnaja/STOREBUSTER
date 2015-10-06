@@ -18,7 +18,9 @@ block content
         .separator
         .content__wrapper
             .content__headline Популярные товары
-            include ../include/catalog/catalog
+            .catalog.catalog--bordered
+                .row
+                    include ../include/catalog/catalog__goods
             
         .separator
         .content__wrapper

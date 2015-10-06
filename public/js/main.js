@@ -17,15 +17,20 @@ function buildGrid(className) {
         arrHeight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         h = 0,
         i;
-    arElements.css({'top': 0});
+    arElements.css({
+        'top': 0,
+        'opacity' : 0,
+        'filter' : 'alpha(opacity = 0)'
+    });
+    
     for (i = 0; i < arElements.length; i++) {
-            
+
         if ((shift + $(arElements[i]).width()) > w_width) {
             shift = 0;
-                
+
             var z = i,
                 j;
-                
+
             for (j = 0; j < counter; j++) {
                 arrHeight[j] += $(arElements[z - counter]).outerHeight(true);
                 $(arElements[z]).css({
@@ -37,9 +42,11 @@ function buildGrid(className) {
         }
 
         $(arElements[i]).css({
-            'left' : shift
+            'left' : shift,
+            //'opacity' : 1
         });
-            
+
+
         shift += $(arElements[i]).innerWidth();
         counter++;
         if (h < $(arElements[i]).position().top + $(arElements[i]).height()) {
@@ -47,7 +54,13 @@ function buildGrid(className) {
         }
         arElements.parent().height(h);
     }
-    arElements.css({'opacity' : 1});
+
+    arElements.css({
+        'opacity' : '1',
+        'filter' : 'alpha(opacity = 100)',
+        'zoom' : 1
+    });
+    
 }
 
 /**
