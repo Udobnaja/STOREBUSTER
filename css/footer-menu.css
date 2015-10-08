@@ -18,7 +18,8 @@
     border-bottom: none;
 }
 
-.footer-menu__link--active.link{
+.footer-menu__link--active.link,
+.footer-menu__link.link:hover{
     color: #f7de22;
 }
 

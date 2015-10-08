@@ -42,7 +42,7 @@ function buildGrid(className) {
         }
 
         $(arElements[i]).css({
-            'left' : shift,
+            'left' : shift
             //'opacity' : 1
         });
 
@@ -119,7 +119,11 @@ function inputTringger(elem) {
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--error')
                 .append('<i class="font-ico font-ico-error"></i>');
-            elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
+            if (elem.attr('placeholder')) {
+                elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
+            } else {
+                elem.attr('placeholder', 'Заполните это поле');
+            }
         }
     };
     
@@ -130,11 +134,14 @@ function inputTringger(elem) {
     inputTringger.focusIs = function () {
         if (elem.hasClass('form__item--error')) {
             holderText = elem.attr('placeholder');
-            elem
-                .removeClass('form__item--error')
-                .attr('placeholder', holderText
+            elem.removeClass('form__item--error');
+            if (elem.attr('placeholder') !== 'Заполните это поле') {
+                elem.attr('placeholder', holderText
                       .replace(holderText.substring(0, 6), "")
                       .replace(holderText.substring(holderText.lastIndexOf(" обязательно"), holderText.length), ""));
+            } else {
+                elem.attr('placeholder', '');
+            }
         }
         elem
             .parent().find('.form__ico-result')
@@ -358,20 +365,13 @@ function stopFixPanel() {
     'use strict';
     var scrolled = window.pageYOffset || document.documentElement.scrollTop,
         windowH = $(window).height(),
-        pTop = $('.footer-bottom').offset().top;
+        pTop = $('.footer__bottom').offset().top,
+        fixpanel = document.querySelector('.fix-panel');
 
     if (windowH - (pTop - scrolled)  >= 0) {
-        $('.fix-panel').css({
-            'position' : 'absolute',
-            'top' : pTop - $('.fix-panel').height(),
-            'bottom' : 'auto'
-        });
+        fixpanel.classList.add('fix-panel--absolute');
     } else {
-        $('.fix-panel').css({
-            'position' : 'fixed',
-            'top' : 'auto',
-            'bottom' : 0
-        });
+        fixpanel.classList.remove('fix-panel--absolute');
     }
 }
 
@@ -428,6 +428,11 @@ $(function () {
         t = ($(this).parent().find('input').attr('type') === 'text') ? 'password' : 'text';
         $(this).parent().find('input').attr('type', t);
         $(this).toggleClass('form__password-ico--active');
+    });
+    
+    $('.form__hint-ico').on('click', function () {
+        $(this).toggleClass('form__hint-ico--active');
+        $(this).next('.form__hint').toggleClass('form__hint--show');
     });
         
     

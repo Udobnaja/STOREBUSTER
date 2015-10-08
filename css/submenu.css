@@ -1,6 +1,10 @@
+.submenu{
+    font-size: 0;
+}
 
 .submenu__item{
     font-family: 'ProximaNovaRegular';
+    font-size: 15px;
 }
 
 .submenu__link.link{
