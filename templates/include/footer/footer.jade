@@ -17,27 +17,30 @@ footer(role='contentinfo').footer
                 .clearfix
             .clearfix
     .separator
-    .footer-bottom
-        .footer-bottom__wrapper
-            .footer-bottom__left-part.subscribe
-                .subscribe__headline Подпишитесь на новости, и получайте самые выгодные предложения:
-                form(action='').footer__form.form
-                    input(type='email' name='').form__item.subscribe__email
-                    input(type='submit' name='' value='Подписаться').form__item.subscribe__btn
-                    .clearfix
+    .footer__bottom
+        .footer-bottom
+            .footer-bottom__wrapper
+                .footer-bottom__left-part.subscribe
+                    .subscribe__headline Подпишитесь на новости, и получайте самые выгодные предложения:
+                    form(action='').footer__form.form
+                        input(type='email' name='').form__item.subscribe__email
+                        input(type='submit' name='' value='Подписаться').form__item.subscribe__btn
+                        .clearfix
 
-            .footer-bottom__right-part
-                .team
-                   .team__text Разработка
-                   a(href='').team__link.link
-            .clearfix
+                .footer-bottom__right-part
+                    .team
+                       .team__text Разработка
+                       a(href='').team__link.link
+                .clearfix
 
-    .footer__divider
-    .footer-bottom
-        .footer-bottom__wrapper
-            ul.terms-agreement
-                li.terms-agreement__item © Shopogolic ltd
-                li.terms-agreement__item Company 08385436
-                li.terms-agreement__item
-                    a(href='').terms-agreement__link.link Cookie policy
-                    a(href='').terms-agreement__link.link Terms and conditions
+            include ../fix-panel/fix-panel
+
+        .footer__divider
+        .footer-bottom
+            .footer-bottom__wrapper
+                ul.terms-agreement
+                    li.terms-agreement__item © Shopogolic ltd
+                    li.terms-agreement__item Company 08385436
+                    li.terms-agreement__item
+                        a(href='').terms-agreement__link.link Cookie policy
+                        a(href='').terms-agreement__link.link Terms and conditions

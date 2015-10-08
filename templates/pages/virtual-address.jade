@@ -17,46 +17,37 @@ block content
                     |Easy cre&shy;ate account on our web site and start use your address af&shy;ter few minutes.
                 
                 .row.v-adress
-                    .col-xs-100.col-msm-50.col-lg-33
-                        .row
-                            .col-xs-100.col-sm-25
-                                .v-adress__ico: i.fa.fa-archive
-                            .col-xs-100.col-sm-75.v-adress__desc 
-                                |Unlim&shy;ited space
-                                br 
-                                |for your or&shy;ders
-                    .col-xs-100.col-msm-50.col-lg-33
-                        .row
-                            .col-xs-100.col-sm-25
-                                .v-adress__ico: i.fa.fa-plus
-                            .col-xs-100.col-sm-75.v-adress__desc 
-                                |No commis&shy;sion just 1 pound
-                                br  
-                                |per or&shy;der
-                    .col-xs-100.col-msm-50.col-lg-33
-                        .row
-                            .col-xs-100.col-sm-25
-                                .v-adress__ico: i.fa.fa-angellist
-                            .col-xs-100.col-sm-75.v-adress__desc 
-                                |You can or&shy;der goods for anywhere
-                                br
-                                |in UK or Eu&shy;ropean Union
-                    .col-xs-100.col-msm-50.col-lg-33
-                        .row
-                            .col-xs-100.col-sm-25
-                                .v-adress__ico  %
-                            .col-xs-100.col-sm-75.v-adress__desc 
-                                |Free packaging,
-                                br 
-                                |consol&shy;idation and stor&shy;age
-                    .col-xs-100.col-msm-50.col-lg-33
-                        .row
-                            .col-xs-100.col-sm-25
-                                .v-adress__ico: i.fa.fa-cubes
-                            .col-xs-100.col-sm-75.v-adress__desc 
-                                |No any fees for big
-                                br
-                                |or bulky parcels
+                    mixin v-adress(elements)
+                        each element in elements
+                            .col-xs-100.col-msm-50.col-lg-33
+                                .row
+                                    .col-xs-100.col-sm-25
+                                        .v-adress__ico: i(class= element.class)
+                                    .col-xs-100.col-sm-75.v-adress__desc 
+                                        != element.txt
+                    +v-adress([
+                        {
+                            class : 'fa fa-archive',
+                            txt : 'Unlim&shy;ited space <br> for your or&shy;ders'
+                        },
+                        {
+                            class : 'fa fa-plus',
+                            txt : 'No commis&shy;sion just 1 pound <br> per or&shy;der'
+                        },
+                        {
+                            class : 'fa fa-angellist',
+                            txt : 'You can or&shy;der goods for anywhere <br> in UK or Eu&shy;ropean Union'
+                        },
+                        {
+                            class : 'fa fa-archive',
+                            txt : 'Free packaging, <br> consol&shy;idation and stor&shy;age'
+                        },
+                        {
+                            class : 'fa fa-cubes',
+                            txt : 'No any fees for big <br> or bulky parcels'
+                        },
+                    ])
+
             .divider
             .content__wrapper
                 .content__headline How working mail forward&shy;ing address?

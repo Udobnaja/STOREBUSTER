@@ -1122,11 +1122,19 @@
 
     position: fixed;
     z-index: 3;
+    top: auto;
     bottom: 0;
     left: 0;
 
     width: 100%;
     min-width: 320px;
+}
+
+.fix-panel--absolute
+{
+    position: absolute;
+    top: -57px;
+    bottom: auto;
 }
 
 .fix-panel__wrapper
@@ -1389,6 +1397,8 @@
 
 .footer-bottom
 {
+    position: relative;
+
     padding: 50px 0;
 
     background: #414a57;
@@ -1423,7 +1433,8 @@
     border-bottom: none;
 }
 
-.footer-menu__link--active.link
+.footer-menu__link--active.link,
+.footer-menu__link.link:hover
 {
     color: #f7de22;
 }
@@ -1572,9 +1583,9 @@
     transition: all .2s linear;
 
     border-radius: 0;
+    background: #fff;
     box-shadow: none;
 
-    -webkit-appearance: none;
     -webkit-appearance: none;
 }
 
@@ -1796,7 +1807,37 @@
     opacity: 0;
 }
 
-.form__password-ico
+.form__hint
+{
+    line-height: 1.2;
+
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 0;
+    padding-left: 20px;
+
+    transition: all .15s linear;
+
+    opacity: 0;
+    border: 1px solid #b4b4b4;
+    border-bottom: none;
+    background: #f8fbfe;
+}
+
+.form__hint--show
+{
+    height: 100%;
+    padding: 20px;
+
+    opacity: 1;
+}
+
+.form__password-ico,
+.form__hint-ico
 {
     font-size: 30px;
     line-height: 2.4;
@@ -1815,8 +1856,15 @@
     color: #b4b4b4;
 }
 
+.form__hint-ico
+{
+    font: 40px/75px'ProximaNovaBold';
+}
+
 .form__password-ico:hover,
-.form__password-ico--active
+.form__password-ico--active,
+.form__hint-ico:hover,
+.form__hint-ico--active
 {
     color: #f7de22;
 }
@@ -3692,6 +3740,8 @@ th
 
 .shop-list
 {
+    font-size: 0;
+
     margin: 0;
     padding: 20px 20px 0 20px;
 
@@ -3700,6 +3750,8 @@ th
 
 .shop-list__item
 {
+    font-size: 15px;
+
     padding: 0;
 }
 
@@ -3772,9 +3824,15 @@ th
     padding: 0;
 }
 
+.submenu
+{
+    font-size: 0;
+}
+
 .submenu__item
 {
     font-family: 'ProximaNovaRegular';
+    font-size: 15px;
 }
 
 .submenu__link.link

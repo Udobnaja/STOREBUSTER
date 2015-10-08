@@ -1,0 +1,27 @@
+mixin deliveryCol(classturn)
+    .col-xs-100.col-msm-50.col-md-25
+        .delivery__item
+            .delivery__subitem
+                .delivery__logo: //i.fa.fa-yelp
+                .delivery__name
+                    |Shopogolic
+                    br
+                    |Express
+            .divider
+            .delivery__subitem
+                .delivery__price 2000
+                .delivery__time 18 дней
+            .divider
+            .delivery__subitem
+                .delivery__l-commission
+                    |Комиссия
+                    br
+                    |платежной
+                    br
+                    |системы
+                .delivery__r-commission 1,88р
+                .clearfix
+            .delivery__subitem.delivery-desc
+                |В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая
+            .delivery__turn.js-turn-item_delivery-desc.roll
+                span(class= classturn) Свернуть
