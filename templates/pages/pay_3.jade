@@ -1,0 +1,46 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+            
+                h1.content__headline Оплата заказа
+                
+                .headline.headline--h2 Данные плательщика
+                
+                form.wrapper.wrapper--940.form
+                
+                    .row
+                    
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Имя' value='Anton').form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Страна' ).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Фамилия' value='Volkov').form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Город' ).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='tel' placeholder='Телефон' ).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Адрес 1' ).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='email' placeholder='Email' value="Avolkov@gmail.com" readonly).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            input(type='text' placeholder='Адрес 2' ).form__item.form__input
+                        .col-xs-100.col-msm-50
+                            .form__holder
+                                input(type='text' placeholder='Индекс' ).form__item.form__input.js-required
+                        .col-xs-100.col-msm-50
+                            input(type='text' placeholder='Адрес 3' ).form__item.form__input
+                            
+                    input(type='submit' value='Продолжить').form__item.form__submit
+                

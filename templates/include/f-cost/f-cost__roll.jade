@@ -2,10 +2,10 @@ extends ../../block.templates/template__f-cost.delivery-form
 
 block headline
     .js-turn-item_delivery-form.roll.roll--blue
-        span.turn-item.turn-item--closed.link--dashed.turn-item--add-options How much is it?
+        span.turn-item.turn-item--closed.link--dashed.turn-item--add-options=const_howMach
 
 block f-cost__add-options
-    .content__headline.content__headline--indent-top Дополнительные опции
+    .content__headline.content__headline--indent-top=const_addOptions
     .f-cost__wrapper.add-options--show
         include f-cost__add-options
                         

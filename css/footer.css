@@ -38,6 +38,10 @@
     background: #dadada;
 }
 
+.footer__separator{
+    position: relative;
+}
+
 @media only screen and (min-width: 480px){
     
     .footer__payment{

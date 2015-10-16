@@ -1,0 +1,16 @@
+extends ../../block.templates/template__registration-form
+
+block headline
+    .headline.headline--h2=const_reg
+
+block reg-Email
+    p.paragraph.paragraph--centered=const_regEmail
+
+block reg-social
+    p.paragraph.paragraph--centered=const_regViaSocial
+    .entrance.entrance--registration
+        include ../entrance/entrance__social-ico
+        
+block submit
+    input(type='submit' value=const_pay data-i=4).form__item.form__submit.form__submit--top-indent
+    

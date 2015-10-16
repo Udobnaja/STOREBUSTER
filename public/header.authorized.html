@@ -33,7 +33,8 @@
       </div>
     </div>
     <div class="header__bottom"><a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="logo Storebusters" class="img img--response"></a>
-      <div class="header__tel js-btn_back-call-window js-show_overlay"><a class="header__tel-number">8-800-888-888</a>заказать обратный звонок</div>
+      <div class="header__tel js-btn_back-call-window js-show_overlay"><a class="header__tel-number">8-800-888-888</a>Заказать обратный звонок
+      </div>
       <div class="clearfix"></div>
     </div>
     <div class="header__menu menu">
@@ -68,7 +69,7 @@
             </ul>
           </nav>
         </div>
-        <div role="button" class="header__faq js-btn_faq-window js-show_overlay">?</div><span role="button" aria-describedby="menu__name" class="menu__ico js-btn_menu-window js-show_overlay"><i class="fa fa-bars"></i></span><span id="menu__name" class="menu__name">меню</span>
+        <div role="button" class="header__faq js-btn_faq-window js-show_overlay">?</div><span role="button" aria-describedby="menu__name" class="menu__ico js-btn_menu-window js-show_overlay"><i class="font-ico font-ico-menu"></i></span><span id="menu__name" class="menu__name">меню</span>
       </div>
     </div>
     <div class="faq-window">
@@ -84,15 +85,15 @@
           <form action="" class="form">
             <label class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</label>
             <div class="form__holder">
-              <input type="tel" placeholder="Телефон" name="" required class="form__item form__input js-required">
+              <input type="tel" placeholder="Телефон" name="" class="form__item form__input js-required">
               <div class="form__ico-result"></div>
             </div>
             <div class="form__holder">
-              <input type="text" placeholder="Ваше имя и фамилия" name="" required class="form__item form__input js-required">
+              <input type="text" placeholder="Имя и фамилия" name="" class="form__item form__input js-required">
               <div class="form__ico-result"></div>
             </div>
             <div class="timepicker form__holder">
-              <input type="text" placeholder="Другое время" required id="timepicker" class="form__input form__item js-required"><span class="timepicker__ico"><i class="fa fa-clock-o"></i></span>
+              <input type="text" placeholder="Другое время" id="timepicker" class="form__input form__item js-required"><span class="timepicker__ico"><i class="font-ico font-ico-clock"></i></span>
               <div class="form__ico-result"></div>
             </div>
             <input type="submit" value="Заказать обратный звонок" data-i='2' class="form__item form__submit">
@@ -151,14 +152,23 @@
         <div class="clearfix"></div>
       </div>
     </div>
-    <div class="separator"></div>
+    <div class="separator footer__separator">
+      <div class="fix-panel">
+        <div class="fix-panel__wrapper">
+          <div class="fix-panel__container">
+            <div class="fix-panel__btn btn js-btn_calculator-window js-show_overlay"><i class="font-ico font-ico-calculator"></i></div>
+            <div class="fix-panel__btn btn"><i class="font-ico font-ico-livechat"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer__bottom">
       <div class="footer-bottom">
         <div class="footer-bottom__wrapper">
           <div class="footer-bottom__left-part subscribe">
             <div class="subscribe__headline">Подпишитесь на новости, и получайте самые выгодные предложения:</div>
             <form action="" class="footer__form form">
-              <input type="email" name="" class="form__item subscribe__email">
+              <input type="email" name="" placeholder="E-mail" class="form__item subscribe__email">
               <input type="submit" name="" value="Подписаться" class="form__item subscribe__btn">
               <div class="clearfix"></div>
             </form>
@@ -169,14 +179,6 @@
             </div>
           </div>
           <div class="clearfix"></div>
-        </div>
-        <div class="fix-panel">
-          <div class="fix-panel__wrapper">
-            <div class="fix-panel__container">
-              <div class="fix-panel__btn btn js-btn_calculator-window js-show_overlay"><i class="font-ico font-ico-calculator"></i></div>
-              <div class="fix-panel__btn btn"><i class="font-ico font-ico-livechat"></i></div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="footer__divider"></div>
@@ -195,7 +197,7 @@
     <div class="calculator-window">
       <div class="calculator-window__list blue js-stopProp">
         <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
-        <div class="content__headline">How much is it?</div>
+        <div class="content__headline">How much is it</div>
         <form action="" class="form form-cost">
           <div class="f-cost__wrapper">
             <div class="row">
@@ -321,8 +323,8 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/main.js"> </script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.timepicker.min.js"> </script>
   <script src="js/jquery.fs.selecter.js"></script>
   <script>
     $("select").selecter();

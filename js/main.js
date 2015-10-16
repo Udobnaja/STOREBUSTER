@@ -88,6 +88,11 @@ function reBuildSubmenu() {
     });
 }
 
+function isRequired(val) {
+    'use strict';
+    return val !== undefined && val !== null && val !== '';
+}
+
 /**
 * Функция проверки обязательных для заполения инпутов при фокусе и снятие фокуса
 *
@@ -108,7 +113,7 @@ function inputTringger(elem) {
     
     inputTringger.blurIs = function () {
 
-        if (elem.val().replace(/\s+/g, '')) {
+        if (isRequired(elem.val())) {
             elem
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--success')
@@ -211,18 +216,21 @@ function defineClassName(t, requiredString) {
         $('.js-overlay_' + className).addClass('overlay--show');
         $('.' + className).addClass(className + '--show');
         $('.' + className + '__list').addClass(className + '__list--show');
+        document.body.classList.toggle('no-scrolled');
     };
     
     defineClassName.hideOverlay = function () {
         t.removeClass('overlay--show');
         removeClases();
         removeInputs();
+        document.body.classList.toggle('no-scrolled');
     };
     
     defineClassName.closeOverlay = function () {
         $('.js-overlay_' + className).removeClass('overlay--show');
         removeClases();
         removeInputs();
+        document.body.classList.toggle('no-scrolled');
     };
     
     /**
@@ -364,10 +372,10 @@ function createUpload() {
 function stopFixPanel() {
     'use strict';
     var scrolled = window.pageYOffset || document.documentElement.scrollTop,
-        windowH = $(window).height(),
         pTop = $('.footer__bottom').offset().top,
+        windowH = $(window).height(),
         fixpanel = document.querySelector('.fix-panel');
-
+    
     if (windowH - (pTop - scrolled)  >= 0) {
         fixpanel.classList.add('fix-panel--absolute');
     } else {
@@ -375,27 +383,28 @@ function stopFixPanel() {
     }
 }
 
+
+
 $(function () {
     'use strict';
+    
+    
     $('.js-show_overlay').click(function (event) {
          
         defineClassName($(this), 'js-btn_');
         defineClassName.showOverlay();
-        $('body').css('overflow', 'hidden');
         event.preventDefault();
     });
     
     $('.js-hide_overlay').click(function () {
         defineClassName($(this), 'js-overlay_');
         defineClassName.hideOverlay();
-        $('body').css('overflow', 'auto');
     });
     
     $('.js-close_overlay').click(function (e) {
         e.preventDefault();
         defineClassName($(this), 'js-close-btn_');
         defineClassName.closeOverlay();
-        $('body').css('overflow', 'auto');
     });
     
     $('.delivery__turn').click(function () {
@@ -430,9 +439,13 @@ $(function () {
         $(this).toggleClass('form__password-ico--active');
     });
     
-    $('.form__hint-ico').on('click', function () {
-        $(this).toggleClass('form__hint-ico--active');
-        $(this).next('.form__hint').toggleClass('form__hint--show');
+    /**
+    * Показать подсказку
+    */
+    
+    $('.form__hint-ico', this).on('click', function () {
+        this.classList.toggle('form__hint-ico--active');
+        this.nextElementSibling.classList.toggle('form__hint--show');
     });
         
     
@@ -505,7 +518,6 @@ $(function () {
     
     windowSize();
     
-    defineMinHeight('.reviews__img', '.reviews__txt-container');
     createUpload();
     
     window.onscroll = function () {
@@ -518,17 +530,37 @@ $(function () {
         stopFixPanel();
     });
     
+    var $images = $('.top-slider__slide img'),
+        counter = 0;
+// Проходимся по каждой картинке и навешиваем обработчик
+    $images.each(function () {
+        $(this).load(function () {
+            counter++;
+            // Если подгрузились все картинки, то инициализируем слайдер
+            if ($images.length === counter) {
+                $('.top-slider').addClass('top-slider--ready');
+            }
+            
+        });
+        // Меняем src для инициализации load
+        $(this).attr('src', $(this).attr('src'));
+    });
+    
 });
+
+
 
 window.onload = function () {
     'use strict';
     buildGrid('.blog__prev');
     buildGrid('.detail-product__col');
+    defineMinHeight('.reviews__img', '.reviews__txt-container');
 };
 
 
 $(window).resize(function () {
     'use strict';
+    
     autoHeight('.track-table__content');
     windowSize();
     buildGrid('.blog__prev');
@@ -536,6 +568,7 @@ $(window).resize(function () {
     defineMinHeight('.reviews__img', '.reviews__txt-container');
     stopFixPanel();
 });
+
 
 
 

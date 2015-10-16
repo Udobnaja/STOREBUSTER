@@ -48,6 +48,10 @@
     margin: 60px auto 10px ;
 }
 
+.content__headline.content__headline--100{
+    width: 100%;
+}
+
 
 @media only screen and (min-width: 768px){
     

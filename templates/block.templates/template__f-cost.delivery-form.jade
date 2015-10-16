@@ -1,23 +1,15 @@
 block headline
-    .content__headline How much is it?
-
+    .content__headline=const_howMach
 form(action='').form.form-cost.delivery-form
     include ../include/f-cost/f-cost__wrapper
+    
+    block f-cost__add-options
+    
+    .delivery.delivery--indent
+        .row 
+            include ../mixins/deliveryCol 
 
-
-    block f-cost__add-options 
-
-    .delivery.delivery--indent  
-        .row
-            include ../mixins/deliveryCol
-                            
+            +deliveryCol('turn-item') 
+            +deliveryCol('turn-item') 
+            +deliveryCol('turn-item') 
             +deliveryCol('turn-item')
-            +deliveryCol('turn-item')
-            +deliveryCol('turn-item')
-            +deliveryCol('turn-item')
-            
-             
-            
-
-
-

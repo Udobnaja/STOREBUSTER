@@ -1,0 +1,10 @@
+extends ../../block.templates/template__entrance
+
+block headline
+    .headline.headline--h2=h1_entrance
+
+block forgot-password
+    a.link.js-btn_forgot-password-window.js-show_overlay=const_forgetPassword
+
+block submit
+    input(type='submit' value=const_pay data-i=5).form__item.form__submit.entrance__submit

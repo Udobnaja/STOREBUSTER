@@ -1,6 +1,7 @@
 .delivery{
     width: 70%;
     margin: 0 auto;
+    transform: translateZ(0);
 }
 
 .delivery.delivery--indent{

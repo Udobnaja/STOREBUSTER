@@ -1,13 +1,13 @@
 extends ../../block.templates/template__registration-form
 
 block headline
-    h1.content__headline Регистрация
+    h1.content__headline=const_reg
 
 block reg-Email
-    p.paragraph.paragraph--centered Зарегистрироваться через E-mail
+    p.paragraph.paragraph--centered=const_regEmail
 
 block reg-social
-    p.paragraph.paragraph--centered Зарегистрироваться через социальную сеть
+    p.paragraph.paragraph--centered=const_regViaSocial
     .entrance.entrance--registration
         include ../entrance/entrance__social-ico
     

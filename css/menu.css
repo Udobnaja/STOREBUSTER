@@ -19,9 +19,9 @@
 }
 
 .menu__ico{
-    font-size: 21px;
+    font-size: 22px;
 
-    padding: 5px 7px;
+    padding: 7px 7px 2px;
 
     cursor: pointer;
 
@@ -47,6 +47,7 @@
     font: 15px/18px 'ProximaNovaBold';
 
     padding-left: 7px;
+    vertical-align: 5px;
 }
 
 @media only screen and (min-width: 480px){

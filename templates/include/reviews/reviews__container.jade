@@ -1,13 +1,11 @@
 
 mixin reviews(list)
-    - var i = 0
-    each item in list
+    each item, i in list
         - var className = (i == 0) ? 'row reviews__container reviews__container--first' : 'row reviews__container'
         div(class= className)
             - var classNameImg = !(i % 2) ? 'reviews__img--even' : 'reviews__img--odd'
             div(class= classNameImg).col-xs-30.col-msm-20.reviews__img
                 img(src='images/1316879278_080928apple.jpg' alt='').img.img--response
-                - i++
             .reviews__txt-container.col-msm-80
                 each paragraph in item[0]
                     p.paragraph.reviews__paragraph= paragraph

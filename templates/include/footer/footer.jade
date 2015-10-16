@@ -16,14 +16,15 @@ footer(role='contentinfo').footer
 
                 .clearfix
             .clearfix
-    .separator
+    .separator.footer__separator
+        include ../fix-panel/fix-panel
     .footer__bottom
         .footer-bottom
             .footer-bottom__wrapper
                 .footer-bottom__left-part.subscribe
                     .subscribe__headline Подпишитесь на новости, и получайте самые выгодные предложения:
                     form(action='').footer__form.form
-                        input(type='email' name='').form__item.subscribe__email
+                        input(type='email' name='' placeholder=const_Email).form__item.subscribe__email
                         input(type='submit' name='' value='Подписаться').form__item.subscribe__btn
                         .clearfix
 
@@ -33,7 +34,7 @@ footer(role='contentinfo').footer
                        a(href='').team__link.link
                 .clearfix
 
-            include ../fix-panel/fix-panel
+            
 
         .footer__divider
         .footer-bottom

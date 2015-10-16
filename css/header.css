@@ -167,7 +167,7 @@ a.header__tel-number{
     line-height: 1.2;
 
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 0;
 
     width: 33px;
@@ -359,15 +359,12 @@ a.header__tel-number{
         margin: 0;
         padding: 0;
 
-        -webkit-transition: all .3s linear;
-           -moz-transition: all .3s linear;
-            -ms-transition: all .3s linear;
-             -o-transition: all .3s linear;
-                transition: all .3s linear;
+        transition: all .3s linear;
         transition-delay: .25s;
 
         opacity: 0;
         background: #f7de22;
+        transform: translateZ(0);
     }
 
     .header__submenu:hover{

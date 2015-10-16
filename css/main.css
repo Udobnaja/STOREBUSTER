@@ -81,6 +81,10 @@ body{
     hyphens: auto;
 }
 
+.no-scrolled{
+    overflow: hidden;
+}
+
 strong,
 .strong{
     font-family: 'ProximaNovaBold';
@@ -92,6 +96,13 @@ strong,
     margin: 10px 0 20px 0;
 
     text-align: center;
+}
+
+
+
+.headline--h2{
+    margin: 0;
+    font-size: 22px;
 }
 
 .font--30{
@@ -139,10 +150,8 @@ strong,
     position: relative;
 
     width: 100%;
-    height: 1px;
+    min-height: 1px;
     margin: 0 auto;
-
-    background: #dadada;
 }
 
 .divider:before{

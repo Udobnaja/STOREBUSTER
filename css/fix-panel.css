@@ -10,12 +10,11 @@
     width: 100%;
     min-width: 320px;
     z-index: 3;
+    transform: translateZ(0);
 }
 
 .fix-panel--absolute{
     position: absolute;
-    bottom: auto;
-    top: -57px;
 }
 
 .fix-panel__wrapper{
@@ -61,7 +60,7 @@
             transition: all .3s;
     text-align: center;
     text-decoration: none;
-    background: #414a57;
+    background-color: #414a57;
 
     font-size: 30px;
     line-height: 1.2;
@@ -72,7 +71,7 @@
 
 
 .fix-panel__btn:hover{
-    background: #fff;
+    background-color: #fff;
     color: #414a57;
 }
 

@@ -1,0 +1,21 @@
+    
+form(action='').form.entrance__form.wrapper.wrapper--710
+    block headline
+        .headline= h1_entrance
+        
+    p.paragraph.paragraph--centered=const_entranceEmail
+    .form__holder
+        input(type='email' name='entrance__email' placeholder=const_Email).form__item.form__input.js-required
+        .form__ico-result
+    .form__holder
+        input(type='password' placeholder=const_password name='').form__item.form__input.js-required
+        .form__password-ico
+            i.font-ico.font-ico-view_password
+        .form__ico-result
+    .centered
+        block forgot-password
+            a.link.js-close_overlay.js-close-btn_entrance-window.js-btn_forgot-password-window.js-show_overlay=const_forgetPassword
+    p.paragraph.paragraph--centered Войти через социальную сеть
+    include ../include/entrance/entrance__social-ico
+    block submit
+        input(type='submit' value=h1_entrance data-i=5).form__item.form__submit.entrance__submit

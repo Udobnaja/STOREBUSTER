@@ -33,6 +33,24 @@ body
     a(href='http://browsehappy.com/') upgrade your browser
     |to improve your experience
     <![endif]-->
+    -var h1_entrance = 'Войти'
+        -const_pay = 'Оплатить'
+        -const_addOptions = 'Дополнительные опции'
+        -const_forgetPassword = 'Забыли пароль ?'
+        -const_reg = 'Регистрация'
+        -const_Email = 'E-mail'
+        -const_viaEmail = 'через ' + const_Email
+        -const_regEmail = 'Зарегистрироваться ' + const_viaEmail
+        -const_entranceEmail = h1_entrance + ' ' + const_viaEmail
+        -const_regViaSocial = 'Зарегистрироваться через социальную сеть'
+        -backCall = 'Заказать обратный звонок'
+        -const_tel = 'Телефон'
+        -const_name = 'Имя и фамилия'
+        -const_password = 'Пароль'
+        -const_anotherScheme = 'Другие схемы работы'
+        -const_howMach = 'How much is it'
+        -const_howWork = 'How it working?'
+   
     
     block header
         include ../include/header/header
@@ -52,8 +70,8 @@ body
     
     block script
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-        script(src='js/jquery.timepicker.min.js')
-        script(src='js/main.js') 
+        script(src='js/main.js')
+        script(src='js/jquery.timepicker.min.js') 
         script(src='js/jquery.fs.selecter.js')
         script
             |$("select").selecter();

@@ -43,6 +43,12 @@
     margin-left: -10px;
 }
 
+.turn-element--open .add-options__container{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
 
 @media only screen and (min-width: 480px){
     .turn-item--add-options:after{

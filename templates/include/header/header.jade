@@ -12,42 +12,11 @@ block header
             .entrance-window.entrance.js-stopProp
                 .js-close_overlay.btn.btn--close.js-close-btn_entrance-window.entrance__close-btn
                 .entrance-window__list.entrance__list
-                    .headline Войти
-                    form(action='').form.entrance__form
-                        label.form__label Войти через адрес электронной почты
-                        .form__holder
-                            input(type='email' name='entrance__email' placeholder='E-mail').form__item.form__input.js-required
-                            .form__ico-result
-                        .form__holder
-                            input(type='password' placeholder='Пароль' name='').form__item.form__input.js-required
-                            .form__password-ico
-                                i.fa.fa-eye
-                            .form__ico-result
-                        a.link.js-close_overlay.js-close-btn_entrance-window.js-btn_forgot-password-window.js-show_overlay Забыли пароль?
-                        p.paragraph Войти через социальную сеть
-                        include ../entrance/entrance__social-ico
-                        input(type='submit' value='Войти' data-i=5).form__item.form__submit.entrance__submit
+                    include ../form-entrance/form-entrance
 
         .overlay.js-overlay_forgot-password-window.overlay--black.js-hide_overlay
 
-        .overlay.js-overlay_back-call-window.overlay--black.js-hide_overlay.overlay--scroll
-            .back-call-window.js-stopProp
-                .js-close_overlay.btn.btn--close.js-close-btn_back-call-window.back-call-window__close-btn
-                .back-call-window__list
-                    .headline Обратный звонок
-                    form(action='').form
-                        label.form__label Введите номер мобильного телефона и мы перезвоним Вам
-                        .form__holder
-                            input(type='tel' placeholder='Телефон' name='' ).form__item.form__input.js-required
-                            .form__ico-result
-                        .form__holder
-                            input(type='text' placeholder='Ваше имя и фамилия' name='').form__item.form__input.js-required
-                            .form__ico-result
-                        .timepicker.form__holder
-                            input(type='text' placeholder='Другое время').form__input.form__item.js-required#timepicker
-                            span.timepicker__ico: i.fa.fa-clock-o
-                            .form__ico-result
-                        input(type='submit' value='Заказать обратный звонок' data-i=2).form__item.form__submit
+        include ../back-call/back-call
 
         .overlay.js-overlay_faq-window.js-hide_overlay
 
@@ -58,7 +27,7 @@ block header
                 form(action='').form
                     label.form__label Введите E-mail, указанный при регистрации
                     .form__holder
-                        input(type='email' placeholder='E-mail' name='').form__item.form__input.js-required
+                        input(type='email' placeholder=const_Email name='').form__item.form__input.js-required
                         .form__ico-result
                     input(type='submit' data-i=0).form__item.form__submit
 

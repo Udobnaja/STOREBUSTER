@@ -3,6 +3,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 60px 0 0;
+    transform: translateZ(0);
 }
 
 .footer-top__right-part{

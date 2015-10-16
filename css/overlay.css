@@ -11,14 +11,13 @@
     width: 100%;
     min-width: 320px;
 
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
+    
 }
 
 .overlay--show{
     visibility: visible;
-    z-index: 20;
+    z-index: 19;
 }
 
 .overlay--yellow{

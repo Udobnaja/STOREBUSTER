@@ -13,11 +13,8 @@
     margin: 0 auto;
     padding: 20px 0;
 
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-         -o-transition: all .2s linear;
-            transition: all .2s linear;
+    
+     transition: all .2s linear;
     text-align: center;
 
     background: #f7de22;
@@ -39,20 +36,16 @@
     height: 24px;
 
     cursor: pointer;
-    -webkit-transition: all .2s ease-in-out;
-       -moz-transition: all .2s ease-in-out;
-         -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    transform: translateZ(0);
+    will-change: transform;
 
     background: url(/images/btn__close.png) no-repeat center;
+    z-index: 21;
 }
 
 .btn--close:hover{
-    -webkit-transform: rotate(180deg);
-       -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-         -o-transform: rotate(180deg);
-            transform: rotate(180deg);
+            transform: rotate(180deg) translateZ(0);
 }
 
 

@@ -1,0 +1,14 @@
+extends ../block.templates/template
+    
+block content
+    .light-blue
+        .content
+            .content__wrapper
+            
+                h1.content__headline Оплата заказа
+                
+
+            
+                include ../include/form-registration/form-registration_pay
+                p.paragraph.paragraph--centered Уже зарегистрированы? 
+                    a(href='pay_1.html').link=h1_entrance+'!'

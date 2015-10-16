@@ -14,7 +14,7 @@
     height: 75px;
     margin-bottom: 25px;
     padding: 20px;
-    background: #fff;
+    background-color: #fff;
 
 
             transition: all .2s linear;
@@ -24,6 +24,7 @@
             box-shadow: none;
 
     -webkit-appearance: none;
+    z-index: 3;
 
 }
 
@@ -40,7 +41,7 @@
 
 .form__input{
     border: 1px solid #b4b4b4;
-    background: #fff;
+    background-color: #fff;
 }
 
 .form__item--dashed{
@@ -64,7 +65,7 @@
     text-align: center;
 
     border: none;
-    background: #f7de22;
+    background-color: #f7de22;
 }
 
 .form__submit:hover{
@@ -79,6 +80,7 @@
 .form__checkbox:checked{
     position: absolute;
     left: -9999px;
+    transform: translateZ(0);
 }
 
 .form__checkbox:not(:checked) + .form_checkLabel,
@@ -102,7 +104,8 @@
     content: '';
 
     border-color: #f0f5f7;
-    background: #f0f5f7;
+    background-color: #f0f5f7;
+    transform: translateZ(0);
 }
 
 .form__checkbox:not(:checked) + .form_checkLabel:after,
@@ -119,23 +122,24 @@
     transition: all .2s;
 
     color: #414a57;
-    background: #f7de22;
+    background-color: #f7de22;
+    transform: translateZ(0);
 }
 
 .form__checkbox:not(:checked) + .form_checkLabel--error.form_checkLabel:before,
 .form__checkbox:checked + .form_checkLabel--error.form_checkLabel:before{
     border: 1px solid #d34836;
-    background: #fff;
+    background-color: #fff;
 }
 
 .form__checkbox:not(:checked) + .form_checkLabel:after{
-    transform: scale(0);
+    transform: scale(0) translateZ(0);
 
     opacity: 0;
 }
 
 .form__checkbox:checked + .form_checkLabel:after{
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
 
     opacity: 1;
 }
@@ -194,14 +198,11 @@
     margin: 0 auto;
     padding: 20px 0;
 
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-         -o-transition: all .2s linear;
-            transition: all .2s linear;
+    
+    transition: all .2s linear;
     text-align: center;
 
-    background: #f7de22;
+    background-color: #f7de22;
 }
 
 .form__upload-btn:hover{
@@ -222,25 +223,25 @@
 
 .form__hint{
     position: absolute;
-    bottom: 100%;
+    top: 0px;
     left: 0;
     width: 100%;
-    height: 0;
-    background: #f8fbfe;
+    background-color: #f8fbfe;
     border: 1px solid #b4b4b4;
     border-bottom: none;
     box-sizing: border-box;
-    padding-left: 20px;
+    padding: 20px;
     
     line-height: 1.2;
     transition: all .15s linear;
     opacity: 0;
+    z-index: 2;
+    transform: translateZ(0);
 }
 
 .form__hint--show{
-    height: 100%;
     opacity: 1;
-    padding: 20px;
+    transform: translateY(-100%) translateZ(0);
 }
 
 .form__password-ico,
@@ -256,11 +257,8 @@
     height: 73px;
 
     cursor: pointer;
-    -webkit-transition: all .15s linear;
-       -moz-transition: all .15s linear;
-        -ms-transition: all .15s linear;
-         -o-transition: all .15s linear;
-            transition: all .15s linear;
+
+    transition: all .15s linear;
     text-align: center;
 
     color: #b4b4b4;
@@ -268,6 +266,7 @@
 
 .form__hint-ico{
     font: 40px/75px'ProximaNovaBold';
+    z-index: 10;
 }
 
 .form__password-ico:hover,
@@ -277,9 +276,9 @@
     color: #f7de22;
 }
 
-.form__password-ico:hover{
-    -webkit-transform: scale(1.1,1.1);
-            transform: scale(1.1,1.1);
+.form__password-ico:hover,
+.form__hint-ico:hover{
+    transform: scale(1.1,1.1);
 }
 
 .form__holder{
@@ -301,14 +300,11 @@
     width: 73px;
     height: 73px;
 
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-         -o-transition: all .2s linear;
-            transition: all .2s linear;
+    transition: all .2s linear;
     text-align: center;
 
     color: #b4b4b4;
+    transform: translateZ(0);
 }
 
 .form__input-search{
@@ -316,7 +312,7 @@
 }
 
 .form__input-search:focus + .form__search-ico{
-    left: -30px;
+    transform: translateX(-20%) translateZ(0);
 
     opacity: 0;
 }
@@ -338,15 +334,12 @@
     width: 40px;
     height: 40px;
 
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-         -o-transition: all .2s linear;
-            transition: all .2s linear;
+     transition: all .2s linear;
     text-align: center;
 
     opacity: 0;
     color: #b4b4b4;
+    transform: translateZ(0);
 }
 
 .form__ico-result--success{
@@ -383,7 +376,7 @@
 
         color: #b4b4b4;
         border: 1px solid #b4b4b4;
-        background: #fff;
+        background-color: #fff;
     }
 
     .form__ico-result{

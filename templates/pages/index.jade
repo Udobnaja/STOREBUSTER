@@ -2,14 +2,14 @@ extends ../block.templates/template
     
 block content
     .content
-        .content__wrapper
+        .content__wrapper.top-slider
             include ../include/top-slider/top-slider
         .divider
         .content__wrapper
             include ../include/advantages/advantages
         .divider
         .content__wrapper
-            .content__headline How it working?
+            .content__headline=const_howWork
             include ../include/progress/progress--1170
                 
         .separator
