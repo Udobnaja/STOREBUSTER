@@ -56,7 +56,9 @@
 
 @media only screen and (min-width: 768px){
     .menu-window{
-        position: static;
+        position: absolute;
+        top: 0;
+        left: 0;
         z-index: 11;
 
         width: 100%;

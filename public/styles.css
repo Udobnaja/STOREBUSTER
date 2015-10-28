@@ -5200,6 +5200,7 @@ th
         width: 96%;
         margin: 0 auto;
         padding-top: 0;
+        padding-bottom: 50px;
 
         border-top: none;
     }
@@ -5363,8 +5364,10 @@ th
 
     .menu-window
     {
-        position: static;
+        position: absolute;
         z-index: 11;
+        top: 0;
+        left: 0;
 
         width: 100%;
         margin-bottom: 0;
@@ -5444,7 +5447,7 @@ th
 
     .overlay--menu.overlay--scroll
     {
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .owl-controls
@@ -5486,6 +5489,11 @@ th
     .progress__step--penultimate
     {
         margin-left: 105px;
+    }
+
+    .progress--5el
+    {
+        width: 600px;
     }
 
     .pseudo-table__row
@@ -6145,7 +6153,7 @@ th
         width: 950px;
     }
 
-    .progress--1170
+    .progress--5el
     {
         width: 84%;
         max-width: 1170px;

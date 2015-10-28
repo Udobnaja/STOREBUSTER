@@ -42,7 +42,7 @@
         position: static;
     }
     .overlay--menu.overlay--scroll{
-        overflow-y: hidden;
+        overflow: hidden;
     }
 }
 

@@ -338,6 +338,7 @@ a.header__tel-number{
         width: 96%;
         margin: 0 auto;
         padding-top: 0;
+        padding-bottom: 50px;
 
         border-top: none;
     }
