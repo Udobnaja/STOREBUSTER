@@ -5962,11 +5962,6 @@ th
         padding-right: 7%;
     }
 
-    .overlay--scroll
-    {
-        overflow-y: hidden;
-    }
-
     .owl-controls
     {
         position: absolute;
