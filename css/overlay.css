@@ -32,6 +32,7 @@
     overflow: scroll;
     overflow-x: auto;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (min-width: 768px){
@@ -39,5 +40,14 @@
         visibility: visible;
         background: transparent;
         position: static;
+    }
+    .overlay--menu.overlay--scroll{
+        overflow-y: hidden;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .overlay--scroll{
+        overflow-y: hidden;
     }
 }

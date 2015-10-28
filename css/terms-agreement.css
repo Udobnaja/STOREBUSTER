@@ -25,8 +25,14 @@
 }
 
 .terms-agreement__link:first-child{
+        margin-right: 10px;
+    }
+
+@media only screen and (min-width: 480px){
+    .terms-agreement__link:first-child{
         margin-right: 44px;
     }
+}
 
 
 @media only screen and (min-width: 768px){

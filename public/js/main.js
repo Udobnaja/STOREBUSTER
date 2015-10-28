@@ -534,6 +534,20 @@ $(function () {
         counter = 0;
 // Проходимся по каждой картинке и навешиваем обработчик
     $images.each(function () {
+        $(this).one('load', function () {
+            counter++;
+            if ($images.length === counter) {
+                $('.top-slider').addClass('top-slider--ready');
+            }
+        })
+            .attr('src', $(this).attr('src'))
+            .each(function () {
+                if (this.complete) {
+                    $(this).load();
+                }
+            });
+    });
+    /*$images.each(function () {
         $(this).load(function () {
             counter++;
             // Если подгрузились все картинки, то инициализируем слайдер
@@ -544,7 +558,7 @@ $(function () {
         });
         // Меняем src для инициализации load
         $(this).attr('src', $(this).attr('src'));
-    });
+    });*/
     
 });
 

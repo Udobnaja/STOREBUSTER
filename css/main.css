@@ -82,7 +82,10 @@ body{
 }
 
 .no-scrolled{
+    height: 100%; /* Для IOS 6*/
     overflow: hidden;
+    width: 100%; /* Для IOS 6*/
+    position: fixed; /* Для IOS 6*/
 }
 
 strong,

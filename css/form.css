@@ -235,12 +235,14 @@
     line-height: 1.2;
     transition: all .15s linear;
     opacity: 0;
+    visibility: hidden;
     z-index: 2;
     transform: translateZ(0);
 }
 
 .form__hint--show{
     opacity: 1;
+    visibility: visible;
     transform: translateY(-100%) translateZ(0);
 }
 
