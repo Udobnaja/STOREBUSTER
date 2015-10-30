@@ -113,7 +113,7 @@ function inputTringger(elem) {
     
     inputTringger.blurIs = function () {
 
-        if (isRequired(elem.val())) {
+        if (isRequired($.trim(elem.val()))) {
             elem
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--success')
@@ -125,7 +125,8 @@ function inputTringger(elem) {
                 .addClass('form__ico-result--error')
                 .append('<i class="font-ico font-ico-error"></i>');
             if (elem.attr('placeholder')) {
-                elem.attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
+                elem.val('')
+                    .attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
             } else {
                 elem.attr('placeholder', 'Заполните это поле');
             }
