@@ -46,19 +46,34 @@ block content
                                                 when 0
                                                     a(href='').link добавить комментарий
                                                 when 1
-                                                    a.link отменить | 
+                                                    a.link отменить |&nbsp;
                                                     a.link сохранить
                                                 when 2
-                                                    a.link удалить | 
+                                                    a.link удалить |&nbsp;
                                                     a.link изменить
                                                 default
                                                     a(href='').link добавить комментарий
                                         .col-xs-100.no-indent--bottom
                                         
                                             case i
+                                                when 0
+                                                    form
+                                                    //
+                                                        форма выше не существует - видна только при амазоне идр магазинах, поставлена для отработки jade
+                                                    form(action='').form.basket__form
+                                                    
+                                                    
+                                                        textarea(placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
+                                                    .basket__comment
+                                                    
+                                                when 1
+                                                    form(action='').form.basket__form.basket__form--show
+                                                        textarea(placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
+                                                    .basket__comment
+                                                    
                                                 when 2
                                                     form(action='').form.basket__form
-                                                        textarea(name='' placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
+                                                        textarea(placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
                                                     .basket__comment.
                                                         Товар очень понравился. Собственно я могу смело рекомендовать данный продукт.                                                                                   Натуральный, хорошо помогает при сухости кожи и волос, а главное быстро. Надеюсь, что и всем
                                                         заинтересовавшимся и купившим поможет так же хорошо, как и мне.
@@ -66,7 +81,7 @@ block content
                                                 default 
                                                     form(action='').form.basket__form.basket__form--show
                                                         textarea(name='' placeholder='Ваш комментарий').form__item.form__textarea.basket__textarea.no-indent--bottom
-                                                    .basket__comment
+                                                    .basket__comment 
 
                                 .col-xs-100.col-md-20.no-indent--top
                                     .basket__price цена
