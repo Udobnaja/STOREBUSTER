@@ -117,19 +117,23 @@ function inputTringger(elem) {
             elem
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--success')
+                .empty()
                 .append('<i class="font-ico font-ico-okay"></i>');
         } else {
+            if (elem.hasClass('form__item--error') === false) {
+                if (elem.attr('placeholder')) {
+                    elem.val('')
+                        .attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
+                } else {
+                    elem.attr('placeholder', 'Заполните это поле');
+                }
+            }
             elem
                 .addClass('form__item--error')
                 .parent().find('.form__ico-result')
                 .addClass('form__ico-result--error')
+                .empty()
                 .append('<i class="font-ico font-ico-error"></i>');
-            if (elem.attr('placeholder')) {
-                elem.val('')
-                    .attr('placeholder', arrHolderText[0] + elem.attr('placeholder') + arrHolderText[1]);
-            } else {
-                elem.attr('placeholder', 'Заполните это поле');
-            }
         }
     };
     
