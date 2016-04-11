@@ -2,6 +2,9 @@
 /*jslint plusplus: true */
 /*jslint bitwise: true */
 
+
+var calcPopUp = '';
+
 /**
 * Строит динамический layout блоков разного размера
 * Динамический т.е. блоки располагают/строятся в контейнере в зависимости от его размеров
@@ -63,6 +66,103 @@ function buildGrid(className) {
     
 }
 
+
+function PopUp(){
+    this.overlay = document.getElementsByClassName('overlay')[0];
+    this.container = document.getElementsByClassName('overlay__container')[0];
+}
+
+PopUp.prototype.fill = function(content) {
+    this.container.innerHTML = '';
+    this.container.innerHTML = content;
+}
+
+PopUp.prototype.toggle = function() {
+    this.overlay.classList.toggle('overlay--show');
+    this.container.classList.toggle('overlay__container--show');
+    document.body.classList.toggle('fixed');
+}
+
+PopUp.prototype.open = function(content, containerClass){
+    if (containerClass) {
+        this.containerClass = containerClass;
+        this.container.classList.add(this.containerClass);
+    }
+    this.fill(content);
+    this.toggle();
+}
+
+PopUp.prototype.close = function(){
+    this.toggle();
+    if (this.containerClass) {
+        this.container.classList.remove(this.containerClass);
+    }
+    this.container.innerHTML = ''; // Под сомнением работа окна
+}
+
+var popUp = new PopUp();
+
+// $('.fix-panel__btn--calc').click(function(){
+//     popUp.open((document.getElementsByClassName('js-overlay_calculator-window')[0]).innerHTML, 'overlay__container--full');
+// });
+
+// $('.header__btn_entrance').click(function(){
+//     popUp.open((document.getElementsByClassName('js-overlay_entrance-window')[0]).innerHTML);
+// });
+
+// $('.overlay').on('click', '.entrance__link-forgot-password', function(){
+//     popUp.fill((document.getElementsByClassName('js-overlay_forgot-password-window')[0]).innerHTML);
+// });
+
+// $('.header__tel').click(function(){
+//     popUp.open((document.getElementsByClassName('js-overlay_back-call-window')[0]).innerHTML);
+// });
+
+// $('.link--agreement').click(function(){
+//     popUp.open((document.getElementsByClassName('js-overlay_agreement-window')[0]).innerHTML, 'overlay__container--full');
+// });
+
+$('.overlay').on('click', '.btn--close', function(){
+    popUp.close();
+});
+
+$('.overlay').click(function(){
+    popUp.close();
+});
+
+$('.overlay').on('click', '.overlay__container', function(e) {
+    e.stopPropagation();
+});
+
+function toggleFaqWindow(){
+    $('.faq-window').toggleClass('faq-window--show');
+    $('.faq-window__container').toggleClass('faq-window__container--show');
+}
+
+function toggleMenuWindow(){
+    $('.menu').toggleClass('menu--show');
+    $('.menu__container').toggleClass('menu__container--show');
+    document.body.classList.toggle('fixed');
+}
+
+$('.header__faq').click(function(){
+    toggleFaqWindow();
+});
+
+$('.faq-window .btn--close').click(function(){
+    toggleFaqWindow();
+});
+
+$('.menu__ico').click(function(){
+    toggleMenuWindow();
+});
+
+$('.menu__btn-close').click(function(){
+    toggleMenuWindow();
+});
+
+
+
 /**
 * Строит Подменю для среднего и большого экрана
 */
@@ -72,7 +172,7 @@ function buildSubmenu() {
     $('.header__submenu').width($('.header__menu').outerWidth());
      
     $('.header__submenu').css({
-        'left': -($('.menu__list').offset().left - $('.header__menu').offset().left)
+        'left': -($('.menu__container').offset().left - $('.header__menu').offset().left)
     });
 }
 
@@ -211,32 +311,6 @@ function defineClassName(t, requiredString) {
             });
         }
     }
-    
-    /**
-    * Делает объекты с классом js-overlay_className, className, className__list видимыми
-    * За счет добавления соответствующих классов
-    */
-    
-    defineClassName.showOverlay = function () {
-        $('.js-overlay_' + className).addClass('overlay--show');
-        $('.' + className).addClass(className + '--show');
-        $('.' + className + '__list').addClass(className + '__list--show');
-        document.body.classList.toggle('no-scrolled');
-    };
-    
-    defineClassName.hideOverlay = function () {
-        t.removeClass('overlay--show');
-        removeClases();
-        removeInputs();
-        document.body.classList.toggle('no-scrolled');
-    };
-    
-    defineClassName.closeOverlay = function () {
-        $('.js-overlay_' + className).removeClass('overlay--show');
-        removeClases();
-        removeInputs();
-        document.body.classList.toggle('no-scrolled');
-    };
     
     /**
     * Сворачивание
@@ -388,29 +462,8 @@ function stopFixPanel() {
     }
 }
 
-
-
 $(function () {
     'use strict';
-    
-    
-    $('.js-show_overlay').click(function (event) {
-         
-        defineClassName($(this), 'js-btn_');
-        defineClassName.showOverlay();
-        event.preventDefault();
-    });
-    
-    $('.js-hide_overlay').click(function () {
-        defineClassName($(this), 'js-overlay_');
-        defineClassName.hideOverlay();
-    });
-    
-    $('.js-close_overlay').click(function (e) {
-        e.preventDefault();
-        defineClassName($(this), 'js-close-btn_');
-        defineClassName.closeOverlay();
-    });
     
     $('.delivery__turn').click(function () {
         $(this).toggleClass('delivery__turn--white');
@@ -454,32 +507,6 @@ $(function () {
     });
         
     
-    function goodAnswer(submit) {
-    //Только для визцального представления,
-    //Этот скрипт не будет существовать
-
-        var arrPhrases = [
-            "<p class='paragraph paragraph--centered'>На ваш E-mail был отправлен запрос на восстановление пароля. <br>Пожалуйста, воспользуйтесь ссылкой, указанной в письме.</p>",
-            "<p class='paragraph paragraph--centered'>Ваше сообщение успешно отправлено. Мы ответим вам в ближайшее время. <br>Спасибо!</p>",
-            "<p class='paragraph paragraph--centered'>Вы заказали у нас обратный звонок. <br>В течение нескольких минут мы перезвоним Вам.<br>Спасибо!</p>",
-            "<p class='paragraph paragraph--centered'>Ваша заявка принята. В течение ближайшего времени мы перезвоним Вам.</p>",
-            "<p class='paragraph paragraph--centered'>В течение нескольких минут на Ваш E-mail придет письмо с уведомлением о регистрации и ссылкой на ее подтверждение.</p>",
-            "<p class='paragraph paragraph--centered'>Операция выполнена успешно.<br>Будет выполнен переход в личный кабинет.</p>"
-        ],
-            count;
-
-         
-        count = submit.data('i');
-        submit
-            .parent()
-            .html(arrPhrases[count]);
-        setTimeout(function () {
-            location.reload();
-        }, 2000);
- 
-    //
-    }
-    
     $('.js-required-check').change(function () {
         if (this.checked) {
             $('.form_checkLabel').removeClass('form_checkLabel--error');
@@ -501,21 +528,18 @@ $(function () {
                 ($('.js-required-check').prop('checked')) ? 'removeClass' : 'addClass'
             ]('form_checkLabel--error');
         }
-        if (!($('.form_checkLabel', this).hasClass('form_checkLabel--error')) && !($('.js-required', this).hasClass('form__item--error'))) {
-            goodAnswer($('.form__submit', this));
-        }
         
         return false;
     });
     
-    $('.js-required').on('blur', function () {
+    $('body').on('blur', '.js-required', function () {
         inputTringger($(this));
         inputTringger.blurIs();
     });
 
     
    
-    $('.js-required').on('focus', function () {
+    $('body').on('focus', '.js-required', function () {
         inputTringger($(this));
         inputTringger.focusIs();
     });
@@ -551,20 +575,7 @@ $(function () {
                     $(this).load();
                 }
             });
-    });
-    /*$images.each(function () {
-        $(this).load(function () {
-            counter++;
-            // Если подгрузились все картинки, то инициализируем слайдер
-            if ($images.length === counter) {
-                $('.top-slider').addClass('top-slider--ready');
-            }
-            
-        });
-        // Меняем src для инициализации load
-        $(this).attr('src', $(this).attr('src'));
-    });*/
-    
+    });    
 });
 
 

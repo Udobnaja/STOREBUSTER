@@ -18,13 +18,16 @@
 <body><!--[if lt IE 8]>
   <p class="browserupgrade"></p>You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience
   <![endif]-->
+  <div class="overlay">
+    <div class="overlay__container"></div>
+  </div>
   <header role="banner" class="header">
     <div class="header__top">
       <div class="header__wrapper">
         <div class="header__track track"><a href="track-package.html" class="track__link link">Отследить посылку</a></div>
         <div class="header__btns-panel">
           <div class="header__top-panel"><a href="registration.html" class="header__btn btn header__btn--yellow">Регистрация</a>
-            <div role="button" class="header__btn btn header__btn--lightYellow js-btn_entrance-window js-show_overlay">Вход в кабинет</div>
+            <div role="button" class="header__btn btn header__btn--lightYellow header__btn_entrance">Вход в кабинет</div>
           </div>
           <div class="add-panel"><a href="basket.html" class="add-panel__btn btn add-panel__basket">Корзина<i class="font-ico font-ico-basket add-panel__basket-ico"></i></a></div>
           <div class="clearfix"></div>
@@ -33,116 +36,47 @@
       </div>
     </div>
     <div class="header__bottom"><a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="logo Storebusters" class="img img--response"></a>
-      <div class="header__tel js-btn_back-call-window js-show_overlay"><a class="header__tel-number">8-800-888-888</a>Заказать обратный звонок
+      <div class="header__tel"><a class="header__tel-number">8-800-888-888</a>Заказать обратный звонок
       </div>
       <div class="clearfix"></div>
     </div>
-    <div class="header__menu menu">
-      <div class="menu__wrapper">
-        <div class="overlay js-overlay_menu-window overlay--yellow js-hide_overlay overlay--menu overlay--scroll">
-          <nav role="navigation" class="menu-window">
-            <ul class="menu-window__list menu__list">
-              <li class="menu__item"><a href="delivery.html" class="menu__link link">Service</a>
-                    <ul class="header__submenu submenu">
-                      <li class="submenu__item"><a href="delivery.html" class="submenu__link link">Our service fees</a>
-                      </li>
-                      <li class="submenu__item"><a href="wholesale-goods.html" class="submenu__link link">For business</a>
-                      </li>
-                      <li class="submenu__item"><a href="virtual-address.html" class="submenu__link link">Your mail forward&shying address for shopping</a>
-                      </li>
-                    </ul>
-              </li>
-              <li class="menu__item"> <a href="catalog-shops.html" class="menu__link link">Магазины</a>
-              </li>
-              <li class="menu__item"><a href="about.html" class="menu__link link">О нас</a>
-                    <ul class="header__submenu submenu">
-                      <li class="submenu__item"><a href="about.html" class="submenu__link link">Контакты</a>
-                      </li>
-                      <li class="submenu__item"><a href="agent.html" class="submenu__link link">How it working?</a>
-                      </li>
-                      <li class="submenu__item"><a href="news.html" class="submenu__link link">Блог</a>
-                      </li>
-                    </ul>
-              </li>
-              <li class="menu__item"><a href="delivery-single-page.html" class="menu__link link">Доставка, гарантия, возврат</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div role="button" class="header__faq js-btn_faq-window js-show_overlay">?</div><span role="button" aria-describedby="menu__name" class="menu__ico js-btn_menu-window js-show_overlay"><i class="font-ico font-ico-menu"></i></span><span id="menu__name" class="menu__name">меню</span>
+    <div class="header__menu">
+      <div class="header__menu-wrapper">           
+        <nav role="navigation" class="menu">
+          <div class="btn btn--close menu__btn-close"></div>
+          <ul class="menu__container">
+            <li class="menu__item"><a href="delivery.html" class="menu__link link">Service</a>
+                  <ul class="header__submenu submenu">
+                    <li class="submenu__item"><a href="delivery.html" class="submenu__link link">Our service fees</a>
+                    </li>
+                    <li class="submenu__item"><a href="wholesale-goods.html" class="submenu__link link">For business</a>
+                    </li>
+                    <li class="submenu__item"><a href="virtual-address.html" class="submenu__link link">Your mail forward&shying address for shopping</a>
+                    </li>
+                  </ul>
+            </li>
+            <li class="menu__item"> <a href="catalog-shops.html" class="menu__link link">Магазины</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link link">О нас</a>
+                  <ul class="header__submenu submenu">
+                    <li class="submenu__item"><a href="about.html" class="submenu__link link">Контакты</a>
+                    </li>
+                    <li class="submenu__item"><a href="agent.html" class="submenu__link link">How it working?</a>
+                    </li>
+                    <li class="submenu__item"><a href="news.html" class="submenu__link link">Блог</a>
+                    </li>
+                  </ul>
+            </li>
+            <li class="menu__item"><a href="delivery-single-page.html" class="menu__link link">Доставка, гарантия, возврат</a>
+            </li>
+          </ul>
+        </nav>
+        <div role="button" class="header__faq">?</div><span role="button" aria-describedby="menu__name" class="menu__ico"><i class="font-ico font-ico-menu"></i></span><span id="menu__name" class="menu__name">меню</span>
       </div>
     </div>
     <div class="faq-window">
-      <div class="faq-window__list">
-        <div class="js-close_overlay btn btn--close js-close-btn_faq-window faq-window__close-btn"></div><a href="often-questions.html" class="faq-window__link link">FAQ</a><br><a href="agent.html" class="faq-window__link link">How it working?</a><br><a href="payment-method.html" class="faq-window__link link">Способы оплаты</a><br><a href="feedback.html" class="faq-window__link faq-window__link--active link">Обратная связь</a><br>
-      </div>
-    </div>
-    <div class="overlay js-overlay_entrance-window overlay--black js-hide_overlay overlay--scroll">
-      <div class="entrance-window entrance js-stopProp">
-        <div class="js-close_overlay btn btn--close js-close-btn_entrance-window entrance__close-btn"></div>
-        <div class="entrance-window__list entrance__list">   
-          <form action="" class="form entrance__form wrapper wrapper--710">
-            <div class="headline">Войти</div>
-            <p class="paragraph paragraph--centered">Войти через E-mail</p>
-            <div class="form__holder">
-              <input type="email" name="entrance__email" placeholder="E-mail" class="form__item form__input js-required">
-              <div class="form__ico-result"></div>
-            </div>
-            <div class="form__holder">
-              <input type="password" placeholder="Пароль" name="" class="form__item form__input js-required">
-              <div class="form__password-ico"><i class="font-ico font-ico-view_password"></i></div>
-              <div class="form__ico-result"></div>
-            </div>
-            <div class="centered"><a class="link js-close_overlay js-close-btn_entrance-window js-btn_forgot-password-window js-show_overlay">Забыли пароль ?</a></div>
-            <p class="paragraph paragraph--centered">Войти через социальную сеть</p>
-            <div class="row entrance__social-ico">
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--facebook"><i class="font-ico font-ico-facebook"></i></a></div>
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--google-plus"><i class="font-ico font-ico-google"></i></a></div>
-              <div class="col-xs-33 centered"><a class="link entrance__ico entrance__ico--twitter"><i class="font-ico font-ico-twitter"></i></a></div>
-            </div>
-            <input type="submit" value="Войти" data-i='5' class="form__item form__submit entrance__submit">
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="overlay js-overlay_forgot-password-window overlay--black js-hide_overlay"></div>
-    <div class="overlay js-overlay_back-call-window overlay--black js-hide_overlay overlay--scroll">
-      <div class="back-call-window js-stopProp">
-        <div class="js-close_overlay btn btn--close js-close-btn_back-call-window back-call-window__close-btn"></div>
-        <div class="back-call-window__list">
-          <div class="headline">Обратный звонок</div>
-          <form action="" class="form">
-            <label class="form__label">Введите номер мобильного телефона и мы перезвоним Вам</label>
-            <div class="form__holder">
-              <input type="tel" placeholder="Телефон" name="" class="form__item form__input js-required">
-              <div class="form__ico-result"></div>
-            </div>
-            <div class="form__holder">
-              <input type="text" placeholder="Имя и фамилия" name="" class="form__item form__input js-required">
-              <div class="form__ico-result"></div>
-            </div>
-            <div class="timepicker form__holder">
-              <input type="text" placeholder="Другое время" id="timepicker" class="form__input form__item js-required"><span class="timepicker__ico"><i class="font-ico font-ico-clock"></i></span>
-              <div class="form__ico-result"></div>
-            </div>
-            <input type="submit" value="Заказать обратный звонок" data-i='2' class="form__item form__submit">
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="overlay js-overlay_faq-window js-hide_overlay"></div>
-    <div class="forgot-password-window">
-      <div class="forgot-password-window__list">
-        <div class="js-close_overlay btn btn--close js-close-btn_forgot-password-window forgot-password-window__close-btn"></div>
-        <div class="headline">Восстановить пароль</div>
-        <form action="" class="form">
-          <label class="form__label">Введите E-mail, указанный при регистрации</label>
-          <div class="form__holder">
-            <input type="email" placeholder="E-mail" name="" class="form__item form__input js-required">
-            <div class="form__ico-result"></div>
-          </div>
-          <input type="submit" data-i='0' class="form__item form__submit">
-        </form>
+      <div class="btn btn--close"></div>
+      <div class="faq-window__container"><a href="often-questions.html" class="faq-window__link link">FAQ</a><br><a href="agent.html" class="faq-window__link link">How it working?</a><br><a href="payment-method.html" class="faq-window__link link">Способы оплаты</a><br><a href="feedback.html" class="faq-window__link faq-window__link--active link">Обратная связь</a><br>
       </div>
     </div>
   </header>
@@ -201,7 +135,7 @@
       <div class="fix-panel">
         <div class="fix-panel__wrapper">
           <div class="fix-panel__container">
-            <div class="fix-panel__btn btn js-btn_calculator-window js-show_overlay"><i class="font-ico font-ico-calculator"></i></div>
+            <div class="fix-panel__btn btn fix-panel__btn--calc"><i class="font-ico font-ico-calculator"></i></div>
             <div class="fix-panel__btn btn"><i class="font-ico font-ico-livechat"></i></div>
           </div>
         </div>
@@ -238,135 +172,6 @@
       </div>
     </div>
   </footer>
-  <div class="overlay js-overlay_calculator-window overlay--black js-hide_overlay overlay--scroll">
-    <div class="calculator-window">
-      <div class="calculator-window__list blue js-stopProp">
-        <div class="js-close_overlay btn btn--close js-close-btn_calculator-window calculator-window__close-btn"></div>
-        <div class="content__headline">How much is it</div>
-        <form action="" class="form form-cost">
-          <div class="f-cost__wrapper">
-            <div class="row">
-              <div class="col-xs-100 col-msm-33">
-                <label for="" class="form__label">Вес посылки</label>
-                <input type="text" class="form__item form__input no-indent--bottom">
-              </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33">
-                <label for="" class="form__label">Ваша страна</label>
-                <select name="" class="form__item no-indent--bottom">
-                  <option value="Россия">Россия</option>
-                  <option value="Украина">Украина                               </option>
-                </select>
-              </div>
-              <div class="col-xs-100 col-sm-50 col-msm-33">
-                <label for="" class="form__label">Страна назначения</label>
-                <select name="" class="form__item">
-                  <option value="Англия">Россия</option>
-                  <option value="Германия">Украина</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="f-cost--white centered headline"><a href="calculator.html" class="link link--inline">Дополнительные опции</a></div>
-          <div class="delivery"> 
-            <div class="row">
-                            <div class="col-xs-100 col-msm-50 col-md-25">
-                              <div class="delivery__item">
-                                <div class="delivery__subitem">
-                                  <div class="delivery__logo">
-                                    <!--i.fa.fa-yelp-->
-                                  </div>
-                                  <div class="delivery__name">Shopogolic<br>Express</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__price">2000</div>
-                                  <div class="delivery__time">18 дней</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                                  <div class="delivery__r-commission">1,88р</div>
-                                  <div class="clearfix"></div>
-                                </div>
-                                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-                              </div>
-                            </div>
-                            <div class="col-xs-100 col-msm-50 col-md-25">
-                              <div class="delivery__item">
-                                <div class="delivery__subitem">
-                                  <div class="delivery__logo">
-                                    <!--i.fa.fa-yelp-->
-                                  </div>
-                                  <div class="delivery__name">Shopogolic<br>Express</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__price">2000</div>
-                                  <div class="delivery__time">18 дней</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                                  <div class="delivery__r-commission">1,88р</div>
-                                  <div class="clearfix"></div>
-                                </div>
-                                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-                              </div>
-                            </div>
-                            <div class="col-xs-100 col-msm-50 col-md-25">
-                              <div class="delivery__item">
-                                <div class="delivery__subitem">
-                                  <div class="delivery__logo">
-                                    <!--i.fa.fa-yelp-->
-                                  </div>
-                                  <div class="delivery__name">Shopogolic<br>Express</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__price">2000</div>
-                                  <div class="delivery__time">18 дней</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                                  <div class="delivery__r-commission">1,88р</div>
-                                  <div class="clearfix"></div>
-                                </div>
-                                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-                              </div>
-                            </div>
-                            <div class="col-xs-100 col-msm-50 col-md-25">
-                              <div class="delivery__item">
-                                <div class="delivery__subitem">
-                                  <div class="delivery__logo">
-                                    <!--i.fa.fa-yelp-->
-                                  </div>
-                                  <div class="delivery__name">Shopogolic<br>Express</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__price">2000</div>
-                                  <div class="delivery__time">18 дней</div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="delivery__subitem">
-                                  <div class="delivery__l-commission">Комиссия<br>платежной<br>системы</div>
-                                  <div class="delivery__r-commission">1,88р</div>
-                                  <div class="clearfix"></div>
-                                </div>
-                                <div class="delivery__subitem delivery-desc">В России доставляется  курьером и в удобно расположенные пункты самовывоза. Стоимоть при этом - очень примлимая</div>
-                                <div class="delivery__turn js-turn-item_delivery-desc roll"><span class="turn-item turn-item--closed">Свернуть</span></div>
-                              </div>
-                            </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jquery.timepicker.min.js"> </script>

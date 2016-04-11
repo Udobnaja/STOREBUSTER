@@ -19,7 +19,7 @@
     visibility: visible;
 }
 
-.faq-window__list{
+.faq-window__container{
     position: relative;
 
     height: 100%;
@@ -34,7 +34,7 @@
     background: #f7de22;
 }
 
-.faq-window__list--show{
+.faq-window__container--show{
             transform: translateX(0) translateZ(0);
 
     opacity: 1;

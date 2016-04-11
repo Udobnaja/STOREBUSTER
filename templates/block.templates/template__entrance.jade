@@ -1,5 +1,5 @@
     
-form(action='').form.entrance__form.wrapper.wrapper--710
+form(action='').form
     block headline
         .headline= h1_entrance
         
@@ -14,7 +14,7 @@ form(action='').form.entrance__form.wrapper.wrapper--710
         .form__ico-result
     .centered
         block forgot-password
-            a.link.js-close_overlay.js-close-btn_entrance-window.js-btn_forgot-password-window.js-show_overlay=const_forgetPassword
+            a.link.link--forgot-password=const_forgetPassword
     p.paragraph.paragraph--centered Войти через социальную сеть
     include ../include/entrance/entrance__social-ico
     block submit

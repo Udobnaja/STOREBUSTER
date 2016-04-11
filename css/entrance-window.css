@@ -1,53 +1,6 @@
 .entrance-window{
-   position: absolute;
-    z-index: 20;
-    top: 60px;
-    left: 50%;
-
-    width: 100%;
-    min-width: 320px;
-    max-width: 840px;
-
-    transition: all .3s;
-    transform: translateX(-50%) translateZ(0);
-
-    background: #fff;
-
-
-    line-height: 2;
-    opacity: 0;
-    margin-bottom: 60px;
-}
-
-.entrance-window--show{
-    opacity: 1;
-}
-
-.entrance-window__list{
-    position: relative;
-
+	min-width: 320px;
     width: 75.5%;
     max-width: 710px;
-    margin: 0 auto;
-    padding: 60px 0;
-
-    list-style-type: none;
-
-    transition: all .3s;
-
-    transform: translateY(20%) translateZ(0);
-    will-change: transform;
-
-    opacity: 0;
-}
-
-.entrance-window__list--show{
-    transform: translateY(0) translateZ(0);
-
-    opacity: 1;
-}
-
-
-@media only screen and (min-width: 768px){
-    
+    margin: 50px auto;
 }

@@ -1,38 +1,91 @@
 .overlay{
     position: fixed;
-    z-index: 0;
-    top: 0;
+    z-index: 6;
     right: 0;
     bottom: 0;
     left: 0;
-
     visibility: hidden;
-
+    height: 100%;
+    padding-left: 0;
+    transition: opacity .4s,
+                visibility .6s;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+    top: 0;
     width: 100%;
     min-width: 320px;
-
+    opacity: 0;
     backface-visibility: hidden;
+    line-height: 2;
     
 }
 
 .overlay--show{
+    opacity: 1;
     visibility: visible;
-    z-index: 19;
-}
-
-.overlay--yellow{
-    background: #f7de22;
-}
-
-.overlay--black{
-    background: rgba(104, 104, 104, .84);
-}
-
-.overlay--scroll{
     overflow: scroll;
     overflow-x: auto;
     overflow-y: scroll;
+    backface-visibility: visible;
     -webkit-overflow-scrolling: touch;
+}
+
+.overlay__container{
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 30px 35px;
+    transition: opacity .4s,
+                transform .4s;
+    box-sizing: border-box;
+    transform: translateX(-50%) translateY(-20%);
+    opacity: 0;
+    top: 1px;
+    will-change: transform, opacity;    
+}
+
+.overlay__container--show{
+    z-index: 6;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    background-color: #fff;
+}
+
+.overlay__container--full{
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+@media only screen and (min-width: 1440px){
+    .overlay__container{
+        top: 50%;
+        transform: translateX(-50%) translateY(-100%);
+    }
+
+    .overlay__container--show{
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .overlay__container--full{
+        top: 1px;
+        transform: translateX(-50%) translateY(-20%);
+    }
+
+    .overlay__container--full.overlay__container--show{
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .overlay__container{
+        padding: 40px 130px;
+    }
 }
 
 @media only screen and (min-width: 768px){

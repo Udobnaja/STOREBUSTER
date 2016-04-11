@@ -8,26 +8,4 @@ block header
 
         include ../faq-window/faq-window
 
-        .overlay.js-overlay_entrance-window.overlay--black.js-hide_overlay.overlay--scroll
-            .entrance-window.entrance.js-stopProp
-                .js-close_overlay.btn.btn--close.js-close-btn_entrance-window.entrance__close-btn
-                .entrance-window__list.entrance__list
-                    include ../form-entrance/form-entrance
-
-        .overlay.js-overlay_forgot-password-window.overlay--black.js-hide_overlay
-
-        include ../back-call/back-call
-
-        .overlay.js-overlay_faq-window.js-hide_overlay
-
-        .forgot-password-window
-            .forgot-password-window__list
-                .js-close_overlay.btn.btn--close.js-close-btn_forgot-password-window.forgot-password-window__close-btn
-                .headline Восстановить пароль
-                form(action='').form
-                    label.form__label Введите E-mail, указанный при регистрации
-                    .form__holder
-                        input(type='email' placeholder=const_Email name='').form__item.form__input.js-required
-                        .form__ico-result
-                    input(type='submit' data-i=0).form__item.form__submit
 

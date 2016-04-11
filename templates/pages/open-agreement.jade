@@ -1,0 +1,9 @@
+extends ../block.templates/template
+	
+block overlay
+	.overlay.overlay--show
+		.overlay__container.overlay__container--show.overlay__container--full
+			include ../include/agreement/agreement
+append script
+	script.
+		$('body').addClass('fixed');

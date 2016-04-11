@@ -1,61 +1,60 @@
 include ../../mixins/menu
 include ../../mixins/submenu
-.header__menu.menu
-    .menu__wrapper
-        .overlay.js-overlay_menu-window.overlay--yellow.js-hide_overlay.overlay--menu.overlay--scroll
-                
-            nav(role='navigation').menu-window
-                ul.menu-window__list.menu__list
-                    li.menu__item
-                        +menu({
+.header__menu
+    .header__menu-wrapper            
+        nav(role='navigation').menu
+            .btn.btn--close.menu__btn-close
+            ul.menu__container
+                li.menu__item
+                    +menu({
+                        href: 'delivery.html',
+                        name: 'Service'
+                    }, 0)
+                    +submenu([
+                        {
                             href: 'delivery.html',
-                            name: 'Service'
-                        }, 0)
-                        +submenu([
-                            {
-                                href: 'delivery.html',
-                                name: 'Our service fees'                            
-                            },
-                            {
-                                href: 'wholesale-goods.html',
-                                name: 'For business'                            
-                            },
-                            {
-                                href: 'virtual-address.html',
-                                name: 'Your mail forward&shying address for shopping'                            
-                            }
-                        ], '0')
-                    li.menu__item 
-                        +menu({
-                            href: 'catalog-shops.html',
-                            name: 'Магазины'
-                        }, 1)
-                    li.menu__item
-                        +menu({
+                            name: 'Our service fees'                            
+                        },
+                        {
+                            href: 'wholesale-goods.html',
+                            name: 'For business'                            
+                        },
+                        {
+                            href: 'virtual-address.html',
+                            name: 'Your mail forward&shying address for shopping'                            
+                        }
+                    ], '0')
+                li.menu__item 
+                    +menu({
+                        href: 'catalog-shops.html',
+                        name: 'Магазины'
+                    }, 1)
+                li.menu__item
+                    +menu({
+                        href: 'about.html',
+                        name: 'О нас'
+                    }, 2)
+                    +submenu([
+                        {
                             href: 'about.html',
-                            name: 'О нас'
-                        }, 2)
-                        +submenu([
-                            {
-                                href: 'about.html',
-                                name: 'Контакты'                            
-                            },
-                            {
-                                href: 'agent.html',
-                                name: const_howWork                            
-                            },
-                            {
-                                href: 'news.html',
-                                name: 'Блог'                            
-                            }
-                        ], '1')
-                    li.menu__item
-                        +menu({
-                            href: 'delivery-single-page.html',
-                            name: 'Доставка, гарантия, возврат'
-                        }, 3)
+                            name: 'Контакты'                            
+                        },
+                        {
+                            href: 'agent.html',
+                            name: const_howWork                            
+                        },
+                        {
+                            href: 'news.html',
+                            name: 'Блог'                            
+                        }
+                    ], '1')
+                li.menu__item
+                    +menu({
+                        href: 'delivery-single-page.html',
+                        name: 'Доставка, гарантия, возврат'
+                    }, 3)
                             
-        div(role='button').header__faq.js-btn_faq-window.js-show_overlay ?
-        span(role='button' aria-describedby='menu__name').menu__ico.js-btn_menu-window.js-show_overlay
+        div(role='button').header__faq ?
+        span(role='button' aria-describedby='menu__name').menu__ico
             i.font-ico.font-ico-menu
         span.menu__name#menu__name меню

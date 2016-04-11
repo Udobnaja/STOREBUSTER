@@ -1,0 +1,24 @@
+extends ../block.templates/template
+	
+block overlay
+	.overlay.overlay--show
+		.overlay__container.overlay__container--show
+			.btn.btn--close
+			.back-call-window
+				.headline Обратный звонок
+				form(action='').form
+					label.form__label Введите номер мобильного телефона и мы перезвоним Вам
+					.form__holder
+						input(type='tel' placeholder=const_tel name='' ).form__item.form__input.js-required
+						.form__ico-result
+					.form__holder
+						input(type='text' placeholder=const_name name='').form__item.form__input.js-required
+						.form__ico-result
+					.timepicker.form__holder
+						input(type='text' placeholder='Другое время').form__input.form__item.js-required#timepicker
+						span.timepicker__ico: i.font-ico.font-ico-clock
+						.form__ico-result
+					input(type='submit' value=backCall data-i=2).form__item.form__submit
+append script
+	script.
+		$('body').addClass('fixed');

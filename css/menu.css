@@ -1,9 +1,72 @@
-.menu__wrapper{
-    position: relative;
-
-    width: 84%;
-    margin: 0 auto;
+.menu{
+    position: fixed;
+    z-index: 6;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    height: 100%;
+    padding-left: 0;
+    transition: opacity .4s,
+                visibility .6s;
+    text-align: left;
+    background-color: #f7de22;
+    backface-visibility: hidden;
+    top: 0;
+    width: 100%;
+    min-width: 320px;
+    opacity: 0;
+    backface-visibility: hidden;
 }
+
+.menu--show{
+    opacity: 1;
+    visibility: visible;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: scroll;
+    backface-visibility: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu__container{
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    min-width: 203px;
+    margin: 0 auto;
+    padding: 30px 35px;
+    transition: opacity .4s,
+                transform .4s;
+    box-sizing: border-box;
+    transform: translateX(-50%) translateY(-20%);
+    opacity: 0;
+    top: 1px;
+    will-change: transform, opacity; 
+    list-style-type: none;
+    text-align: center;
+
+}
+
+.menu__container--show{
+    z-index: 6;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+@media only screen and (min-width: 1200px){
+    .menu{
+        position: absolute;
+        top: -55px;
+        left: 17%;
+
+        width: 60%;
+        
+    }
+}
+
+
+
 
 .menu__item{
     font: 15px/30px 'ProximaNovaBold';
@@ -50,20 +113,13 @@
     vertical-align: 5px;
 }
 
-@media only screen and (min-width: 480px){
-    
-    .menu__wrapper{
-        width: 86.5%;
-    }
-}
-
 @media only screen and (min-width: 768px){
-    
-    .menu__wrapper{
-        width: 625px;
-    }
 
     .menu__ico{
+        display: none;
+    }
+
+    .menu__btn-close{
         display: none;
     }
 
@@ -97,14 +153,35 @@
 
         opacity: 1;
     }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        width: 100%;
+        margin-bottom: 0;
+
+        transform: none;
+
+        opacity: 1;
+        backface-visibility: visible;
+        visibility: visible;
+    }
+
+    .menu__container{
+        transition: none;
+        transform: none;
+
+        opacity: 1;
+        width: 100%;
+        left: 0;
+        padding: 0;
+    }
 }
 
 @media only screen and (min-width: 992px){
-    
-    .menu__wrapper{
-        width: 100%;
-        max-width: 1440px;
-    }
 
     .menu__item{
         padding-right: 7%;

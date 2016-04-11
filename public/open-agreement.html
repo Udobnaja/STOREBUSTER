@@ -1,72 +1,102 @@
-
-.btn.btn--close
-.agreement-window
-    .light-blue.agreement-window__content
-        .headline Условия соглашения
-        p.paragraph.strong 1. Политика конфидициальности:
-        p.paragraph.strong Предоставление информации Клиентом
-        p.paragraph При регистрации на Сайте Shopogolic.net, Клиент предоставляет следующую информацию:
-        ul.list 
-            li.list__item.list__item--official Фамилия, Имя, Отчество;
-            li.list__item.list__item--official Адрес электронной почты;
-            li.list__item.list__item--official Пароль для доступа к Сайту.
-        p.paragraph. Предоставляя свои персональные данные при регистрации на сайте, Клиент соглашается на их обработку, в том числе и в целях продвижения товаров и услуг.
-        p.paragraph. Клиент не желает, чтобы его персональные данные использовались для продвижения Shopogolic.net, он может сообщить об этом в службу поддержки сайта.
-        p.paragraph. В таком случае вся полученная от Клиента информация будет использована только для обработки сделанных им заявок, и доставки подтверждённых Заказов в магазине Shopogolic.net.
-        p.paragraph. При оплате заявки кредитной картой Клиентом на сайте, компания Shopogolic.net не хранит информацию о данной кредитной карте.
-        p.paragraph.strong Использование информации, предоставленной Клиентом на Сайте.
-        p.paragraph Продавец использует информацию:
-        ul.list 
-            li.list__item.list__item--official Для регистрации Клиента на Сайте;
-            li.list__item.list__item--official Для выполнения своих обязательств перед  Клиентом;
-            li.list__item.list__item--official Для оценки и анализа работы Сайта;
-        p.paragraph Продавец вправе направлять Клиенту сообщения рекламно-информационного характера.
-        p.paragraph.strong Разглашение информации, полученной Shopogolic.net
-        p.paragraph. Shopogolic.net  обязуется не разглашать полученную от Клиента информацию. Не считается нарушением предоставление Shopogolic.net  информации агентам и третьим лицам, действующим на основании договора с Shopogolic.net, для исполнения обязательств перед Клиентом.
-        p.paragraph. Не считается нарушением обязательств разглашение информации в соответствии с обоснованными и применимыми требованиями закона.
-        p.paragraph. Shopogolic.net вправе использовать технологию «cookies». «Cookies» не содержат конфиденциальную информацию и не передаются третьим лицам.
-        p.paragraph. Shopogolic.net получает информацию о ip-адресе посетителя. Данная информация не используется для установления личности посетителя.
-        p.paragraph Shopogolic.net не несёт ответственности за сведения, предоставленные Клиентом на Сайте в общедоступной форме.
-        p.paragraph Shopogolic.net не рассылает спам и Клиент всегда вправе отказаться от рассылки сообщений с нашего сайта.
-        p.paragraph.strong 2. Условия договора:
-        p.paragraph.strong Общие положения
-        p.paragraph. Исполнитель (Shopogolic.net) предоставляет посреднические услуги по покупке товаров в интернет-магазинах и на аукциона Великобритании.
-        p.paragraph. Исполнитель оставляет за собой право вносить изменения в настоящее Соглашение, в связи с чем, Клиент обязуется регулярно отслеживать изменения в Соглашении.
-        p.paragraph Клиент соглашается с условиями данного соглашения, внося денежные средства на личный счет на сайте Shopogolic.net
-        p.paragraph За свои услуги Исполнитель удерживает с клиента комиссию, указанную в разделе «Услуги».
-        p.paragraph.strong Порядок предоставления услуг
-        p.paragraph.
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Шопоголик</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Для Safari (iPhone / IPod / IPad) и Android браузера - запрет на преобразование любых номеров в ссылки-->
+  <meta name="format-detection" content="telephone=no">
+  <!--Для BlackBerry - запрет на преобразование любых номеров в ссылки-->
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="styles.css"><!--[if lt IE 9]>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script><![endif]-->
+</head>
+<body><!--[if lt IE 8]>
+  <p class="browserupgrade"></p>You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience
+  <![endif]-->
+  <div class="overlay overlay--show">
+    <div class="overlay__container overlay__container--show overlay__container--full">
+      <div class="btn btn--close"></div>
+      <div class="agreement-window">
+        <div class="light-blue agreement-window__content">
+          <div class="headline">Условия соглашения</div>
+          <p class="paragraph strong">1. Политика конфидициальности:</p>
+          <p class="paragraph strong">Предоставление информации Клиентом</p>
+          <p class="paragraph">При регистрации на Сайте Shopogolic.net, Клиент предоставляет следующую информацию:</p>
+          <ul class="list"> 
+            <li class="list__item list__item--official">Фамилия, Имя, Отчество;</li>
+            <li class="list__item list__item--official">Адрес электронной почты;</li>
+            <li class="list__item list__item--official">Пароль для доступа к Сайту.</li>
+          </ul>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph strong">Использование информации, предоставленной Клиентом на Сайте.</p>
+          <p class="paragraph">Продавец использует информацию:</p>
+          <ul class="list"> 
+            <li class="list__item list__item--official">Для регистрации Клиента на Сайте;</li>
+            <li class="list__item list__item--official">Для выполнения своих обязательств перед  Клиентом;</li>
+            <li class="list__item list__item--official">Для оценки и анализа работы Сайта;</li>
+          </ul>
+          <p class="paragraph">Продавец вправе направлять Клиенту сообщения рекламно-информационного характера.</p>
+          <p class="paragraph strong">Разглашение информации, полученной Shopogolic.net</p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph">Shopogolic.net не несёт ответственности за сведения, предоставленные Клиентом на Сайте в общедоступной форме.</p>
+          <p class="paragraph">Shopogolic.net не рассылает спам и Клиент всегда вправе отказаться от рассылки сообщений с нашего сайта.</p>
+          <p class="paragraph strong">2. Условия договора:</p>
+          <p class="paragraph strong">Общие положения</p>
+          <p class="paragraph"></p>
+          <p class="paragraph"></p>
+          <p class="paragraph">Клиент соглашается с условиями данного соглашения, внося денежные средства на личный счет на сайте Shopogolic.net</p>
+          <p class="paragraph">За свои услуги Исполнитель удерживает с клиента комиссию, указанную в разделе «Услуги».</p>
+          <p class="paragraph strong">Порядок предоставления услуг</p>
+          <p class="paragraph">
             При добавлении товаров в личный кабинет клиент обязан указать полную стоимость товара, стоимость доставки товара до склада                                     Исполнителя на территории Великобритании, а также налогов, действующих в данной стране. 
             В случае если клиент не указал необходимые данные или указал их неправильно, Исполнитель имеет право снять с 
             Пользовательского счета клиента сумму, необходимую для покрытия затрат, понесенных при покупке указанного клиентом 
             товара в размере не более 20% от стоимости товара при этом уведомив Клиента. При указании размеров 
             (для одежды, обуви и т.п.) необходимо указывать Английские размеры.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент несет ответственность за соответствие приобретаемого товара условиям доставки почтовой службы и 
             таможенному кодексу страны, в которой находится, для пересылки товара Клиенту Почтовой службой.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             В случае участия в аукционе через личный кабинет, клиент должен вносить необходимую сумму на личный счет 
             заблаговременно. В случае нехватки денежных средств на личном счету клиента, дальнейшее повышение ставок невозможно.
-        p.paragraph Покупка на аукционе Ebay.com возможна только у продавцов с рейтингом 5 и выше.
-        p.paragraph.
+          </p>
+          <p class="paragraph">Покупка на аукционе Ebay.com возможна только у продавцов с рейтингом 5 и выше.</p>
+          <p class="paragraph">
             Исполнитель обязуется оплатить указанные Клиентом товары продавцу товара, от своего имени, но за счет Клиента, 
             при условии, что данный продавец осуществляет доставку товаров по территории Великобритании.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             В случае отсутствия заказанных Товаров на складе Продавца, Исполнитель вправе аннулировать указанный Товар 
             из Заказа Клиента и уведомить об этом Клиента путем направления электронного сообщения по адресу, 
             указанному при регистрации (либо сообщением в раздел «Внутренняя почта»).
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель обязуется принять на свой склад товар, который доставила почтовая служба от продавца. 
             Срок бесплатного хранения товара Клиента на складе составляет 1 месяц. За хранение товаров и/или посылок 
             Клиента свыше бесплатного срока хранения Исполнителем взимается комиссия за хранение. Началом срока бесплатного 
             хранения является физическое прибытие товара на склад Исполнителя. В случае неоплаты или невостребованности этого 
             товара Клиентом в течение 6 месяцев со дня получения на склад, Исполнитель имеет право утилизировать товар, 
             продать или сдать на благотворительность.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             В случае если продавец не отправил товар, Исполнитель старается сделать все от него зависящее для возврата 
             уплаченных денежных средств, но не гарантирует их возврата и в этом случае не компенсирует потери 
             Клиента. Продавца выбирает клиент и за его действия Исполнитель ответственности не несет.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             При отказе по желанию Клиента от товара, который оплачен, с Клиента взимается стоимость обратной доставки 
             товара Продавцу, комиссионное вознаграждение при этом не возвращается. При отказе от товара после открытия 
             процедуры спора с продавцом комиссионное вознаграждение возвращается в размере 50% в случае, если предварительно 
@@ -74,166 +104,351 @@
             предварительно заказана не была. Отказ от покупки с аукциона Ebay.com невозможен, если у продавца в 
             описании лота не указаны правила возврата товаров, если правила возврата товаров указаны, то возврат возможен 
             согласно этим правилам.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель обязуется упаковать полученные на склад товары Клиента согласно данным, которые клиент указал 
             в разделе «Посылки» личного кабинета. В случае, если посылка Клиента по весу или габаритам не может быть 
             отправлена тем способом доставки, который указал Клиент, Исполнитель имеет право изменить способ 
             доставки посылки.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель оставляет за собой право изменять тарифы и условия предоставления услуг в 
             одностороннем порядке, уведомляя клиентов путем размещения изменений на сайте.
-        p.paragraph Исполнитель оставляет за собой право отказать Клиенту в приобретении любого товара без объяснения причин.
-        p.paragraph.
+          </p>
+          <p class="paragraph">Исполнитель оставляет за собой право отказать Клиенту в приобретении любого товара без объяснения причин.</p>
+          <p class="paragraph">
             Исполнитель оставляет за собой право отказать Клиенту в оказании услуг в случае использования Клиентом 
             нецензурной лексики и оскорблений в адрес Исполнителя.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             При отказе от заказа или его неоплаты и возникновения долга на балансе клиента, Исполнитель связывается с 
             Клиентом путем контактов в личном кабинете. Исполнитель имеет право взыскать неоплаченную сумму с Клиента 
             путем переговоров и договоренностей или обращения в компанию по взысканию долгов.
-        p.paragraph.strong Пополнение Пользовательского счета клиента
-        p.paragraph Пополнение Пользовательского счета возможно способами, указанными в разделе «Оплата».
-        p.paragraph.
+          </p>
+          <p class="paragraph strong">Пополнение Пользовательского счета клиента</p>
+          <p class="paragraph">Пополнение Пользовательского счета возможно способами, указанными в разделе «Оплата».</p>
+          <p class="paragraph">
             В случае неверного указания цены заказанного Клиентом товара, Исполнитель при первой возможности информирует 
             об этом Клиента для подтверждения либо аннулирования заказанного товара. При невозможности связаться с 
             Клиентом данный заказ на покупку товара считается аннулированным.
-        p.paragraph Исполнитель не кредитует клиентов, не выкупает товары в долг и не отправляет Посылки в долг.
-        p.paragraph.strong Формирование Посылки и Доставка товаров
-        p.paragraph Доставка товаров осуществляется способами и по тарифам, указанным в разделе «Доставка» и «Услуги» сайта.
-        p.paragraph.
+          </p>
+          <p class="paragraph">Исполнитель не кредитует клиентов, не выкупает товары в долг и не отправляет Посылки в долг.</p>
+          <p class="paragraph strong">Формирование Посылки и Доставка товаров</p>
+          <p class="paragraph">Доставка товаров осуществляется способами и по тарифам, указанным в разделе «Доставка» и «Услуги» сайта.</p>
+          <p class="paragraph">
             Оплата доставки товаров Клиента производится отдельно от оплаты самих товаров. Стоимость доставки товаров 
             до Клиента указывается после того, как посылка упакована и взвешена. После упаковки посылки Исполнитель 
             не вскрывает упакованные посылки и не меняет товары. В случае нехватки денежных средств на счету клиента, 
             передача посылки в службу доставки будет задержана до погашения Клиентом долга на личном счету.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент может застраховать посылку, указав страховую сумму при оформлении посылки. Страховая премия 
             снимается с пользовательского счета клиента. В случае пропажи посылки, Исполнитель подает заявление в 
             почтовую службу на возмещение страховой суммы. В случае возмещения, Исполнитель зачисляет страховую сумму на счет Клиента.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель обязуется передать упакованную посылку с товарами клиента почтовой службе, 
             которую клиент указал в разделе «Посылки» личного кабинета.
-
-        p.paragraph Услуги считаются полностью оказанными Исполнителем с момента передачи товаров Клиента почтовой службе.
-        p.paragraph.
+            
+          </p>
+          <p class="paragraph">Услуги считаются полностью оказанными Исполнителем с момента передачи товаров Клиента почтовой службе.</p>
+          <p class="paragraph">
             Исполнитель предоставляет Клиенту возможность самостоятельно заполнить счет и декларацию, который будет 
             вложен в посылку при оплате Клиентом данной услуги.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не отвечает за действия почты, курьерских служб и транспортных компаний и не может влиять 
             на скорость доставки. Указанные на сайте сроки доставки являются приблизительными.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Для использования услуги «Виртуальный адрес» необходимо подтвердить Вашу личность и правомерность совершаемой 
             покупки. Доставка посылок при использовании Клиентом услуги «Виртуальный адрес» возможна только адресатам, 
             имя которых совпадает с именем владельца банковской карты, с которой производилась оплата доставляемых в 
             данной посылке товаров.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Виртуальный адрес запрещается использовать для открытия компаний или любых других юридических услуг. 
             Мы обязаны обратиться в организацию по формированию новых компаний в Англии «CompanyHouse» для 
             аннулирования любой деятельности любой новой компании на наш адрес.
-        p.paragraph.strong Обязанности Исполнителя
-        p.paragraph.
+          </p>
+          <p class="paragraph strong">Обязанности Исполнителя</p>
+          <p class="paragraph">
             Исполнитель обязуется предоставить Клиенту Услуги, а также выполнять требования Клиента, 
             связанные с выполнением этих услуг, если данные требование не противоречат данному соглашению, 
             информации, указанной на сайте Shopogolic.net, а также действующему законодательству Великобритании.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель обязуется сохранять конфиденциальность предоставленных Клиентом данных и не 
             разглашать их третьим лицам, если это не требуется для выполнения условий данного соглашения.
-        p.paragraph Предоставлять Клиенту информацию о выполнении поручений, указанных в данном соглашении.
-        p.paragraph.strong Обязанности Клиента
-        p.paragraph.
+          </p>
+          <p class="paragraph">Предоставлять Клиенту информацию о выполнении поручений, указанных в данном соглашении.</p>
+          <p class="paragraph strong">Обязанности Клиента</p>
+          <p class="paragraph">
             Клиент обязуется своевременно и в полном объеме предоставлять достоверную информацию, 
             необходимую для оказания Услуг Исполнителем. В случае недостатка такой информации или сомнений в 
             ее достоверности Исполнитель имеет право приостановить оказание Услуг.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент обязуется своевременно и в полном объеме оплачивать стоимость заказанных товаров, 
             стоимость их доставки до склада Исполнителя, налоги и другие расходы, возникающие в связи с 
             оказанием Услуг Исполнителем, а также стоимость комиссионного вознаграждения Исполнителя, стоимость 
             доставки товара до Клиента. В случае нехватки средств Исполнитель имеет право приостановить или 
             прекратить обслуживание Клиента.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент обязуется хранить все документы, подтверждающие оплату услуг Исполнителя, 
             до зачисления денежных средств на личный счет Клиента.
-        p.paragraph Клиент обязуется самостоятельно отслеживать поступление товара на склад Исполнителя и его дальнейшую пересылку получателю.
-        p.paragraph.strong Условия возврата и обмена
-        p.paragraph.
+          </p>
+          <p class="paragraph">Клиент обязуется самостоятельно отслеживать поступление товара на склад Исполнителя и его дальнейшую пересылку получателю.</p>
+          <p class="paragraph strong">Условия возврата и обмена</p>
+          <p class="paragraph">
             В случае возврата/обмена стоимость доставки товара от Клиента Исполнителю и от Исполнителя Продавцу,
             а так же в обратных направлениях, оплачивается Клиентом.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель принимает решение о возможности возврата/обмена товара, полностью руководствуясь 
             решением Продавца о возможности возврата/обмена. При обнаружении Исполнителем брака, несоответствия
             заявленному наименованию или недостачи товара без предварительного заказа Клиентом услуги проверки данного 
             товара возврат/обмен товара возможен только при условии дополнительной оплаты услуг.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             В случае если Продавец принимает решение об отказе Клиенту в возврате/обмене, Исполнитель не 
             компенсирует Клиенту стоимость Товара, а решение о возможности повторного возврата Товара Клиенту 
             принимается Исполнителем на индивидуальной основе.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Все операции по возврату/обмену осуществляются в полном соответствии с условиями Продавца, включая, 
             но не ограничиваясь сроками, процедурой и размером компенсации.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент должен учитывать сроки доставки Товара от Клиента Исполнителю, сроки обработки возврата/обмена на 
             складе Исполнителя (до 5 рабочих дней) и сроки доставки Товара от Исполнителя Продавцу, при расчете 
             возможности возврата/обмена Товаров Продавцу.
-        p.paragraph Возврат средств Клиенту осуществляется после полного возврата стоимости товара Продавцом Исполнителю.
-        p.paragraph.
+          </p>
+          <p class="paragraph">Возврат средств Клиенту осуществляется после полного возврата стоимости товара Продавцом Исполнителю.</p>
+          <p class="paragraph">
             Комиссия за услуги Исполнителя не возвращается не зависимо от решения Продавца о возможности/невозможности 
             возврата Товара.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             При повторной отправке обмененного товара, Клиент оплачивает полную стоимость обработки заказа 
             Исполнителем в соответствии с тарифами.
-        p.paragraph.strong Ограничение ответственности
-        p.paragraph.
+          </p>
+          <p class="paragraph strong">Ограничение ответственности</p>
+          <p class="paragraph">
             Исполнитель не несет ответственности за любые расходы Клиента или прямой либо косвенный ущерб, который может 
             быть нанесен Клиенту вследствие использования услуг Исполнителя, причиненный Клиенту в результате использования 
             или невозможности использования Услуг и понесенный в результате ошибок, пропусков, перерывов в работе, 
             удаления файлов, изменения функций, дефектов, задержек в работе при передаче данных и т.п.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не несет ответственности за действия смежных служб и сервисов, используемых для предоставления 
             Услуг Клиенту, но не принадлежащих Исполнителю, как то: банки, почтовые службы, провайдеры, Email-сервисы, 
             платежные системы и т.д.
-        p.paragraph Исполнитель не несет ответственности за сроки доставки товара от Продавца к Исполнителю.
-        p.paragraph.
+          </p>
+          <p class="paragraph">Исполнитель не несет ответственности за сроки доставки товара от Продавца к Исполнителю.</p>
+          <p class="paragraph">
             Исполнитель не несёт ответственности за сроки получения ответов от продавцов и оставляет за собой право 
             связываться с продавцом спустя 14 дней после покупки товара.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не несет ответственности за качество и комплектацию полученных на свой склад товаров, 
             а также не обеспечивает гарантией товары, приобретенные Клиентом с помощью Услуг Исполнителя.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не проверяет товар, полученный от продавца на соответствие заявленным продавцом характеристикам 
             и в случае ошибки продавца не несет ответственности за несоответствие товара. Проверка товара возможна за 
             отдельную плату, согласно тарифам, указанным на сайте Shopogolic.net
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не несет ответственность за недобросовестность выбранных клиентом продавцов в случаях: товар 
             выслан с задержкой; товар выслан, но не соответствует описанию; товар не рабочий (хотя заявлен как рабочий); 
             товар вообще не выслан (случаи мошенничества).
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Клиент согласен не делать Исполнителя ответчиком или соответчиком по любым обязательствам и расходам,
             связанным с ущербом, нанесенным Клиенту в результате действия третьих лиц, включая Продавцов, 
             Почтовыми и курьерскими службами, платежными системами.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             В случае заполнения счета Клиентом или уполномоченными представителями 
             Исполнителя по поручению Клиента, оформленному в личном кабинете, ответственность за правильность и 
             полноту сведений, указанных в декларации и счете, несет Клиент.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не несет ответственности за взимание Таможенных пошлин при доставке посылки, 
             не компенсирует их, а также не представляет интересы Клиента в органах таможни.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель не является сотрудником транспортной компании или почтовой службы и не несет ответственность 
             ни за один из способов пересылки товара.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             Исполнитель возмещает убытки Клиента по его заявлению, и только в случае, если заявленные убытки 
             явились результатом ошибок, допущенных служащими Исполнителя. При этом сумма возмещения не может 
             превышать комиссии исполнителя.
-        p.paragraph.strong Форс-мажор
-        p.paragraph. 
+          </p>
+          <p class="paragraph strong">Форс-мажор</p>
+          <p class="paragraph">
             Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств по настоящему 
             Соглашению, если это неисполнение явилось следствием обстоятельств непреодолимой силы, возникших после 
             заключения Соглашения в результате событий чрезвычайного характера, которые участник не мог ни предвидеть, 
             ни предотвратить разумными мерами (форс-мажор). К таким событиям чрезвычайного характера относятся: 
             наводнение, пожар, землетрясение, взрыв, шторм, эпидемия и иные явления природы, а также война или военные действия и т.п.
-        p.paragraph.strong Разрешение споров
-        p.paragraph.
+          </p>
+          <p class="paragraph strong">Разрешение споров</p>
+          <p class="paragraph">
             В случае возникновения разногласий и споров, связанных с выполнениями условия данного 
             Соглашения стороны решают их путем переговоров.
-        p.paragraph.
+          </p>
+          <p class="paragraph">
             При регистрации и пополнения счета Клиент берет на себя все обязательства и соглашается с 
             данным соглашением и правилами использования сервиса.
                     
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header role="banner" class="header">
+    <div class="header__top">
+      <div class="header__wrapper">
+        <div class="header__track track"><a href="track-package.html" class="track__link link">Отследить посылку</a></div>
+        <div class="header__btns-panel">
+          <div class="header__top-panel"><a href="registration.html" class="header__btn btn header__btn--yellow">Регистрация</a>
+            <div role="button" class="header__btn btn header__btn--lightYellow header__btn_entrance">Вход в кабинет</div>
+          </div>
+          <div class="add-panel"><a href="basket.html" class="add-panel__btn btn add-panel__basket">Корзина<i class="font-ico font-ico-basket add-panel__basket-ico"></i></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="header__bottom"><a href="index.html" class="header__logo"><img src="images/header-logo.png" alt="logo Storebusters" class="img img--response"></a>
+      <div class="header__tel"><a class="header__tel-number">8-800-888-888</a>Заказать обратный звонок
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="header__menu">
+      <div class="header__menu-wrapper">           
+        <nav role="navigation" class="menu">
+          <div class="btn btn--close menu__btn-close"></div>
+          <ul class="menu__container">
+            <li class="menu__item"><a href="delivery.html" class="menu__link link">Service</a>
+                  <ul class="header__submenu submenu">
+                    <li class="submenu__item"><a href="delivery.html" class="submenu__link link">Our service fees</a>
+                    </li>
+                    <li class="submenu__item"><a href="wholesale-goods.html" class="submenu__link link">For business</a>
+                    </li>
+                    <li class="submenu__item"><a href="virtual-address.html" class="submenu__link link">Your mail forward&shying address for shopping</a>
+                    </li>
+                  </ul>
+            </li>
+            <li class="menu__item"> <a href="catalog-shops.html" class="menu__link link">Магазины</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link link">О нас</a>
+                  <ul class="header__submenu submenu">
+                    <li class="submenu__item"><a href="about.html" class="submenu__link link">Контакты</a>
+                    </li>
+                    <li class="submenu__item"><a href="agent.html" class="submenu__link link">How it working?</a>
+                    </li>
+                    <li class="submenu__item"><a href="news.html" class="submenu__link link">Блог</a>
+                    </li>
+                  </ul>
+            </li>
+            <li class="menu__item"><a href="delivery-single-page.html" class="menu__link link">Доставка, гарантия, возврат</a>
+            </li>
+          </ul>
+        </nav>
+        <div role="button" class="header__faq">?</div><span role="button" aria-describedby="menu__name" class="menu__ico"><i class="font-ico font-ico-menu"></i></span><span id="menu__name" class="menu__name">меню</span>
+      </div>
+    </div>
+    <div class="faq-window">
+      <div class="btn btn--close"></div>
+      <div class="faq-window__container"><a href="often-questions.html" class="faq-window__link link">FAQ</a><br><a href="agent.html" class="faq-window__link link">How it working?</a><br><a href="payment-method.html" class="faq-window__link link">Способы оплаты</a><br><a href="feedback.html" class="faq-window__link link">Обратная связь</a><br>
+      </div>
+    </div>
+  </header>
+  <footer role="contentinfo" class="footer">
+    <div class="footer__wrapper">
+      <div class="footer-top">
+        <div class="footer-top__left-part">
+          <div class="footer__payment">Способы оплаты
+            <div class="footer__payment-content payment">
+              <div class="payment__col"><img alt="Платежная система 1" src="images/payment.png"></div>
+              <div class="payment__col"><img alt="Платежная система 2" src="images/payment.png"></div>
+              <div class="payment__col"><img alt="Платежная система 3" src="images/payment.png"></div>
+              <div class="payment__col"><img alt="Платежная система 4" src="images/payment.png"></div>
+              <div class="payment__col"><img alt="Платежная система 5" src="images/payment.png"></div>
+              <div class="payment__col"><img alt="Платежная система 5" src="images/payment.png"></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="footer-menu">  
+                        <nav class="footer-menu__content"><a href="news.html" class="footer-menu__link link">Блог</a><a href="delivery.html" class="footer-menu__link link">Service</a><a href="about.html" class="footer-menu__link link">Контакты</a><a href="reviews.html" class="footer-menu__link link">Отзывы</a><a href="catalog-shops.html" class="footer-menu__link link">Магазины</a><a href="often-questions.html" class="footer-menu__link link">FAQ</a><a href="ref.html" class="footer-menu__link link">Реферальная программа</a><a href="delivery-single-page.html" class="footer-menu__link link">Доставка и гарантия</a>
+                          <div class="clearfix"></div>
+                        </nav>
+          </div>
+        </div>
+        <div class="footer-top__right-part">
+          <div class="footer__adress">Великобритания:<br><a href="" class="link">+44 75633 59 211</a><br><a href="mailto:shopogolic@shopogolic.net" class="link">shopogolic@shopogolic.net</a></div>
+          <div class="footer__social social"><a href="" class="social__link link"><i class="font-ico font-ico-vkontakte"></i></a><a href="mailto:shopogolic@shopogolic.net" class="social__link link"><i class="font-ico font-ico-mail"></i></a><a href="" class="social__link link"><i class="font-ico font-ico-facebook_footer"></i></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="separator footer__separator">
+      <div class="fix-panel">
+        <div class="fix-panel__wrapper">
+          <div class="fix-panel__container">
+            <div class="fix-panel__btn btn fix-panel__btn--calc"><i class="font-ico font-ico-calculator"></i></div>
+            <div class="fix-panel__btn btn"><i class="font-ico font-ico-livechat"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer-bottom">
+        <div class="footer-bottom__wrapper">
+          <div class="footer-bottom__left-part subscribe">
+            <div class="subscribe__headline">Подпишитесь на новости, и получайте самые выгодные предложения:</div>
+            <form action="" class="footer__form form">
+              <input type="email" name="" placeholder="E-mail" class="form__item subscribe__email">
+              <input type="submit" name="" value="Подписаться" class="form__item subscribe__btn">
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <div class="footer-bottom__right-part">
+            <div class="team">
+              <div class="team__text">Разработка</div><a href="" class="team__link link"></a>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="footer__divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-bottom__wrapper">
+          <ul class="terms-agreement">
+            <li class="terms-agreement__item">© Shopogolic ltd</li>
+            <li class="terms-agreement__item">Company 08385436</li>
+            <li class="terms-agreement__item"><a href="" class="terms-agreement__link link">Cookie policy</a><a href="" class="terms-agreement__link link">Terms and conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.timepicker.min.js"> </script>
+  <script src="js/jquery.fs.selecter.js"></script>
+  <script>
+    $("select").selecter();
+    $('#timepicker').timepicker();
+    $('#timepicker').on('click', function (){
+    $(this).timepicker('setTime', new Date());
+    });
+  </script>
+  <script>$('body').addClass('fixed');</script>
+</body>

@@ -153,6 +153,13 @@ a.header__tel-number{
     border-bottom: 1px solid #dadada;
 }
 
+.header__menu-wrapper{
+    position: relative;
+
+    width: 84%;
+    margin: 0 auto;
+}
+
 .header__submenu{
     margin: 0;
     padding: 0;
@@ -198,6 +205,10 @@ a.header__tel-number{
     .header__wrapper{
         width: 93%;
     }
+    
+    .header__menu-wrapper{
+        width: 86.5%;
+    }
 
     .header__top-panel{
         float: left;
@@ -241,6 +252,8 @@ a.header__tel-number{
     .header__wrapper{
         width: 768px;
     }
+
+    
 
     .header__logo{
         width: 135px;
@@ -381,6 +394,11 @@ a.header__tel-number{
         width: 94%;
         max-width: 1440px;
     }
+
+    .header__menu-wrapper{
+        width: 100%;
+        max-width: 1440px;
+    }
     
     .header__bottom{
         width: 86%;
@@ -408,6 +426,6 @@ a.header__tel-number{
     }
 
     .header__submenu{
-        top: 61px;
+        top: 60px;
     }
 }
